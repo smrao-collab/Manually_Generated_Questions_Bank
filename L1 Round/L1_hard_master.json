@@ -1,0 +1,902 @@
+[
+  {
+    "question": "A value increases by 20%, then decreases by 20%, then increases by 25%. Net change?",
+    "options": [
+      "8% increase",
+      "10% increase",
+      "12% increase",
+      "15% increase"
+    ],
+    "correct_answer": "12% increase",
+    "topic": "Percentages",
+    "difficulty": "hard"
+  },
+  {
+    "question": "If an amount becomes ₹14400 after two years at compound interest of 20% p.a., initial amount = ?",
+    "options": [
+      "₹10,000",
+      "₹10,500",
+      "₹11,000",
+      "₹12,000"
+    ],
+    "correct_answer": "₹10,000",
+    "topic": "Percentages",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Three successive discounts of 20%, 25%, 30% equal a single discount of?",
+    "options": [
+      "75%",
+      "65%",
+      "58%",
+      "45%"
+    ],
+    "correct_answer": "58%",
+    "topic": "Percentages",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Class A has 30 students with average age 20. Class B has 20 students with average age 22. Combined average?",
+    "options": [
+      "20.8",
+      "21",
+      "21.2",
+      "21.5"
+    ],
+    "correct_answer": "20.8",
+    "topic": "Averages",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A merchant mixes 10 kg sugar at ₹40/kg and 5 kg at ₹50/kg. Cost per kg?",
+    "options": [
+      "₹42",
+      "₹43",
+      "₹43.33",
+      "₹44"
+    ],
+    "correct_answer": "₹43.33",
+    "topic": "Averages",
+    "difficulty": "hard"
+  },
+  {
+    "question": "If A:B:C = 2:3:4 and A+B+C = 180, what is B?",
+    "options": [
+      "40",
+      "60",
+      "80",
+      "100"
+    ],
+    "correct_answer": "60",
+    "topic": "Ratios & Proportions",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Three friends share profit in ratio 3:4:5. If total profit is ₹12,000, the largest share is?",
+    "options": [
+      "₹4,000",
+      "₹5,000",
+      "₹6,000",
+      "₹7,000"
+    ],
+    "correct_answer": "₹5,000",
+    "topic": "Ratios & Proportions",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A merchant buys 100 items for ₹40 each. He sells 60 at ₹50, 30 at ₹45, 10 at ₹30. Net profit%?",
+    "options": [
+      "12%",
+      "13%",
+      "14%",
+      "15%"
+    ],
+    "correct_answer": "12%",
+    "topic": "Profit & Loss",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Cost price of article A is 3/4 of B. If both are sold at equal profit%, ratio of SP = ?",
+    "options": [
+      "3:4",
+      "4:3",
+      "1:1",
+      "2:3"
+    ],
+    "correct_answer": "3:4",
+    "topic": "Profit & Loss",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A takes 30 days, B takes 40 days, C takes 60 days to complete a task. If they work together, time taken?",
+    "options": [
+      "13.33 days",
+      "10 days",
+      "13.33 days",
+      "15 days"
+    ],
+    "correct_answer": "13.33 days",
+    "topic": "Time & Work",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A boat's speed in still water is 12 km/hr. Stream speed is 4 km/hr. Distance upstream in 4 hours?",
+    "options": [
+      "32 km",
+      "36 km",
+      "40 km",
+      "44 km"
+    ],
+    "correct_answer": "32 km",
+    "topic": "Time, Speed & Distance",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Two trains start from opposite directions at speeds 40 km/hr and 60 km/hr. They meet after 3 hours. Distance between stations?",
+    "options": [
+      "200 km",
+      "250 km",
+      "300 km",
+      "350 km"
+    ],
+    "correct_answer": "300 km",
+    "topic": "Time, Speed & Distance",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Complete: 1, 2, 6, 24, 120, ?",
+    "options": [
+      "600",
+      "720",
+      "840",
+      "960"
+    ],
+    "correct_answer": "720",
+    "topic": "Number Series",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Complete: 1, 4, 10, 20, 35, ?",
+    "options": [
+      "50",
+      "56",
+      "60",
+      "70"
+    ],
+    "correct_answer": "56",
+    "topic": "Number Series",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Complete: 2, 5, 11, 23, 47, ?",
+    "options": [
+      "85",
+      "89",
+      "95",
+      "100"
+    ],
+    "correct_answer": "95",
+    "topic": "Number Series",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A walks 5m north, 3m east, 4m south, 2m west. Final distance and direction?",
+    "options": [
+      "√2 m NE",
+      "√10 m NE",
+      "√8 m NE",
+      "√5 m NE"
+    ],
+    "correct_answer": "√10 m NE",
+    "topic": "Directions",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A starts at origin, goes 6 units north, 8 units east, 3 units south, 4 units west. Distance from origin?",
+    "options": [
+      "5 units",
+      "√61 units",
+      "√85 units",
+      "10 units"
+    ],
+    "correct_answer": "√85 units",
+    "topic": "Directions",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A's father's mother's only son is B. How many male relatives of A in B's lineage (excluding B)?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct_answer": "2",
+    "topic": "Blood Relations",
+    "difficulty": "hard"
+  },
+  {
+    "question": "If X's father is Y's grandfather and Y's mother is X's mother, then Y is X's __?",
+    "options": [
+      "Brother",
+      "Cousin",
+      "Son",
+      "Nephew"
+    ],
+    "correct_answer": "Brother",
+    "topic": "Blood Relations",
+    "difficulty": "hard"
+  },
+  {
+    "question": "If MATHEMATICS is coded as 82963486347, how is MATH coded?",
+    "options": [
+      "8296",
+      "8269",
+      "8296",
+      "8239"
+    ],
+    "correct_answer": "8296",
+    "topic": "Coding-Decoding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "If each letter in STUDENT is replaced by the letter 2 positions ahead, the code is?",
+    "options": [
+      "UVWFGPV",
+      "VWIGNQV",
+      "UWHFGQV",
+      "VXIHGRW"
+    ],
+    "correct_answer": "UVWFGPV",
+    "topic": "Coding-Decoding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "5 people sit in a row. A is next to B. C is next to D. If E is at one end, how many arrangements?",
+    "options": [
+      "24",
+      "48",
+      "72",
+      "96"
+    ],
+    "correct_answer": "48",
+    "topic": "Seating Arrangements",
+    "difficulty": "hard"
+  },
+  {
+    "question": "The word most similar in meaning to 'pugnacious' is?",
+    "options": [
+      "Aggressive",
+      "Peaceful",
+      "Quiet",
+      "Calm"
+    ],
+    "correct_answer": "Aggressive",
+    "topic": "Synonyms & Antonyms",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Which word is closest in meaning to 'perspicacious'?",
+    "options": [
+      "Sweating",
+      "Insightful",
+      "Visible",
+      "Obvious"
+    ],
+    "correct_answer": "Insightful",
+    "topic": "Synonyms & Antonyms",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Choose correct: 'Had he known the truth, he _____.' A)would come B)will come C)would have come D)came",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correct_answer": "C",
+    "topic": "Grammar",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify error: 'The committee have decided to postpone the meeting.'",
+    "options": [
+      "committee",
+      "'have' to 'has'",
+      "'decided' to 'decide'",
+      "No error"
+    ],
+    "correct_answer": "'have' to 'has'",
+    "topic": "Grammar",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Arrange: A) This led to increased productivity. B) The company implemented new strategies. C) Employee satisfaction improved. D) Automation reduced manual work.",
+    "options": [
+      "BADC",
+      "BDAC",
+      "BCAD",
+      "BCDA"
+    ],
+    "correct_answer": "BDAC",
+    "topic": "Para Jumbles",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Passage: 'Artificial intelligence has revolutionized many industries. Manufacturing, healthcare, and finance have all benefited from AI. However, the rise of AI has also raised concerns about job displacement.' What is the main concern mentioned?",
+    "options": [
+      "High cost",
+      "Job displacement",
+      "Poor quality",
+      "Complexity"
+    ],
+    "correct_answer": "Job displacement",
+    "topic": "Reading Comprehension",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A amount becomes ₹2420 in 2 years at 10% SI. Initial amount = ?",
+    "options": [
+      "₹1800",
+      "₹2000",
+      "₹2100",
+      "₹2200"
+    ],
+    "correct_answer": "₹2000",
+    "topic": "Percentages",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Two containers: A has 5 red, 3 blue balls. B has 2 red, 4 blue balls. Probability of drawing one red from each?",
+    "options": [
+      "5/16",
+      "5/8",
+      "10/64",
+      "5/32"
+    ],
+    "correct_answer": "10/64",
+    "topic": "Averages",
+    "difficulty": "hard"
+  },
+  {
+    "question": "If x:y:z = 1:2:3 and xyz = 48, find x",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct_answer": "2",
+    "topic": "Ratios & Proportions",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A trader marks profit 40%, gives discount 25%. Net profit%?",
+    "options": [
+      "5%",
+      "10%",
+      "15%",
+      "20%"
+    ],
+    "correct_answer": "5%",
+    "topic": "Profit & Loss",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A, B, C together finish work in 5 days. A alone takes 10 days. B+C together = ?",
+    "options": [
+      "10 days",
+      "15 days",
+      "8 days",
+      "12 days"
+    ],
+    "correct_answer": "10 days",
+    "topic": "Time & Work",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Two swimmers 100m apart swim toward each other. One at 3 m/s, other at 2 m/s. Time to meet?",
+    "options": [
+      "15 seconds",
+      "20 seconds",
+      "25 seconds",
+      "30 seconds"
+    ],
+    "correct_answer": "20 seconds",
+    "topic": "Time, Speed & Distance",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Complete: 5, 11, 23, 47, 95, ?",
+    "options": [
+      "185",
+      "190",
+      "191",
+      "192"
+    ],
+    "correct_answer": "191",
+    "topic": "Number Series",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A starts at (0,0), goes 3 units north, 4 units east, 5 units south, 2 units west. Position?",
+    "options": [
+      "(2,-2)",
+      "(2,-1)",
+      "(1,-2)",
+      "(1,-1)"
+    ],
+    "correct_answer": "(2,-2)",
+    "topic": "Directions",
+    "difficulty": "hard"
+  },
+  {
+    "question": "How is X related to Y? X's son's sister is Y's mother.",
+    "options": [
+      "Father",
+      "Grandfather",
+      "Uncle",
+      "Cousin"
+    ],
+    "correct_answer": "Grandfather",
+    "topic": "Blood Relations",
+    "difficulty": "hard"
+  },
+  {
+    "question": "If ZEBRA is coded using the pattern where each letter is replaced by its position in alphabet, the code is?",
+    "options": [
+      "26521",
+      "265218",
+      "26518",
+      "2615189"
+    ],
+    "correct_answer": "2615189",
+    "topic": "Coding-Decoding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "The synonym of 'laconic' is?",
+    "options": [
+      "Talkative",
+      "Eloquent",
+      "Concise",
+      "Verbose"
+    ],
+    "correct_answer": "Concise",
+    "topic": "Synonyms & Antonyms",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Correct: 'The data ____ incomplete, so we cannot proceed.'",
+    "options": [
+      "are",
+      "is",
+      "were",
+      "have been"
+    ],
+    "correct_answer": "is",
+    "topic": "Grammar",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Arrange in logical order: A) She decided to pursue medicine. B) She scored well in board exams. C) Her dream came true. D) She got admitted to a medical college.",
+    "options": [
+      "BADC",
+      "BACD",
+      "ACBD",
+      "DCBA"
+    ],
+    "correct_answer": "BADC",
+    "topic": "Para Jumbles",
+    "difficulty": "hard"
+  },
+  {
+    "question": "From passage: 'Technology has enabled remote work, increasing flexibility. However, it has blurred work-life boundaries.' What is the trade-off?",
+    "options": [
+      "Cost vs benefit",
+      "Flexibility vs boundaries",
+      "Productivity vs health",
+      "None"
+    ],
+    "correct_answer": "Flexibility vs boundaries",
+    "topic": "Reading Comprehension",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Simple interest on ₹1500 for 3 years at 8% p.a. = ?",
+    "options": [
+      "₹300",
+      "₹360",
+      "₹400",
+      "₹450"
+    ],
+    "correct_answer": "₹360",
+    "topic": "Percentages",
+    "difficulty": "hard"
+  },
+  {
+    "question": "If three articles cost ₹120, ₹140, ₹160 respectively, weighted average cost?",
+    "options": [
+      "₹140",
+      "₹145",
+      "₹150",
+      "₹155"
+    ],
+    "correct_answer": "₹140",
+    "topic": "Averages",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Ratio 12:18:24 in simplest form is?",
+    "options": [
+      "2:3:4",
+      "4:6:8",
+      "1:1.5:2",
+      "6:9:12"
+    ],
+    "correct_answer": "2:3:4",
+    "topic": "Ratios & Proportions",
+    "difficulty": "hard"
+  },
+  {
+    "question": "If CP is 60% of SP, profit% = ?",
+    "options": [
+      "40%",
+      "50%",
+      "66.67%",
+      "75%"
+    ],
+    "correct_answer": "66.67%",
+    "topic": "Profit & Loss",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A's 1-day work + B's 1-day work = 1/6 of task. If A does it in 10 days, B does in?",
+    "options": [
+      "15 days",
+      "18 days",
+      "20 days",
+      "24 days"
+    ],
+    "correct_answer": "15 days",
+    "topic": "Time & Work",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A car average speed for 120 km at 60 km/hr and next 120 km at 40 km/hr, overall average?",
+    "options": [
+      "48 km/hr",
+      "50 km/hr",
+      "52 km/hr",
+      "55 km/hr"
+    ],
+    "correct_answer": "48 km/hr",
+    "topic": "Time, Speed & Distance",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Complete: 1, 1, 2, 3, 5, 8, 13, ?",
+    "options": [
+      "20",
+      "21",
+      "22",
+      "23"
+    ],
+    "correct_answer": "21",
+    "topic": "Number Series",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A walks to point (5,5) via (3,2). If he retraces, final position?",
+    "options": [
+      "(0,0)",
+      "(3,2)",
+      "(5,5)",
+      "(8,8)"
+    ],
+    "correct_answer": "(0,0)",
+    "topic": "Directions",
+    "difficulty": "hard"
+  },
+  {
+    "question": "If P's father's sister is Q and Q's son is R, how is R related to P?",
+    "options": [
+      "Brother",
+      "Cousin",
+      "Uncle",
+      "Nephew"
+    ],
+    "correct_answer": "Cousin",
+    "topic": "Blood Relations",
+    "difficulty": "hard"
+  },
+  {
+    "question": "If reverse of 'GOOD' is coded as specific pattern, 'BAD' reverse code?",
+    "options": [
+      "DAB",
+      "DAAB",
+      "ABC",
+      "CBA"
+    ],
+    "correct_answer": "DAB",
+    "topic": "Coding-Decoding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Antonym of 'benign' is?",
+    "options": [
+      "Malicious",
+      "Harmful",
+      "Kind",
+      "Gentle"
+    ],
+    "correct_answer": "Malicious",
+    "topic": "Synonyms & Antonyms",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Correct: 'Not only John but also Mary ____ present.'",
+    "options": [
+      "is",
+      "are",
+      "was",
+      "were"
+    ],
+    "correct_answer": "is",
+    "topic": "Grammar",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Arrange: A) The project was completed successfully. B) The team worked tirelessly. C) It was celebrated as a major achievement. D) The deadline was extended twice.",
+    "options": [
+      "BDAC",
+      "BADC",
+      "ABDC",
+      "BCAD"
+    ],
+    "correct_answer": "BDAC",
+    "topic": "Para Jumbles",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Passage: 'Climate change is accelerating. Extreme weather events are becoming frequent.' Which word best describes the mood?",
+    "options": [
+      "Optimistic",
+      "Alarming",
+      "Neutral",
+      "Humorous"
+    ],
+    "correct_answer": "Alarming",
+    "topic": "Reading Comprehension",
+    "difficulty": "hard"
+  },
+  {
+    "question": "If 40% of x = 50% of y, ratio x:y = ?",
+    "options": [
+      "4:5",
+      "5:4",
+      "2:5",
+      "5:2"
+    ],
+    "correct_answer": "5:4",
+    "topic": "Percentages",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Three numbers in ratio 2:3:5 with sum 300. Largest number?",
+    "options": [
+      "100",
+      "120",
+      "150",
+      "180"
+    ],
+    "correct_answer": "150",
+    "topic": "Ratios & Proportions",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A mixture of milk and water in ratio 3:2. If 10 liters added, ratio becomes 1:1. Original mixture?",
+    "options": [
+      "20 L",
+      "25 L",
+      "30 L",
+      "35 L"
+    ],
+    "correct_answer": "25 L",
+    "topic": "Ratios & Proportions",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Profit% when CP = ₹250, discount = 20%, marked price = ₹400?",
+    "options": [
+      "20%",
+      "28%",
+      "32%",
+      "35%"
+    ],
+    "correct_answer": "28%",
+    "topic": "Profit & Loss",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A and B do work in 12 and 15 days. C undoes in 20 days. Working together, time?",
+    "options": [
+      "8 days",
+      "10 days",
+      "12 days",
+      "15 days"
+    ],
+    "correct_answer": "10 days",
+    "topic": "Time & Work",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Two trains start simultaneously. One goes 50 km/hr north, another 40 km/hr east. Distance after 2 hours?",
+    "options": [
+      "100 km",
+      "80 km",
+      "128.06 km",
+      "150 km"
+    ],
+    "correct_answer": "128.06 km",
+    "topic": "Time, Speed & Distance",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Complete: 1, 3, 6, 10, 15, ?",
+    "options": [
+      "20",
+      "21",
+      "22",
+      "25"
+    ],
+    "correct_answer": "21",
+    "topic": "Number Series",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Person moves 7 units north, 9 units east. Vector distance?",
+    "options": [
+      "11.4 units",
+      "12.2 units",
+      "13.1 units",
+      "14.3 units"
+    ],
+    "correct_answer": "11.4 units",
+    "topic": "Directions",
+    "difficulty": "hard"
+  },
+  {
+    "question": "X's only sister's husband is Y. Y is X's __?",
+    "options": [
+      "Brother-in-law",
+      "Brother",
+      "Cousin",
+      "Uncle"
+    ],
+    "correct_answer": "Brother-in-law",
+    "topic": "Blood Relations",
+    "difficulty": "hard"
+  },
+  {
+    "question": "If CODE is 3-15-4-5, what is DECODE?",
+    "options": [
+      "4-5-3-15-4-5",
+      "3-5-3-15-4-5",
+      "4-5-3-15-4-5",
+      "5-5-3-15-4-5"
+    ],
+    "correct_answer": "4-5-3-15-4-5",
+    "topic": "Coding-Decoding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Synonym of 'ephemeral' is?",
+    "options": [
+      "Permanent",
+      "Transient",
+      "Eternal",
+      "Durable"
+    ],
+    "correct_answer": "Transient",
+    "topic": "Synonyms & Antonyms",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Choose correct form: 'I wish I ____ more time.'",
+    "options": [
+      "have",
+      "had",
+      "would have",
+      "has"
+    ],
+    "correct_answer": "had",
+    "topic": "Grammar",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Arrange: A) Innovation drives growth. B) Companies must adapt. C) Markets are evolving. D) Competition is fierce.",
+    "options": [
+      "CADB",
+      "CDAB",
+      "DBAC",
+      "ACDB"
+    ],
+    "correct_answer": "CADB",
+    "topic": "Para Jumbles",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Passage: 'Education opens doors.' What does 'opens doors' mean here?",
+    "options": [
+      "Physical doors",
+      "New opportunities",
+      "Unlock buildings",
+      "Door mechanisms"
+    ],
+    "correct_answer": "New opportunities",
+    "topic": "Reading Comprehension",
+    "difficulty": "hard"
+  },
+  {
+    "question": "If 15% of x = 25% of y and sum is 100, then x = ?",
+    "options": [
+      "30",
+      "40",
+      "60",
+      "70"
+    ],
+    "correct_answer": "40",
+    "topic": "Percentages",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Average of arithmetic sequence 5, 10, 15,...,100 = ?",
+    "options": [
+      "50",
+      "52.5",
+      "55",
+      "57.5"
+    ],
+    "correct_answer": "52.5",
+    "topic": "Averages",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A:B:C = 2:3:4, B = 60. Then A+C = ?",
+    "options": [
+      "80",
+      "100",
+      "120",
+      "140"
+    ],
+    "correct_answer": "100",
+    "topic": "Ratios & Proportions",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Profit when marked price = ₹500, discount = 25%, cost = ₹300?",
+    "options": [
+      "₹75",
+      "₹100",
+      "₹125",
+      "₹150"
+    ],
+    "correct_answer": "₹75",
+    "topic": "Profit & Loss",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A pipe fills in 6 hrs, B empties in 10 hrs. Both open, time to fill?",
+    "options": [
+      "12 hrs",
+      "15 hrs",
+      "18 hrs",
+      "20 hrs"
+    ],
+    "correct_answer": "15 hrs",
+    "topic": "Time & Work",
+    "difficulty": "hard"
+  }
+]

@@ -1,0 +1,890 @@
+[
+  {
+    "question": "Identify the bug in this closure:\n\nlet functions = [];\nfor (var i = 0; i < 3; i++) {\n  functions.push(() => i);\n}\nconsole.log(functions[0]());",
+    "options": [
+      "0 - closure captures i at creation",
+      "3 - var is function-scoped, i is 3 after loop",
+      "undefined - closure breaks",
+      "Error - invalid closure"
+    ],
+    "correct_answer": "3 - var is function-scoped, i is 3 after loop",
+    "topic": "Closures",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the output?\n\nlet obj = { x: 1 };\nfunction test() {\n  console.log(this.x);\n}\ntest.call(obj);",
+    "options": [
+      "undefined - this is not bound",
+      "1 - call() sets this to obj",
+      "Error - call is not valid",
+      "null - this binding fails"
+    ],
+    "correct_answer": "1 - call() sets this to obj",
+    "topic": "this Keyword",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Identify the bug:\n\nlet promise = new Promise((resolve, reject) => {\n  resolve(5);\n});\npromise.then(x => console.log(x));",
+    "options": [
+      "Nothing logs - promise not handled",
+      "5 logs - then callback executes when resolved",
+      "Error - promise not caught",
+      "undefined - then fails"
+    ],
+    "correct_answer": "5 logs - then callback executes when resolved",
+    "topic": "Promises",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What does this output?\n\nlet x = async () => 5;\nconsole.log(x());",
+    "options": [
+      "5 - async returns value",
+      "Promise { 5 } - async always returns Promise",
+      "Error - invalid async",
+      "undefined - async fails"
+    ],
+    "correct_answer": "Promise { 5 } - async always returns Promise",
+    "topic": "Async/Await",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Identify the bug:\n\nlet obj = {\n  x: 1,\n  getX: function() {\n    return this.x;\n  }\n};\nconsole.log(obj.getX());",
+    "options": [
+      "undefined - this is not bound",
+      "1 - this refers to obj",
+      "Error - this binding fails",
+      "null - method call fails"
+    ],
+    "correct_answer": "1 - this refers to obj",
+    "topic": "OOP Concepts",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the output?\n\nlet arr = [1, 2, 3];\nlet result = arr.every(x => x > 0);\nconsole.log(result);",
+    "options": [
+      "false - not all elements > 0",
+      "true - all elements > 0",
+      "undefined - every is invalid",
+      "Error - method doesn't exist"
+    ],
+    "correct_answer": "true - all elements > 0",
+    "topic": "Arrays",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Identify the bug:\n\nlet x = 5;\nlet y = (() => {\n  let x = 10;\n  return x;\n})();\nconsole.log(x, y);",
+    "options": [
+      "5, 5 - IIFE doesn't affect outer x",
+      "5, 10 - IIFE has its own scope",
+      "10, 10 - x is overridden",
+      "Error - IIFE fails"
+    ],
+    "correct_answer": "5, 10 - IIFE has its own scope",
+    "topic": "Functions and Scope",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What does this output?\n\nlet x = [1, 2, 3];\nlet y = x;\nx = [4, 5, 6];\nconsole.log(y);",
+    "options": [
+      "[4, 5, 6] - y references same array as x",
+      "[1, 2, 3] - y keeps original value",
+      "Error - reassignment fails",
+      "undefined - reference breaks"
+    ],
+    "correct_answer": "[1, 2, 3] - y keeps original value",
+    "topic": "References",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Identify the bug:\n\nlet obj = {\n  x: 1,\n  arrow: () => {\n    return this.x;\n  }\n};\nconsole.log(obj.arrow());",
+    "options": [
+      "1 - arrow inherits this from obj",
+      "undefined - arrow inherits this from global",
+      "Error - this binding fails",
+      "null - method call fails"
+    ],
+    "correct_answer": "undefined - arrow inherits this from global",
+    "topic": "Arrow Functions",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the output?\n\nlet x = Promise.resolve(5);\nx.then(val => console.log(val * 2));",
+    "options": [
+      "Nothing - promise not handled",
+      "10 logs - promise resolved, callback executes",
+      "Error - invalid promise",
+      "undefined - then fails"
+    ],
+    "correct_answer": "10 logs - promise resolved, callback executes",
+    "topic": "Promises",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Identify the bug:\n\nlet fn = function named() {\n  return named;\n};\nconsole.log(fn() === named);",
+    "options": [
+      "true - function name is accessible",
+      "false - named function name not accessible outside",
+      "Error - named is undefined",
+      "undefined - comparison fails"
+    ],
+    "correct_answer": "Error - named is undefined",
+    "topic": "Functions",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What does this output?\n\nlet x = [1, 2, 3];\nlet fn = x.map;\nfn(item => item * 2);",
+    "options": [
+      "[2, 4, 6] - map works on its own",
+      "Error - fn is undefined or this is wrong",
+      "undefined - detached method fails",
+      "null - method call fails"
+    ],
+    "correct_answer": "Error - fn is undefined or this is wrong",
+    "topic": "Methods",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Identify the bug:\n\nfunction* generator() {\n  yield 1;\n  yield 2;\n}\nlet gen = generator();\nconsole.log(gen.next().value);",
+    "options": [
+      "undefined - generator fails",
+      "1 - first next() returns {value: 1}",
+      "Error - next is not valid",
+      "null - generator invalid"
+    ],
+    "correct_answer": "1 - first next() returns {value: 1}",
+    "topic": "Generators",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the output?\n\nlet x = [1, 2, 3];\nlet [first, ...rest] = x;\nconsole.log(rest);",
+    "options": [
+      "[2, 3] - rest captures remaining elements",
+      "[1] - rest operator fails",
+      "Error - invalid destructuring",
+      "[1, 2, 3] - all elements in rest"
+    ],
+    "correct_answer": "[2, 3] - rest captures remaining elements",
+    "topic": "Operators",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Identify the bug:\n\ntry {\n  throw new Error('message');\n} catch (e) {\n  console.log(e.message);\n}",
+    "options": [
+      "undefined - error not caught",
+      "'message' - catch block executes",
+      "Error - catch doesn't work",
+      "null - message is null"
+    ],
+    "correct_answer": "'message' - catch block executes",
+    "topic": "Error Handling",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What does this output?\n\nlet x = 10;\nlet fn = () => x;\nx = 20;\nconsole.log(fn());",
+    "options": [
+      "10 - closure captures value at creation",
+      "20 - closure accesses current value",
+      "undefined - closure breaks",
+      "Error - arrow function fails"
+    ],
+    "correct_answer": "20 - closure accesses current value",
+    "topic": "Closures",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Identify the bug:\n\nlet obj = Object.create(null);\nconsole.log(obj.toString());",
+    "options": [
+      "'[object Object]' - toString from prototype",
+      "undefined - null prototype has no toString",
+      "Error - toString not available",
+      "null - method call fails"
+    ],
+    "correct_answer": "undefined - null prototype has no toString",
+    "topic": "Prototypes",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the output?\n\nlet x = { a: 1 };\nlet y = { ...x, b: 2 };\nconsole.log(y);",
+    "options": [
+      "{ a: 1 } - spread doesn't work",
+      "{ a: 1, b: 2 } - spread merges objects",
+      "Error - spread syntax invalid",
+      "undefined - merge fails"
+    ],
+    "correct_answer": "{ a: 1, b: 2 } - spread merges objects",
+    "topic": "Objects",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Identify the bug:\n\nlet x = [1, 2, [3, 4]];\nlet flat = x.flat();\nconsole.log(flat);",
+    "options": [
+      "[1, 2, [3, 4]] - flat doesn't work",
+      "[1, 2, 3, 4] - flat flattens one level",
+      "[1, 2, 3, 4, undefined] - flat adds undefined",
+      "Error - flat is not valid"
+    ],
+    "correct_answer": "[1, 2, 3, 4] - flat flattens one level",
+    "topic": "Arrays",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What does this output?\n\nlet x = { a: 1, b: 2 };\nlet { a, ...rest } = x;\nconsole.log(rest);",
+    "options": [
+      "{ b: 2 } - rest gets remaining properties",
+      "{ a: 1, b: 2 } - rest is full object",
+      "Error - rest syntax invalid",
+      "undefined - destructuring fails"
+    ],
+    "correct_answer": "{ b: 2 } - rest gets remaining properties",
+    "topic": "Objects",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Identify the bug:\n\nasync function test() {\n  let x = await Promise.resolve(5);\n  console.log(x);\n}\ntest();",
+    "options": [
+      "Nothing - promise not handled",
+      "5 logs - await gets resolved value",
+      "Error - await invalid",
+      "undefined - test fails"
+    ],
+    "correct_answer": "5 logs - await gets resolved value",
+    "topic": "Async/Await",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the output?\n\nlet x = [1, 2, 3];\nlet y = x.map(function(item) { return item * 2; });\nconsole.log(y);",
+    "options": [
+      "[1, 2, 3] - map doesn't modify",
+      "[2, 4, 6] - regular function works in map",
+      "Error - function syntax invalid",
+      "undefined - map fails"
+    ],
+    "correct_answer": "[2, 4, 6] - regular function works in map",
+    "topic": "Functions",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Identify the bug:\n\nlet x = new Map();\nx.set('a', 1);\nconsole.log(x.get('a'));",
+    "options": [
+      "undefined - Map.get fails",
+      "1 - get returns the value",
+      "Error - Map is invalid",
+      "null - value not found"
+    ],
+    "correct_answer": "1 - get returns the value",
+    "topic": "Data Structures",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What does this output?\n\nlet x = new Set([1, 2, 2, 3]);\nconsole.log(x.size);",
+    "options": [
+      "4 - duplicates are kept",
+      "3 - Set removes duplicates",
+      "undefined - size is invalid",
+      "Error - Set constructor invalid"
+    ],
+    "correct_answer": "3 - Set removes duplicates",
+    "topic": "Data Structures",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Identify the bug:\n\nlet x = 'test'.match(/es/);\nconsole.log(x);",
+    "options": [
+      "null - pattern not found",
+      "['es'] - match returns array with match",
+      "Error - match is invalid",
+      "undefined - regex fails"
+    ],
+    "correct_answer": "['es'] - match returns array with match",
+    "topic": "Regular Expressions",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the output?\n\nlet x = 'HELLO'.toLowerCase();\nconsole.log(x);",
+    "options": [
+      "'HELLO' - toLowerCase fails",
+      "'hello' - converts to lowercase",
+      "Error - toLowerCase invalid",
+      "undefined - method fails"
+    ],
+    "correct_answer": "'hello' - converts to lowercase",
+    "topic": "Strings",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Identify the bug:\n\nlet obj = { get x() { return 5; } };\nconsole.log(obj.x);",
+    "options": [
+      "function - returns getter function",
+      "5 - getter executes and returns value",
+      "undefined - getter doesn't work",
+      "Error - getter syntax invalid"
+    ],
+    "correct_answer": "5 - getter executes and returns value",
+    "topic": "Objects",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What does this output?\n\nlet x = Symbol('test');\nlet y = Symbol('test');\nconsole.log(x === y);",
+    "options": [
+      "true - symbols with same description are equal",
+      "false - each symbol is unique",
+      "Error - symbols invalid",
+      "undefined - comparison fails"
+    ],
+    "correct_answer": "false - each symbol is unique",
+    "topic": "Data Types",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Identify the bug:\n\nlet x = Array.from('hello');\nconsole.log(x);",
+    "options": [
+      "'hello' - from doesn't convert",
+      "['h','e','l','l','o'] - from converts iterable to array",
+      "Error - Array.from invalid",
+      "undefined - conversion fails"
+    ],
+    "correct_answer": "['h','e','l','l','o'] - from converts iterable to array",
+    "topic": "Arrays",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the output?\n\nlet x = { a: { b: 1 } };\nlet y = x;\ny.a.b = 2;\nconsole.log(x.a.b);",
+    "options": [
+      "1 - x is not modified",
+      "2 - y and x reference same object",
+      "undefined - reference breaks",
+      "Error - nested access fails"
+    ],
+    "correct_answer": "2 - y and x reference same object",
+    "topic": "Objects",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the output?\n\nlet x = 5;\nfunction outer() {\n  let x = 10;\n  function inner() {\n    return x * 2;\n  }\n  return inner();\n}\nconsole.log(outer());",
+    "options": [
+      "10 - uses global x",
+      "20 - uses outer's x",
+      "Error - x is not defined",
+      "undefined - scope chain fails"
+    ],
+    "correct_answer": "20 - uses outer's x",
+    "topic": "Closures",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Identify the bug:\n\nPromise.resolve(1)\n  .then(x => x + 1)\n  .then(x => console.log(x));\n\nconsole.log('after');",
+    "options": [
+      "Logs: after, 2",
+      "Logs: 2, after",
+      "Logs: after (then callbacks fail)",
+      "Error - Promise chain invalid"
+    ],
+    "correct_answer": "Logs: after, 2",
+    "topic": "Promises",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the output?\n\nlet obj = {\n  value: 42,\n  getValue: function() { return this.value; }\n};\n\nlet fn = obj.getValue;\nconsole.log(fn());",
+    "options": [
+      "42 - fn still has obj as context",
+      "undefined - this is global, value undefined",
+      "Error - cannot detach method",
+      "null - this binding lost"
+    ],
+    "correct_answer": "undefined - this is global, value undefined",
+    "topic": "this Keyword",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Identify the bug:\n\nlet obj = {\n  value: 99,\n  getValueArrow: () => this.value,\n  getValueRegular: function() { return this.value; }\n};\n\nconsole.log(obj.getValueArrow());",
+    "options": [
+      "99 - arrow function binds obj",
+      "undefined - arrow inherits global this",
+      "Error - arrow syntax invalid",
+      "null - this is undefined"
+    ],
+    "correct_answer": "undefined - arrow inherits global this",
+    "topic": "Arrow Functions",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the output?\n\nlet numbers = [1, 2, 3];\nlet result = numbers.map(function(n) {\n  return n + this.add;\n}, { add: 10 });\nconsole.log(result[0]);",
+    "options": [
+      "NaN - this.add is undefined",
+      "11 - map uses context parameter",
+      "1 - context parameter ignored",
+      "Error - invalid context"
+    ],
+    "correct_answer": "11 - map uses context parameter",
+    "topic": "Methods",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Identify the bug:\n\nasync function test() {\n  return 5;\n}\n\nconsole.log(test());\nconsole.log('sync');",
+    "options": [
+      "Logs: Promise, sync",
+      "Logs: 5, sync",
+      "Logs: sync, Promise",
+      "Error - invalid async"
+    ],
+    "correct_answer": "Logs: Promise, sync",
+    "topic": "Async/Await",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the output?\n\nlet obj = {\n  'key-name': 'value1',\n  [1 + 2]: 'value3'\n};\n\nconsole.log(obj['key-name'], obj[3]);",
+    "options": [
+      "undefined, undefined - keys invalid",
+      "value1, value3 - bracket notation works",
+      "Error - computed properties invalid",
+      "null, null - properties not accessible"
+    ],
+    "correct_answer": "value1, value3 - bracket notation works",
+    "topic": "Objects",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Identify the bug:\n\nlet { a = 10, b = 20 } = { a: 5 };\nconsole.log(a, b);",
+    "options": [
+      "10, 20 - defaults override",
+      "5, 20 - a provided, b uses default",
+      "Error - invalid destructuring",
+      "undefined, undefined - pattern fails"
+    ],
+    "correct_answer": "5, 20 - a provided, b uses default",
+    "topic": "Objects",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the output?\n\nconsole.log('start');\n\nPromise.resolve().then(() => console.log('promise'));\n\nconsole.log('end');",
+    "options": [
+      "start, promise, end",
+      "start, end, promise",
+      "promise, start, end",
+      "Error - timing fails"
+    ],
+    "correct_answer": "start, end, promise",
+    "topic": "Event Loop",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Identify the bug:\n\nlet arr = [1, 2, 3, 4];\nlet found = arr.find(x => x > 2);\nconsole.log(found);",
+    "options": [
+      "[3, 4] - returns all matching",
+      "3 - returns first matching element",
+      "undefined - find invalid",
+      "Error - invalid predicate"
+    ],
+    "correct_answer": "3 - returns first matching element",
+    "topic": "Arrays",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the output?\n\nlet obj1 = { a: 1, b: 2 };\nlet obj2 = { b: 3, c: 4 };\nlet merged = { ...obj1, ...obj2 };\nconsole.log(merged.b);",
+    "options": [
+      "2 - first object wins",
+      "3 - last object overwrites",
+      "undefined - merge fails",
+      "Error - invalid spread"
+    ],
+    "correct_answer": "3 - last object overwrites",
+    "topic": "Operators",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Identify the bug:\n\nfunction makeAdder(x) {\n  return function(y) {\n    return x + y;\n  };\n}\n\nlet add5 = makeAdder(5);\nconsole.log(add5(3));",
+    "options": [
+      "undefined - higher-order functions fail",
+      "8 - closure captures x",
+      "NaN - x not defined",
+      "Error - invalid return"
+    ],
+    "correct_answer": "8 - closure captures x",
+    "topic": "Functions",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the output?\n\nlet str = 'Hello';\nlet result = str\n  .toLowerCase()\n  .charAt(0)\n  .toUpperCase();\nconsole.log(result);",
+    "options": [
+      "H - methods chain successfully",
+      "undefined - charAt returns char, can't chain",
+      "Error - invalid chaining",
+      "'H' - string instead of char"
+    ],
+    "correct_answer": "H - methods chain successfully",
+    "topic": "Strings",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Identify the bug:\n\nlet x = '2';\nswitch(x) {\n  case 2:\n    console.log('number');\n    break;\n  case '2':\n    console.log('string');\n    break;\n}",
+    "options": [
+      "Logs: number - coerced to 2",
+      "Logs: string - strict equality in switch",
+      "Logs both - no break",
+      "Error - invalid switch"
+    ],
+    "correct_answer": "Logs: string - strict equality in switch",
+    "topic": "Operators",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the output?\n\nlet arr = [1, 2, 3];\nlet result = arr.reduce((acc, val) => {\n  acc.push(val * 2);\n  return acc;\n}, []);\nconsole.log(result[1]);",
+    "options": [
+      "undefined - reduce fails",
+      "4 - accumulates doubled values",
+      "[2, 4, 6] - entire array",
+      "Error - invalid accumulator"
+    ],
+    "correct_answer": "4 - accumulates doubled values",
+    "topic": "Arrays",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Identify the bug:\n\nfunction test(x = 5, y = x + 5) {\n  console.log(y);\n}\n\ntest(10);",
+    "options": [
+      "undefined - default evaluation fails",
+      "15 - y uses computed default",
+      "10 - both parameters same",
+      "Error - invalid defaults"
+    ],
+    "correct_answer": "15 - y uses computed default",
+    "topic": "Functions",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the output?\n\nlet name = 'Alice';\nlet age = 25;\nlet message = `Name: ${name}, Next year: ${age + 1}`;\nconsole.log(message);",
+    "options": [
+      "undefined - template literals invalid",
+      "Name: Alice, Next year: 26 - expressions evaluated",
+      "Name: Alice, Next year: ${age + 1} - not evaluated",
+      "Error - invalid syntax"
+    ],
+    "correct_answer": "Name: Alice, Next year: 26 - expressions evaluated",
+    "topic": "Strings",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Identify the bug:\n\nlet obj = {\n  value: 42,\n  getValue() {\n    return this.value;\n  }\n};\n\nconsole.log(obj.getValue());",
+    "options": [
+      "undefined - shorthand invalid",
+      "42 - method shorthand works",
+      "Error - syntax error",
+      "null - this is global"
+    ],
+    "correct_answer": "42 - method shorthand works",
+    "topic": "Objects",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the output?\n\nlet arr = [1, NaN, 3];\nconsole.log(arr.includes(NaN));",
+    "options": [
+      "false - NaN never equals NaN",
+      "true - includes uses SameValueZero",
+      "undefined - includes fails",
+      "Error - NaN invalid"
+    ],
+    "correct_answer": "true - includes uses SameValueZero",
+    "topic": "Arrays",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Identify the bug:\n\nlet obj = { a: 1, b: 2 };\nlet entries = Object.entries(obj);\nconsole.log(entries[0]);",
+    "options": [
+      "'a' - returns first key",
+      "['a', 1] - returns [key, value] pair",
+      "undefined - entries fails",
+      "Error - invalid method"
+    ],
+    "correct_answer": "['a', 1] - returns [key, value] pair",
+    "topic": "Objects",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the output?\n\nlet str = 'ab';\nfor (let char of str) {\n  console.log(char);\n}",
+    "options": [
+      "Logs: a b - iterates characters",
+      "Error - strings not iterable",
+      "Logs: 0 1 - indices instead",
+      "undefined - for...of fails"
+    ],
+    "correct_answer": "Logs: a b - iterates characters",
+    "topic": "Loops",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Identify the bug:\n\nlet original = { a: 1, b: { c: 2 } };\nlet copy = Object.assign({}, original);\ncopy.b.c = 99;\nconsole.log(original.b.c);",
+    "options": [
+      "2 - deep copy made",
+      "99 - shallow copy shares nested objects",
+      "undefined - assign fails",
+      "Error - invalid assignment"
+    ],
+    "correct_answer": "99 - shallow copy shares nested objects",
+    "topic": "Objects",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the output?\n\nconsole.log(isNaN('hello'));\nconsole.log(Number.isNaN('hello'));",
+    "options": [
+      "true, true - both detect NaN",
+      "true, false - isNaN coerces, Number.isNaN doesn't",
+      "false, false - neither detect string",
+      "Error - invalid comparison"
+    ],
+    "correct_answer": "true, false - isNaN coerces, Number.isNaN doesn't",
+    "topic": "Type Checking",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Identify the bug:\n\nlet x = 5;\nlet result = x > 10 ? 'big' : x > 0 ? 'positive' : 'non-positive';\nconsole.log(result);",
+    "options": [
+      "'big' - outermost condition true",
+      "'positive' - nested ternary evaluated",
+      "Error - invalid nesting",
+      "undefined - ternary fails"
+    ],
+    "correct_answer": "'positive' - nested ternary evaluated",
+    "topic": "Operators",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the output?\n\nlet arr = [1, 2, 3];\nlet removed = arr.splice(1, 1);\nconsole.log(arr, removed);",
+    "options": [
+      "[1, 2, 3], undefined - splice fails",
+      "[1, 3], [2] - splice modifies original",
+      "[1, 2, 3], [2] - splice doesn't modify",
+      "Error - invalid splice"
+    ],
+    "correct_answer": "[1, 3], [2] - splice modifies original",
+    "topic": "Arrays",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Identify the bug:\n\nlet arr = ['a', 'b', 'c'];\nlet result = arr.filter((item, index) => index > 0);\nconsole.log(result);",
+    "options": [
+      "undefined - filter doesn't support index",
+      "['b', 'c'] - filter receives index",
+      "Error - invalid filter",
+      "['a'] - only first element"
+    ],
+    "correct_answer": "['b', 'c'] - filter receives index",
+    "topic": "Arrays",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the output?\n\nlet str = 'aaa';\nlet result = str.replace('a', 'b');\nconsole.log(result);",
+    "options": [
+      "'bbb' - replaces all",
+      "'baa' - replaces first occurrence",
+      "Error - invalid replace",
+      "undefined - replace fails"
+    ],
+    "correct_answer": "'baa' - replaces first occurrence",
+    "topic": "Strings",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Identify the bug:\n\nlet obj = { a: { b: { c: 5 } } };\nlet value = obj?.a?.b?.c;\nconsole.log(value);",
+    "options": [
+      "undefined - optional chaining invalid",
+      "5 - safely accesses nested properties",
+      "Error - syntax not supported",
+      "null - chaining fails"
+    ],
+    "correct_answer": "5 - safely accesses nested properties",
+    "topic": "Operators",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the output?\n\nlet x = null;\nlet y = x ?? 'default';\nconsole.log(y);",
+    "options": [
+      "null - nullish coalescing invalid",
+      "'default' - null triggers coalescing",
+      "undefined - operator fails",
+      "Error - invalid syntax"
+    ],
+    "correct_answer": "'default' - null triggers coalescing",
+    "topic": "Operators",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Identify the bug:\n\nlet x = [1, 2, 3];\nconsole.log(typeof x);",
+    "options": [
+      "'array' - typeof returns array",
+      "'object' - arrays are objects",
+      "undefined - typeof invalid",
+      "Error - type check fails"
+    ],
+    "correct_answer": "'object' - arrays are objects",
+    "topic": "Data Types",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the output?\n\nlet str = '5';\nlet padded = str.padStart(3, '0');\nconsole.log(padded);",
+    "options": [
+      "'5' - padStart invalid",
+      "'005' - pads with zeros",
+      "undefined - method fails",
+      "Error - invalid padding"
+    ],
+    "correct_answer": "'005' - pads with zeros",
+    "topic": "Strings",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Identify the bug:\n\nlet key = 'x';\nlet obj = { [key]: 1 };\nconsole.log(obj.x);",
+    "options": [
+      "undefined - computed properties invalid",
+      "1 - computed property works",
+      "Error - syntax error",
+      "null - property not set"
+    ],
+    "correct_answer": "1 - computed property works",
+    "topic": "Objects",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the output?\n\nlet p1 = Promise.resolve(1);\nlet p2 = Promise.resolve(2);\nPromise.race([p1, p2]).then(x => console.log(x));\n\nconsole.log('sync');",
+    "options": [
+      "Logs: sync, 1 - race resolves with first",
+      "Logs: 1, sync - race executes first",
+      "Logs: sync, 2 - both handled",
+      "Error - race invalid"
+    ],
+    "correct_answer": "Logs: sync, 1 - race resolves with first",
+    "topic": "Promises",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Identify the bug:\n\nfunction callback() { console.log('done'); }\nsetTimeout(callback, 0);\nconsole.log('waiting');",
+    "options": [
+      "Logs: done, waiting - executes immediately",
+      "Logs: waiting, done - setTimeout defers",
+      "Logs: both simultaneously",
+      "Error - invalid callback"
+    ],
+    "correct_answer": "Logs: waiting, done - setTimeout defers",
+    "topic": "Event Loop",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the output?\n\ntry {\n  console.log('try');\n} finally {\n  console.log('finally');\n}",
+    "options": [
+      "Logs: try",
+      "Logs: try, finally - finally always runs",
+      "Logs: finally, try",
+      "Error - finally without catch"
+    ],
+    "correct_answer": "Logs: try, finally - finally always runs",
+    "topic": "Error Handling",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Identify the bug:\n\nlet result = 0 && console.log('logged');\nconsole.log('after');",
+    "options": [
+      "Logs: logged, after - both execute",
+      "Logs: after - && short circuits",
+      "Logs: logged - condition true",
+      "Error - invalid logic"
+    ],
+    "correct_answer": "Logs: after - && short circuits",
+    "topic": "Operators",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the output?\n\nlet arr = [1, 2, 3];\nlet joined = arr.join('-');\nconsole.log(joined);",
+    "options": [
+      "[1, 2, 3] - join returns array",
+      "'1-2-3' - join returns string",
+      "undefined - join fails",
+      "Error - invalid join"
+    ],
+    "correct_answer": "'1-2-3' - join returns string",
+    "topic": "Arrays",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Identify the bug:\n\nlet obj = { x: 1 };\nObject.freeze(obj);\nobj.x = 2;\nconsole.log(obj.x);",
+    "options": [
+      "2 - freeze doesn't work",
+      "1 - frozen object unchanged",
+      "undefined - property deleted",
+      "Error - freeze invalid"
+    ],
+    "correct_answer": "1 - frozen object unchanged",
+    "topic": "Objects",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the output?\n\nfunction test(a, b, c) {}\nconsole.log(test.length);",
+    "options": [
+      "undefined - length not available",
+      "3 - length is parameter count",
+      "Error - invalid property",
+      "null - function property fails"
+    ],
+    "correct_answer": "3 - length is parameter count",
+    "topic": "Functions",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Identify the bug:\n\nlet arr = [1, 2, 3];\nlet result = arr.some(x => x > 2);\nconsole.log(result);",
+    "options": [
+      "undefined - some invalid",
+      "true - at least one element > 2",
+      "false - some fails",
+      "Error - invalid predicate"
+    ],
+    "correct_answer": "true - at least one element > 2",
+    "topic": "Arrays",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the output?\n\nlet str = 'a,b,c';\nlet parts = str.split(',');\nconsole.log(parts[1]);",
+    "options": [
+      "'a,b,c' - split invalid",
+      "'b' - split by comma",
+      "undefined - split fails",
+      "Error - invalid delimiter"
+    ],
+    "correct_answer": "'b' - split by comma",
+    "topic": "Strings",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Identify the bug:\n\nlet obj = { _value: 5, get value() { return this._value; } };\nconsole.log(obj.value);",
+    "options": [
+      "undefined - getter invalid",
+      "5 - getter executes as property access",
+      "function - returns getter function",
+      "Error - syntax invalid"
+    ],
+    "correct_answer": "5 - getter executes as property access",
+    "topic": "Objects",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the output?\n\nlet obj = { _value: 0, set value(v) { this._value = v; } };\nobj.value = 10;\nconsole.log(obj._value);",
+    "options": [
+      "undefined - setter invalid",
+      "10 - setter updates value",
+      "0 - setter not called",
+      "Error - syntax invalid"
+    ],
+    "correct_answer": "10 - setter updates value",
+    "topic": "Objects",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Identify the bug:\n\nlet arr = [1, 2, 1, 3];\nlet index = arr.lastIndexOf(1);\nconsole.log(index);",
+    "options": [
+      "0 - indexOf returns first",
+      "2 - lastIndexOf returns last",
+      "undefined - lastIndexOf invalid",
+      "Error - invalid method"
+    ],
+    "correct_answer": "2 - lastIndexOf returns last",
+    "topic": "Arrays",
+    "difficulty": "medium"
+  }
+]

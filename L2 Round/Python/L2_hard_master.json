@@ -1,0 +1,499 @@
+[
+  {
+    "question": "What is the C3 linearization algorithm used for in Python?",
+    "options": ["Memory allocation", "Method Resolution Order computation", "Garbage collection", "Bytecode optimization"],
+    "correct_answer": "Method Resolution Order computation",
+    "topic": "Advanced OOP",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is reference counting in Python's memory model?",
+    "options": ["Counting function calls", "Tracking number of references to objects", "Measuring CPU cycles", "Indexing arrays"],
+    "correct_answer": "Tracking number of references to objects",
+    "topic": "Memory Model",
+    "difficulty": "hard"
+  },
+  {
+    "question": "How does __next__() signal iterator exhaustion?",
+    "options": ["Returns None", "Raises StopIteration exception", "Returns empty string", "Sets flag to False"],
+    "correct_answer": "Raises StopIteration exception",
+    "topic": "Iterator Protocol",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What problem does decorator stacking order address?",
+    "options": ["Memory usage", "Application sequence of multiple decorators", "Performance optimization", "Type checking"],
+    "correct_answer": "Application sequence of multiple decorators",
+    "topic": "Decorator Design",
+    "difficulty": "hard"
+  },
+  {
+    "question": "At the bytecode level, how do generators achieve suspension?",
+    "options": ["Store in global memory", "Preserve frame object with local state", "Use operating system threads", "Restart from beginning"],
+    "correct_answer": "Preserve frame object with local state",
+    "topic": "Generator Internals",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Why does BaseException exist separately from Exception in the hierarchy?",
+    "options": ["Legacy reasons", "To allow system-exiting exceptions to bypass generic handlers", "For performance", "No specific reason"],
+    "correct_answer": "To allow system-exiting exceptions to bypass generic handlers",
+    "topic": "Exception Hierarchy",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Why are sets faster than lists for membership testing?",
+    "options": ["Sets use less memory", "Sets use hash table implementation", "Sets are sorted", "Sets are immutable"],
+    "correct_answer": "Sets use hash table implementation",
+    "topic": "Performance",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is metaclass programming in Python?",
+    "options": ["Creating meta tags", "Classes that create classes", "Abstract classes", "Static classes"],
+    "correct_answer": "Classes that create classes",
+    "topic": "Advanced OOP",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the Global Interpreter Lock (GIL)?",
+    "options": ["Security feature", "Mutex preventing multiple threads from executing Python bytecode simultaneously", "Memory allocator", "Compiler optimization"],
+    "correct_answer": "Mutex preventing multiple threads from executing Python bytecode simultaneously",
+    "topic": "Memory Model",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Why must __iter__() return an object with __next__() method?",
+    "options": ["Python convention", "To establish the iterator protocol contract", "For performance", "Historical reasons"],
+    "correct_answer": "To establish the iterator protocol contract",
+    "topic": "Iterator Protocol",
+    "difficulty": "hard"
+  },
+  {
+    "question": "How does functools.wraps solve the metadata loss problem in decorators?",
+    "options": ["Copies __name__, __doc__, and other attributes", "Creates new function", "Uses metaclasses", "Changes function signature"],
+    "correct_answer": "Copies __name__, __doc__, and other attributes",
+    "topic": "Decorator Design",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the gi_frame attribute in generators?",
+    "options": ["Generator name", "Frame object containing execution state", "Generator type", "Generator result"],
+    "correct_answer": "Frame object containing execution state",
+    "topic": "Generator Internals",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Why should SystemExit not be caught by generic except?",
+    "options": ["It's deprecated", "It's meant to exit the program cleanly", "It causes memory leaks", "It's not an exception"],
+    "correct_answer": "It's meant to exit the program cleanly",
+    "topic": "Exception Hierarchy",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the time complexity advantage of dictionary lookup?",
+    "options": ["O(log n)", "O(1) average case", "O(n)", "O(n²)"],
+    "correct_answer": "O(1) average case",
+    "topic": "Performance",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the descriptor protocol in Python?",
+    "options": ["Documentation standard", "Objects defining __get__, __set__, __delete__ for attribute access", "Type annotation system", "Import mechanism"],
+    "correct_answer": "Objects defining __get__, __set__, __delete__ for attribute access",
+    "topic": "Advanced OOP",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is a memory leak in Python's context?",
+    "options": ["Hardware failure", "Objects not garbage collected due to circular references", "Syntax error", "Import error"],
+    "correct_answer": "Objects not garbage collected due to circular references",
+    "topic": "Memory Model",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Can an iterator be iterable without implementing __iter__()?",
+    "options": ["Yes, with __getitem__", "No, __iter__ is required for iterator protocol", "Only for built-in types", "Yes, automatically"],
+    "correct_answer": "No, __iter__ is required for iterator protocol",
+    "topic": "Iterator Protocol",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is parametrized decorator design?",
+    "options": ["Decorators with multiple functions", "Decorators that accept configuration arguments", "Decorators for parameters", "Type-checking decorators"],
+    "correct_answer": "Decorators that accept configuration arguments",
+    "topic": "Decorator Design",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What does the throw() method enable in generators?",
+    "options": ["Raise exception at suspension point", "Stop generator", "Send value", "Reset generator"],
+    "correct_answer": "Raise exception at suspension point",
+    "topic": "Generator Internals",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What distinguishes KeyboardInterrupt in exception hierarchy?",
+    "options": ["User-generated, inherits from BaseException not Exception", "System error", "Hardware error", "Deprecated exception"],
+    "correct_answer": "User-generated, inherits from BaseException not Exception",
+    "topic": "Exception Hierarchy",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Why is string concatenation in loops inefficient?",
+    "options": ["Strings are mutable", "Creates new string object each time due to immutability", "Uses too much CPU", "Not thread-safe"],
+    "correct_answer": "Creates new string object each time due to immutability",
+    "topic": "Performance",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the __new__() method's role vs __init__()?",
+    "options": ["No difference", "__new__ creates instance, __init__ initializes it", "__new__ is deprecated", "__init__ creates instance"],
+    "correct_answer": "__new__ creates instance, __init__ initializes it",
+    "topic": "Advanced OOP",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is object interning in Python?",
+    "options": ["Import mechanism", "Reusing immutable objects to save memory", "Type conversion", "Garbage collection"],
+    "correct_answer": "Reusing immutable objects to save memory",
+    "topic": "Memory Model",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What constraint must be satisfied for an object to serve as both iterator and iterable?",
+    "options": ["No special constraint", "__iter__ returns self and __next__ is implemented", "Only for built-in types", "Must use generator"],
+    "correct_answer": "__iter__ returns self and __next__ is implemented",
+    "topic": "Iterator Protocol",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is decorator closure in decorator design?",
+    "options": ["Ending decorators", "Decorator accessing variables from outer scope", "Closing files", "Error handling"],
+    "correct_answer": "Decorator accessing variables from outer scope",
+    "topic": "Decorator Design",
+    "difficulty": "hard"
+  },
+  {
+    "question": "How does 'yield from' differ from manually iterating and yielding?",
+    "options": ["No difference", "Establishes bidirectional channel for send() and throw()", "Faster execution", "Uses less memory"],
+    "correct_answer": "Establishes bidirectional channel for send() and throw()",
+    "topic": "Generator Internals",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What signals generator closure to generator code?",
+    "options": ["StopIteration", "GeneratorExit exception", "None return", "EOF signal"],
+    "correct_answer": "GeneratorExit exception",
+    "topic": "Exception Hierarchy",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the performance implication of using generators vs lists?",
+    "options": ["No difference", "Generators use less memory through lazy evaluation", "Lists are always faster", "Generators are slower"],
+    "correct_answer": "Generators use less memory through lazy evaluation",
+    "topic": "Performance",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What are __slots__ in Python classes?",
+    "options": ["Method storage", "Restricting instance attributes to save memory", "Import system", "Type hints"],
+    "correct_answer": "Restricting instance attributes to save memory",
+    "topic": "Advanced OOP",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What mechanism handles circular references in Python's memory management?",
+    "options": ["Reference counting alone", "Generational garbage collector", "Manual cleanup", "Operating system"],
+    "correct_answer": "Generational garbage collector",
+    "topic": "Memory Model",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the sentinel pattern in iterator protocol?",
+    "options": ["Security feature", "Using callable and sentinel value to create iterator", "Error handling", "Type checking"],
+    "correct_answer": "Using callable and sentinel value to create iterator",
+    "topic": "Iterator Protocol",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What challenge does decorator argument passing solve?",
+    "options": ["Performance", "Configuring decorator behavior at application time", "Type safety", "Memory management"],
+    "correct_answer": "Configuring decorator behavior at application time",
+    "topic": "Decorator Design",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What differentiates coroutines from generators at the protocol level?",
+    "options": ["No difference", "Coroutines consume values via send(), generators produce via yield", "Coroutines are faster", "Generators are deprecated"],
+    "correct_answer": "Coroutines consume values via send(), generators produce via yield",
+    "topic": "Generator Internals",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What role does StopIteration play in for loop implementation?",
+    "options": ["Indicates error", "Signals normal loop termination", "Deprecated signal", "Warning message"],
+    "correct_answer": "Signals normal loop termination",
+    "topic": "Exception Hierarchy",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Why are list comprehensions often faster than equivalent loops?",
+    "options": ["Use less memory", "Optimized at C level in CPython", "Run in parallel", "Skip steps"],
+    "correct_answer": "Optimized at C level in CPython",
+    "topic": "Performance",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What distinguishes __getattribute__ from __getattr__?",
+    "options": ["No difference", "__getattribute__ called for all attributes; __getattr__ only for missing ones", "Deprecated", "Type checking"],
+    "correct_answer": "__getattribute__ called for all attributes; __getattr__ only for missing ones",
+    "topic": "Advanced OOP",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is memory fragmentation in Python?",
+    "options": ["Syntax error", "Inefficient memory layout from many allocations/deallocations", "Import error", "Type error"],
+    "correct_answer": "Inefficient memory layout from many allocations/deallocations",
+    "topic": "Memory Model",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What advantage does itertools.chain() provide over list concatenation?",
+    "options": ["Faster sorting", "Memory-efficient concatenation without creating intermediate list", "Parallel processing", "Type safety"],
+    "correct_answer": "Memory-efficient concatenation without creating intermediate list",
+    "topic": "Iterator Protocol",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the challenge of maintaining state in decorators?",
+    "options": ["Performance", "Preserving state across multiple calls while wrapping", "Type safety", "Import errors"],
+    "correct_answer": "Preserving state across multiple calls while wrapping",
+    "topic": "Decorator Design",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What information does gi_code contain in generator objects?",
+    "options": ["Generated values", "Code object with generator's bytecode", "Generator count", "Generator type"],
+    "correct_answer": "Code object with generator's bytecode",
+    "topic": "Generator Internals",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Why are built-in exceptions organized hierarchically?",
+    "options": ["Performance", "Enables catching groups of related exceptions", "Documentation", "Backwards compatibility"],
+    "correct_answer": "Enables catching groups of related exceptions",
+    "topic": "Exception Hierarchy",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What causes tuple's performance advantage over list?",
+    "options": ["No difference", "Immutability enables compile-time optimizations", "Lists always faster", "Equal performance"],
+    "correct_answer": "Immutability enables compile-time optimizations",
+    "topic": "Performance",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is cooperative multiple inheritance?",
+    "options": ["Classes cooperating", "Using super() to ensure all classes in MRO are called", "Parallel inheritance", "Type checking"],
+    "correct_answer": "Using super() to ensure all classes in MRO are called",
+    "topic": "Advanced OOP",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the small integer cache in CPython?",
+    "options": ["Compiler cache", "Pre-allocated integers (-5 to 256) for performance", "Import cache", "Function cache"],
+    "correct_answer": "Pre-allocated integers (-5 to 256) for performance",
+    "topic": "Memory Model",
+    "difficulty": "hard"
+  },
+  {
+    "question": "How does itertools.islice() achieve memory efficiency?",
+    "options": ["Sorts iterator", "Slices iterator without materializing into list", "Counts elements", "Filters iterator"],
+    "correct_answer": "Slices iterator without materializing into list",
+    "topic": "Iterator Protocol",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the execution order when multiple decorators are stacked?",
+    "options": ["Top to bottom", "Bottom to top at definition; innermost executes first at call", "Random", "Alphabetical"],
+    "correct_answer": "Bottom to top at definition; innermost executes first at call",
+    "topic": "Decorator Design",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Where are generator local variables stored during suspension?",
+    "options": ["Global namespace", "Frame object on heap", "Stack only", "Not preserved"],
+    "correct_answer": "Frame object on heap",
+    "topic": "Generator Internals",
+    "difficulty": "hard"
+  },
+  {
+    "question": "How do Warning and Exception differ in the hierarchy?",
+    "options": ["Warning inherits from Exception", "Both inherit from BaseException but are separate branches", "Exception inherits from Warning", "They are the same"],
+    "correct_answer": "Both inherit from BaseException but are separate branches",
+    "topic": "Exception Hierarchy",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Why is operator overloading through magic methods preferred over standalone functions?",
+    "options": ["Faster execution", "Better encapsulation and intuitive syntax", "Required by Python", "Uses less memory"],
+    "correct_answer": "Better encapsulation and intuitive syntax",
+    "topic": "Performance",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the diamond problem in multiple inheritance?",
+    "options": ["Memory error", "Ambiguity when class inherits from two classes with common ancestor", "Syntax error", "Performance issue"],
+    "correct_answer": "Ambiguity when class inherits from two classes with common ancestor",
+    "topic": "Advanced OOP",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is weak referencing in Python?",
+    "options": ["Slow references", "References that don't prevent garbage collection", "Deprecated feature", "Type of import"],
+    "correct_answer": "References that don't prevent garbage collection",
+    "topic": "Memory Model",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What does reversed() return regarding iterator protocol?",
+    "options": ["Returns list", "Returns reverse iterator", "Modifies original", "Sorts descending"],
+    "correct_answer": "Returns reverse iterator",
+    "topic": "Iterator Protocol",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is decorator registration pattern used for?",
+    "options": ["Error logging", "Registering decorated functions in registry for later use", "Performance monitoring", "Type checking"],
+    "correct_answer": "Registering decorated functions in registry for later use",
+    "topic": "Decorator Design",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is gi_running used for in generator objects?",
+    "options": ["Count iterations", "Boolean indicating if generator is currently executing", "Speed measurement", "Error flag"],
+    "correct_answer": "Boolean indicating if generator is currently executing",
+    "topic": "Generator Internals",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What distinguishes exception context from exception cause?",
+    "options": ["Same thing", "Context is implicit chaining; cause is explicit via 'from'", "Context is deprecated", "No difference"],
+    "correct_answer": "Context is implicit chaining; cause is explicit via 'from'",
+    "topic": "Exception Hierarchy",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What makes deque superior to list for queue operations?",
+    "options": ["Uses less memory", "O(1) append and pop from both ends vs O(n) for list pop(0)", "Thread-safe", "Sorted automatically"],
+    "correct_answer": "O(1) append and pop from both ends vs O(n) for list pop(0)",
+    "topic": "Performance",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What do abstract base classes (ABC) enforce?",
+    "options": ["Performance", "Interface contracts through abstract methods", "Memory optimization", "Error handling"],
+    "correct_answer": "Interface contracts through abstract methods",
+    "topic": "Advanced OOP",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What does sys.getrefcount() return?",
+    "options": ["System call count", "Reference count of object", "Function count", "Memory size"],
+    "correct_answer": "Reference count of object",
+    "topic": "Memory Model",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is itertools.tee() used for?",
+    "options": ["Filter elements", "Create independent iterators from one iterable", "Sort iterator", "Count elements"],
+    "correct_answer": "Create independent iterators from one iterable",
+    "topic": "Iterator Protocol",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What optimization does lru_cache decorator provide?",
+    "options": ["Memory reduction", "Memoization of function results", "Type checking", "Error logging"],
+    "correct_answer": "Memoization of function results",
+    "topic": "Decorator Design",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What makes generator different from generator iterator at implementation level?",
+    "options": ["They are identical concepts", "Different types", "One is deprecated", "Performance difference"],
+    "correct_answer": "They are identical concepts",
+    "topic": "Generator Internals",
+    "difficulty": "hard"
+  },
+  {
+    "question": "When is SyntaxError raised relative to execution?",
+    "options": ["During execution", "During parsing before execution", "At runtime", "Never raised"],
+    "correct_answer": "During parsing before execution",
+    "topic": "Exception Hierarchy",
+    "difficulty": "hard"
+  },
+  {
+    "question": "How do __slots__ reduce memory footprint?",
+    "options": ["Faster methods", "Eliminates per-instance __dict__, uses fixed array", "Better types", "Faster imports"],
+    "correct_answer": "Eliminates per-instance __dict__, uses fixed array",
+    "topic": "Performance",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What are mixins in Python design patterns?",
+    "options": ["Mixing types", "Classes providing specific functionality to be mixed into other classes", "Error handling", "Import mechanism"],
+    "correct_answer": "Classes providing specific functionality to be mixed into other classes",
+    "topic": "Advanced OOP",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is generational garbage collection?",
+    "options": ["Collecting old objects", "Organizing objects by age to optimize collection", "Counting references", "Manual cleanup"],
+    "correct_answer": "Organizing objects by age to optimize collection",
+    "topic": "Memory Model",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What happens when zip() receives iterables of different lengths?",
+    "options": ["Raises error", "Stops at shortest iterable", "Pads with None", "Repeats shorter"],
+    "correct_answer": "Stops at shortest iterable",
+    "topic": "Iterator Protocol",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What does contextmanager decorator enable?",
+    "options": ["Managing contexts", "Converting generator to context manager with __enter__ and __exit__", "Error handling", "Performance"],
+    "correct_answer": "Converting generator to context manager with __enter__ and __exit__",
+    "topic": "Decorator Design",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Why can't you iterate a generator twice without recreation?",
+    "options": ["Bug in Python", "Generator state is consumed and not resettable", "Memory limitation", "Design preference"],
+    "correct_answer": "Generator state is consumed and not resettable",
+    "topic": "Generator Internals",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What does __suppress_context__ control in exceptions?",
+    "options": ["Suppress all exceptions", "Suppress implicit exception chaining display", "Hide exceptions", "Log exceptions"],
+    "correct_answer": "Suppress implicit exception chaining display",
+    "topic": "Exception Hierarchy",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Why is dictionary comprehension sometimes faster than dict() constructor?",
+    "options": ["Uses less memory", "Optimized bytecode generation", "Runs in parallel", "No difference"],
+    "correct_answer": "Optimized bytecode generation",
+    "topic": "Performance",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What does __init_subclass__ enable?",
+    "options": ["Initialize instances", "Customize subclass creation", "Create subclasses", "Import mechanism"],
+    "correct_answer": "Customize subclass creation",
+    "topic": "Advanced OOP",
+    "difficulty": "hard"
+  }
+]

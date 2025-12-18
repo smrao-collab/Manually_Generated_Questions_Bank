@@ -1,0 +1,902 @@
+[
+  {
+    "question": "What will this code output?\n\nclass A(type):\n    def __new__(mcs, name, bases, attrs):\n        attrs['meta_attr'] = True\n        return super().__new__(mcs, name, bases, attrs)\n\nclass B(metaclass=A):\n    pass\n\nprint(B.meta_attr)",
+    "options": [
+      "True",
+      "Error",
+      "None",
+      "B"
+    ],
+    "correct_answer": "True",
+    "topic": "Metaclasses",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the issue:\n\nclass MyClass:\n    def __init__(self):\n        self._value = 0\n    \n    def __getattribute__(self, name):\n        if name == '_value':\n            return 100\n        return super().__getattribute__(name)\n\nobj = MyClass()\nprint(obj._value)",
+    "options": [
+      "AttributeError",
+      "0",
+      "100",
+      "Error"
+    ],
+    "correct_answer": "100",
+    "topic": "OOP Internals",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the output?\n\ndef func():\n    x = 5\n    def inner():\n        return x\n    x = 10\n    return inner()\n\nprint(func())",
+    "options": [
+      "5",
+      "10",
+      "Error",
+      "None"
+    ],
+    "correct_answer": "10",
+    "topic": "Closures",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the bug:\n\nclass A:\n    @staticmethod\n    def method():\n        return 'A'\n\nclass B(A):\n    @staticmethod\n    def method():\n        return super().method() + 'B'",
+    "options": [
+      "super() doesn't work in static methods",
+      "No bug - returns 'AB'",
+      "Static methods cannot be overridden",
+      "Both A and C"
+    ],
+    "correct_answer": "super() doesn't work in static methods",
+    "topic": "OOP",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What will this print?\n\nimport gc\n\nclass MyClass:\n    def __del__(self):\n        print('Destructed')\n\nobj = MyClass()\ndel obj\ngc.collect()",
+    "options": [
+      "Destructed",
+      "Error",
+      "None",
+      "Possible that nothing is printed"
+    ],
+    "correct_answer": "Possible that nothing is printed",
+    "topic": "Memory Management",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the issue:\n\nfrom typing import Protocol\n\nclass Duck(Protocol):\n    def quack(self) -> str:\n        ...\n\nclass MyDuck:\n    def quack(self) -> str:\n        return 'Quack'\n\ndef use_duck(d: Duck) -> None:\n    print(d.quack())\n\nuse_duck(MyDuck())",
+    "options": [
+      "Protocol doesn't work this way",
+      "No bug - prints 'Quack'",
+      "MyDuck doesn't inherit from Duck",
+      "Both B and C"
+    ],
+    "correct_answer": "No bug - prints 'Quack'",
+    "topic": "Type Hints",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the output?\n\ndef outer(x):\n    def middle(y):\n        def inner(z):\n            return x + y + z\n        return inner\n    return middle\n\nfunc = outer(1)(2)\nprint(func(3))",
+    "options": [
+      "3",
+      "6",
+      "Error",
+      "None"
+    ],
+    "correct_answer": "6",
+    "topic": "Closures",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the bug:\n\nimport sys\n\nclass MyClass:\n    pass\n\nobj = MyClass()\nprint(sys.getrefcount(obj))",
+    "options": [
+      "getrefcount doesn't exist",
+      "Output varies (typically 2 or 3)",
+      "Cannot get reference count",
+      "Error"
+    ],
+    "correct_answer": "Output varies (typically 2 or 3)",
+    "topic": "Memory Model",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What will this code output?\n\nclass Descriptor:\n    def __get__(self, obj, objtype=None):\n        return 'Got'\n    \n    def __set__(self, obj, value):\n        print('Setting')\n\nclass MyClass:\n    attr = Descriptor()\n\nobj = MyClass()\nprint(obj.attr)\nobj.attr = 10",
+    "options": [
+      "Got\\nSetting",
+      "Error",
+      "10\\nSetting",
+      "Got"
+    ],
+    "correct_answer": "Got\\nSetting",
+    "topic": "Descriptors",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the issue:\n\nfrom abc import ABC, abstractmethod\n\nclass Base(ABC):\n    @property\n    @abstractmethod\n    def value(self):\n        pass\n\nclass Derived(Base):\n    @property\n    def value(self):\n        return 42\n\nobj = Derived()\nprint(obj.value)",
+    "options": [
+      "Cannot use @property with @abstractmethod",
+      "No bug - prints 42",
+      "Cannot instantiate abstract class",
+      "Both B and C"
+    ],
+    "correct_answer": "No bug - prints 42",
+    "topic": "OOP",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the output?\n\nclass A:\n    pass\n\nclass B(A):\n    pass\n\nclass C(A):\n    pass\n\nclass D(B, C):\n    pass\n\nprint([cls.__name__ for cls in D.__mro__])",
+    "options": [
+      "['D', 'A']",
+      "['D', 'B', 'C', 'A', 'object']",
+      "['D', 'B', 'A', 'C', 'object']",
+      "Error"
+    ],
+    "correct_answer": "['D', 'B', 'C', 'A', 'object']",
+    "topic": "Method Resolution Order",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the bug:\n\nfrom functools import wraps\n\ndef decorator(func):\n    @wraps(func)\n    def wrapper(*args, **kwargs):\n        return func(*args, **kwargs)\n    return wrapper\n\n@decorator\ndef func(x):\n    \"\"\"My function\"\"\"\n    return x\n\nprint(func.__doc__)",
+    "options": [
+      "@wraps doesn't preserve docstring",
+      "No bug - prints 'My function'",
+      "Docstring is lost",
+      "Both B and C"
+    ],
+    "correct_answer": "No bug - prints 'My function'",
+    "topic": "Decorators",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What will this print?\n\nclass MyClass:\n    def __getitem__(self, key):\n        return key * 2\n\nobj = MyClass()\nprint(obj[5])",
+    "options": [
+      "Error",
+      "5",
+      "10",
+      "[5]"
+    ],
+    "correct_answer": "10",
+    "topic": "Dunder Methods",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the issue:\n\nfrom collections import defaultdict\n\ndd = defaultdict(list)\ndd['a'].append(1)\ndd['a'].append(2)\nprint(dd)",
+    "options": [
+      "defaultdict doesn't work with list",
+      "No bug - prints defaultdict(...)",
+      "Keys cannot be strings",
+      "Both B and C"
+    ],
+    "correct_answer": "No bug - prints defaultdict(...)",
+    "topic": "Data Structures",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the output?\n\nclass MyIterator:\n    def __init__(self, max):\n        self.max = max\n        self.current = 0\n    \n    def __iter__(self):\n        return self\n    \n    def __next__(self):\n        if self.current < self.max:\n            self.current += 1\n            return self.current - 1\n        else:\n            raise StopIteration\n\nfor i in MyIterator(3):\n    print(i, end=' ')",
+    "options": [
+      "0 1 2",
+      "1 2 3",
+      "Error",
+      "None"
+    ],
+    "correct_answer": "0 1 2",
+    "topic": "Iterators",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the bug:\n\nimport asyncio\n\nasync def async_func():\n    return 'Done'\n\nresult = async_func()\nprint(result)",
+    "options": [
+      "async functions must be awaited",
+      "No bug - prints 'Done'",
+      "async function returns coroutine object",
+      "Both A and C"
+    ],
+    "correct_answer": "Both A and C",
+    "topic": "Async Programming",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What will this code output?\n\nfrom typing import List, TypeVar, Generic\n\nT = TypeVar('T')\n\nclass Stack(Generic[T]):\n    def __init__(self):\n        self.items = []\n    \n    def push(self, item: T) -> None:\n        self.items.append(item)\n    \n    def pop(self) -> T:\n        return self.items.pop()\n\nstack = Stack[int]()\nstack.push(1)\nstack.push(2)\nprint(stack.pop())",
+    "options": [
+      "1",
+      "2",
+      "Error",
+      "None"
+    ],
+    "correct_answer": "2",
+    "topic": "Type Hints",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the issue:\n\nfrom weakref import ref\n\nclass MyClass:\n    pass\n\nobj = MyClass()\nweak_ref = ref(obj)\nprint(weak_ref())",
+    "options": [
+      "WeakRef doesn't work this way",
+      "No bug - prints MyClass instance",
+      "Cannot create weak reference",
+      "Both B and C"
+    ],
+    "correct_answer": "No bug - prints MyClass instance",
+    "topic": "Memory Management",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the output?\n\nclass A:\n    def method(self):\n        return 'A'\n\nclass B(A):\n    def method(self):\n        return super().method() + 'B'\n\nclass C(A):\n    def method(self):\n        return super().method() + 'C'\n\nclass D(B, C):\n    pass\n\nobj = D()\nprint(obj.method())",
+    "options": [
+      "'ABC'",
+      "'ACB'",
+      "Error",
+      "'BAC'"
+    ],
+    "correct_answer": "'ABC'",
+    "topic": "Method Resolution Order",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the bug:\n\nclass MyClass:\n    __slots__ = ['x']\n    \n    def __init__(self, x):\n        self.x = x\n\nobj = MyClass(10)\nobj.y = 20\nprint(obj.y)",
+    "options": [
+      "Cannot add new attribute due to __slots__",
+      "No bug - prints 20",
+      "__slots__ doesn't restrict attributes",
+      "AttributeError"
+    ],
+    "correct_answer": "Cannot add new attribute due to __slots__",
+    "topic": "OOP",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What will this print?\n\nfrom enum import Enum\n\nclass Color(Enum):\n    RED = 1\n    GREEN = 2\n    BLUE = 3\n\nprint(Color.RED.value)",
+    "options": [
+      "Color.RED",
+      "1",
+      "Error",
+      "RED"
+    ],
+    "correct_answer": "1",
+    "topic": "Data Structures",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the issue:\n\nclass MyClass:\n    def __init__(self, x):\n        self.x = x\n    \n    def __hash__(self):\n        return hash(id(self))\n    \n    def __eq__(self, other):\n        return self.x == other.x\n\nobj1 = MyClass(5)\nobj2 = MyClass(5)\nmy_dict = {obj1: 'a'}\nmy_dict[obj2] = 'b'\nprint(len(my_dict))",
+    "options": [
+      "1",
+      "2",
+      "Hash and equality mismatch",
+      "Both B and C"
+    ],
+    "correct_answer": "Both B and C",
+    "topic": "OOP",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the output?\n\nfrom pathlib import Path\n\np = Path('.')\nprint(isinstance(p, Path))",
+    "options": [
+      "True",
+      "False",
+      "Error",
+      "None"
+    ],
+    "correct_answer": "True",
+    "topic": "Standard Library",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the bug:\n\nfrom contextlib import ExitStack\n\nfiles = []\nwith ExitStack() as stack:\n    for i in range(3):\n        f = open(f'file{i}.txt', 'w')\n        stack.callback(f.close)\n        files.append(f)\n\nprint('Files closed')",
+    "options": [
+      "Files are not closed properly",
+      "No bug - all files are properly closed",
+      "ExitStack doesn't work with callbacks",
+      "Both B and C"
+    ],
+    "correct_answer": "No bug - all files are properly closed",
+    "topic": "Context Managers",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What will this print?\n\nclass MyClass:\n    instances = []\n    \n    def __init__(self, value):\n        self.value = value\n        MyClass.instances.append(self)\n    \n    def __del__(self):\n        MyClass.instances.remove(self)\n\nobj1 = MyClass(1)\nobj2 = MyClass(2)\ndel obj1\nprint(len(MyClass.instances))",
+    "options": [
+      "0",
+      "1",
+      "2",
+      "Error"
+    ],
+    "correct_answer": "1",
+    "topic": "Memory Management",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the issue:\n\nimport threading\n\nresult = []\nlock = threading.Lock()\n\ndef worker():\n    with lock:\n        result.append(1)\n\nthreads = [threading.Thread(target=worker) for _ in range(5)]\nfor t in threads:\n    t.start()\nfor t in threads:\n    t.join()\n\nprint(len(result))",
+    "options": [
+      "Threading is not thread-safe",
+      "No bug - prints 5",
+      "Lock is used incorrectly",
+      "Both B and C"
+    ],
+    "correct_answer": "No bug - prints 5",
+    "topic": "Concurrency",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the output?\n\nfrom typing import cast\n\nx = 5\ny = cast(str, x)\nprint(type(y))",
+    "options": [
+      "<class 'str'>",
+      "<class 'int'>",
+      "Error",
+      "str"
+    ],
+    "correct_answer": "<class 'int'>",
+    "topic": "Type Hints",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the bug:\n\nclass MyClass:\n    def __init__(self):\n        self._value = 0\n    \n    def __setattr__(self, name, value):\n        if name == '_value' and value < 0:\n            raise ValueError('Negative value')\n        super().__setattr__(name, value)\n\nobj = MyClass()\nobj._value = -5",
+    "options": [
+      "__setattr__ intercepts attribute assignment",
+      "ValueError is raised",
+      "Both A and B",
+      "No bug"
+    ],
+    "correct_answer": "Both A and B",
+    "topic": "Dunder Methods",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What will this print?\n\nfrom dataclasses import dataclass\n\n@dataclass\nclass Point:\n    x: int\n    y: int\n\np = Point(1, 2)\nprint(p == Point(1, 2))",
+    "options": [
+      "Error",
+      "True",
+      "False",
+      "Point(x=1, y=2)"
+    ],
+    "correct_answer": "True",
+    "topic": "Dataclasses",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the issue:\n\nfrom functools import partial\n\ndef add(a, b, c):\n    return a + b + c\n\nadd_one = partial(add, 1)\nprint(add_one(2, 3))",
+    "options": [
+      "partial doesn't work this way",
+      "No bug - prints 6",
+      "Partial function is incorrect",
+      "Both B and C"
+    ],
+    "correct_answer": "No bug - prints 6",
+    "topic": "Higher-order Functions",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the output?\n\nclass A:\n    x = 5\n\nclass B(A):\n    x = 10\n\nclass C(B, A):\n    pass\n\nprint(C.x)",
+    "options": [
+      "5",
+      "10",
+      "Error",
+      "None"
+    ],
+    "correct_answer": "10",
+    "topic": "OOP",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the bug:\n\nfrom collections import namedtuple\n\nPoint = namedtuple('Point', ['x', 'y'])\np = Point(1, 2)\nprint(p.x, p.y, p[0], p[1])",
+    "options": [
+      "namedtuple doesn't work this way",
+      "No bug - prints 1 2 1 2",
+      "Cannot access namedtuple both ways",
+      "Both B and C"
+    ],
+    "correct_answer": "No bug - prints 1 2 1 2",
+    "topic": "Data Structures",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What will this code output?\n\nfrom itertools import islice\n\ndef infinite_counter():\n    i = 0\n    while True:\n        yield i\n        i += 1\n\nresult = list(islice(infinite_counter(), 5))\nprint(result)",
+    "options": [
+      "Error",
+      "[0, 1, 2, 3, 4]",
+      "Infinite loop",
+      "None"
+    ],
+    "correct_answer": "[0, 1, 2, 3, 4]",
+    "topic": "Generators",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the issue:\n\nfrom operator import attrgetter\n\nclass Person:\n    def __init__(self, name, age):\n        self.name = name\n        self.age = age\n\npeople = [Person('Alice', 30), Person('Bob', 25), Person('Charlie', 35)]\nsorted_people = sorted(people, key=attrgetter('age'))\nprint([p.name for p in sorted_people])",
+    "options": [
+      "attrgetter doesn't work this way",
+      "No bug - prints ['Bob', 'Alice', 'Charlie']",
+      "Cannot sort custom objects",
+      "Both B and C"
+    ],
+    "correct_answer": "No bug - prints ['Bob', 'Alice', 'Charlie']",
+    "topic": "Higher-order Functions",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the output?\n\nclass MyClass:\n    def __init__(self):\n        self.value = 10\n    \n    def __repr__(self):\n        return f'MyClass({self.value})'\n    \n    def __str__(self):\n        return f'Value: {self.value}'\n\nobj = MyClass()\nprint(str(obj))\nprint(repr(obj))",
+    "options": [
+      "Value: 10\\nMyClass(10)",
+      "MyClass(10)\\nValue: 10",
+      "Error",
+      "Both same"
+    ],
+    "correct_answer": "Value: 10\\nMyClass(10)",
+    "topic": "Dunder Methods",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the bug:\n\nfrom copy import deepcopy\n\noriginal = {'a': [1, 2, 3]}\ncopy_list = deepcopy(original)\ncopy_list['a'].append(4)\nprint(original)",
+    "options": [
+      "deepcopy doesn't work",
+      "original is modified to {'a': [1, 2, 3, 4]}",
+      "No bug - original remains unchanged",
+      "Both B and C"
+    ],
+    "correct_answer": "No bug - original remains unchanged",
+    "topic": "Standard Library",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What will this print?\n\nfrom typing import Union\n\ndef process(value: Union[int, str]) -> str:\n    if isinstance(value, int):\n        return str(value)\n    return value\n\nprint(process(42))",
+    "options": [
+      "Error",
+      "'42'",
+      "42",
+      "None"
+    ],
+    "correct_answer": "'42'",
+    "topic": "Type Hints",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the issue:\n\nfrom functools import cached_property\n\nclass MyClass:\n    def __init__(self):\n        self._value = None\n    \n    @cached_property\n    def value(self):\n        print('Computing')\n        self._value = 42\n        return self._value\n\nobj = MyClass()\nprint(obj.value)\nprint(obj.value)",
+    "options": [
+      "cached_property is used incorrectly",
+      "No bug - prints 'Computing'\\n42\\n42",
+      "Prints 'Computing' twice",
+      "Both B and C"
+    ],
+    "correct_answer": "No bug - prints 'Computing'\\n42\\n42",
+    "topic": "Decorators",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the output?\n\nfrom collections import Counter\n\nwords = ['apple', 'banana', 'apple', 'cherry', 'banana', 'apple']\ncounter = Counter(words)\nprint(counter.most_common(2))",
+    "options": [
+      "[('apple', 3), ('banana', 2)]",
+      "Error",
+      "[('apple', 3), ('cherry', 1)]",
+      "None"
+    ],
+    "correct_answer": "[('apple', 3), ('banana', 2)]",
+    "topic": "Data Structures",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the bug:\n\nimport pickle\n\nclass MyClass:\n    def __init__(self, value):\n        self.value = value\n\nobj = MyClass(42)\nserialized = pickle.dumps(obj)\nobj2 = pickle.loads(serialized)\nprint(obj2.value)",
+    "options": [
+      "pickle doesn't work with custom classes",
+      "No bug - prints 42",
+      "Custom class cannot be pickled",
+      "Both B and C"
+    ],
+    "correct_answer": "No bug - prints 42",
+    "topic": "Serialization",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What will this code output?\n\nfrom itertools import chain\n\nlist1 = [1, 2, 3]\nlist2 = [4, 5, 6]\nresult = list(chain(list1, list2))\nprint(result)",
+    "options": [
+      "[[1, 2, 3], [4, 5, 6]]",
+      "[1, 2, 3, 4, 5, 6]",
+      "Error",
+      "None"
+    ],
+    "correct_answer": "[1, 2, 3, 4, 5, 6]",
+    "topic": "Standard Library",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the issue:\n\nfrom typing import Callable\n\ndef decorator(func: Callable) -> Callable:\n    def wrapper(*args, **kwargs):\n        return func(*args, **kwargs)\n    return wrapper\n\n@decorator\ndef my_func(x: int) -> int:\n    return x * 2\n\nprint(my_func(5))",
+    "options": [
+      "Decorator with type hints is incorrect",
+      "No bug - prints 10",
+      "Type hints are invalid",
+      "Both B and C"
+    ],
+    "correct_answer": "No bug - prints 10",
+    "topic": "Type Hints",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the output?\n\nclass MyClass:\n    def __init__(self, value):\n        self.value = value\n    \n    def __add__(self, other):\n        return MyClass(self.value + other.value)\n    \n    def __repr__(self):\n        return f'MyClass({self.value})'\n\nobj1 = MyClass(5)\nobj2 = MyClass(3)\nresult = obj1 + obj2\nprint(result)",
+    "options": [
+      "Error",
+      "MyClass(8)",
+      "8",
+      "None"
+    ],
+    "correct_answer": "MyClass(8)",
+    "topic": "Dunder Methods",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the bug:\n\nfrom inspect import signature\n\ndef my_func(a: int, b: str) -> bool:\n    return True\n\nsig = signature(my_func)\nprint(list(sig.parameters.keys()))",
+    "options": [
+      "signature doesn't work",
+      "No bug - prints ['a', 'b']",
+      "Cannot get function signature",
+      "Both B and C"
+    ],
+    "correct_answer": "No bug - prints ['a', 'b']",
+    "topic": "Introspection",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What will this print?\n\nfrom itertools import combinations\n\nitems = [1, 2, 3]\ncombs = list(combinations(items, 2))\nprint(combs)",
+    "options": [
+      "[(1, 2), (1, 3), (2, 3)]",
+      "[(1, 2), (2, 3), (1, 3)]",
+      "Error",
+      "[(1, 1), (2, 2), (3, 3)]"
+    ],
+    "correct_answer": "[(1, 2), (1, 3), (2, 3)]",
+    "topic": "Standard Library",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the issue:\n\nclass MyClass:\n    def __init__(self):\n        pass\n    \n    def method(self):\n        return 'method'\n    \n    __call__ = method\n\nobj = MyClass()\nprint(obj())",
+    "options": [
+      "__call__ cannot be assigned from method",
+      "No bug - prints 'method'",
+      "method must be called explicitly",
+      "Both B and C"
+    ],
+    "correct_answer": "No bug - prints 'method'",
+    "topic": "Dunder Methods",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the output?\n\nfrom types import SimpleNamespace\n\nobj = SimpleNamespace(x=5, y=10)\nprint(obj.x + obj.y)",
+    "options": [
+      "Error",
+      "15",
+      "None",
+      "SimpleNamespace"
+    ],
+    "correct_answer": "15",
+    "topic": "Standard Library",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the bug:\n\nclass MyClass:\n    def __init__(self):\n        self._data = []\n    \n    def __iter__(self):\n        return iter(self._data)\n    \n    def add(self, item):\n        self._data.append(item)\n\nobj = MyClass()\nobj.add(1)\nobj.add(2)\nfor item in obj:\n    print(item, end=' ')",
+    "options": [
+      "Custom iterator is used incorrectly",
+      "No bug - prints '1 2'",
+      "Cannot iterate custom objects",
+      "Both B and C"
+    ],
+    "correct_answer": "No bug - prints '1 2'",
+    "topic": "Iterators",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What will this code output?\n\nfrom typing import Optional\n\ndef process(value: Optional[int]) -> str:\n    if value is None:\n        return 'None'\n    return str(value)\n\nprint(process(None))\nprint(process(42))",
+    "options": [
+      "None\\n'42'",
+      "None\\n42",
+      "Error",
+      "'None'\\n'42'"
+    ],
+    "correct_answer": "None\\n'42'",
+    "topic": "Type Hints",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the issue:\n\nfrom abc import ABC, abstractmethod\n\nclass Shape(ABC):\n    @abstractmethod\n    def area(self) -> float:\n        pass\n\nclass Circle(Shape):\n    def __init__(self, radius):\n        self.radius = radius\n    \n    def area(self) -> float:\n        return 3.14 * self.radius ** 2\n\nc = Circle(5)\nprint(c.area())",
+    "options": [
+      "Abstract method implementation is incorrect",
+      "No bug - prints 78.5",
+      "Cannot instantiate Circle",
+      "Both B and C"
+    ],
+    "correct_answer": "No bug - prints 78.5",
+    "topic": "OOP",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the output?\n\nfrom functools import reduce\nfrom operator import itemgetter\n\ndata = [{'val': 1}, {'val': 2}, {'val': 3}]\nresult = reduce(lambda x, y: x + y['val'], data, 0)\nprint(result)",
+    "options": [
+      "Error",
+      "6",
+      "[{'val': 1}, {'val': 2}, {'val': 3}]",
+      "None"
+    ],
+    "correct_answer": "6",
+    "topic": "Higher-order Functions",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the bug:\n\nfrom contextlib import suppress\n\ntry:\n    with suppress(ValueError):\n        raise ValueError('Test')\n    print('No error')\nexcept ValueError:\n    print('Error caught')",
+    "options": [
+      "suppress doesn't work",
+      "No bug - prints 'No error'",
+      "ValueError is still raised",
+      "Both B and C"
+    ],
+    "correct_answer": "No bug - prints 'No error'",
+    "topic": "Context Managers",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What will this print?\n\nfrom typing import Literal\n\ndef process(value: Literal['red', 'green', 'blue']) -> str:\n    return f'Color: {value}'\n\nprint(process('red'))",
+    "options": [
+      "Color: red",
+      "Error",
+      "Literal not supported",
+      "None"
+    ],
+    "correct_answer": "Color: red",
+    "topic": "Type Hints",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the issue:\n\nfrom operator import mul\nfrom functools import reduce\n\nfactorial = lambda n: reduce(mul, range(1, n+1), 1)\nprint(factorial(5))",
+    "options": [
+      "Lambda with reduce is incorrect",
+      "No bug - prints 120",
+      "Range produces wrong values",
+      "Both B and C"
+    ],
+    "correct_answer": "No bug - prints 120",
+    "topic": "Higher-order Functions",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the output?\n\nfrom dataclasses import field, dataclass\n\n@dataclass\nclass MyClass:\n    values: list = field(default_factory=list)\n\nobj1 = MyClass()\nobj1.values.append(1)\n\nobj2 = MyClass()\nprint(len(obj2.values))",
+    "options": [
+      "1",
+      "0",
+      "Error",
+      "None"
+    ],
+    "correct_answer": "0",
+    "topic": "Dataclasses",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the bug:\n\nclass MyClass:\n    def __init__(self, x):\n        self.x = x\n    \n    def __contains__(self, item):\n        return item == self.x\n\nobj = MyClass(5)\nprint(3 in obj)",
+    "options": [
+      "__contains__ is incorrect",
+      "No bug - prints False",
+      "Cannot use 'in' operator with objects",
+      "Both B and C"
+    ],
+    "correct_answer": "No bug - prints False",
+    "topic": "Dunder Methods",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What will this code output?\n\nfrom itertools import repeat\n\nresult = list(zip([1, 2, 3], repeat('X', 3)))\nprint(result)",
+    "options": [
+      "[(1, 'X'), (2, 'X'), (3, 'X')]",
+      "Error",
+      "[1, 2, 3]",
+      "['X', 'X', 'X']"
+    ],
+    "correct_answer": "[(1, 'X'), (2, 'X'), (3, 'X')]",
+    "topic": "Standard Library",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the issue:\n\nfrom typing import TypedDict\n\nclass Person(TypedDict):\n    name: str\n    age: int\n\nperson: Person = {'name': 'Alice', 'age': 30}\nprint(person['name'])",
+    "options": [
+      "TypedDict doesn't work at runtime",
+      "No bug - prints 'Alice'",
+      "TypedDict is only for type checking",
+      "Both B and C"
+    ],
+    "correct_answer": "Both B and C",
+    "topic": "Type Hints",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the output?\n\nclass A:\n    def method(self):\n        return 'A'\n\nclass B(A):\n    pass\n\nclass C(A):\n    def method(self):\n        return 'C'\n\nclass D(B, C):\n    pass\n\nprint(D().method())",
+    "options": [
+      "'A'",
+      "'B'",
+      "'C'",
+      "Error"
+    ],
+    "correct_answer": "'C'",
+    "topic": "Method Resolution Order",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the bug:\n\nfrom typing import Final\n\nclass MyClass:\n    x: Final[int] = 10\n\nobj = MyClass()\nobj.x = 20\nprint(obj.x)",
+    "options": [
+      "Final prevents runtime modification",
+      "No bug - prints 20",
+      "Final only works at type checking",
+      "Both B and C"
+    ],
+    "correct_answer": "Both B and C",
+    "topic": "Type Hints",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What will this print?\n\nfrom itertools import takewhile\n\ndata = [1, 2, 3, 4, 5, 3, 2, 1]\nresult = list(takewhile(lambda x: x < 4, data))\nprint(result)",
+    "options": [
+      "[1, 2, 3]",
+      "[1, 2, 3, 4, 5]",
+      "Error",
+      "[3, 2, 1]"
+    ],
+    "correct_answer": "[1, 2, 3]",
+    "topic": "Standard Library",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the issue:\n\nfrom dataclasses import dataclass\n\n@dataclass\nclass Point:\n    x: int\n    y: int\n\ntp = Point(1, 2)\nprint(hash(tp))",
+    "options": [
+      "Dataclass instances are not hashable",
+      "No bug - prints hash value",
+      "hash() requires frozen=True",
+      "Both B and C"
+    ],
+    "correct_answer": "Dataclass instances are not hashable",
+    "topic": "Dataclasses",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the output?\n\nfrom typing import overload\n\nclass MyClass:\n    @overload\n    def method(self, x: int) -> str: ...\n    \n    @overload\n    def method(self, x: str) -> int: ...\n    \n    def method(self, x):\n        return x if isinstance(x, int) else len(x)\n\nobj = MyClass()\nprint(obj.method(42))",
+    "options": [
+      "Error",
+      "42",
+      "'42'",
+      "None"
+    ],
+    "correct_answer": "42",
+    "topic": "Type Hints",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the bug:\n\nfrom typing import get_type_hints\n\ndef func(x: int, y: str) -> bool:\n    return True\n\nhints = get_type_hints(func)\nprint(hints)",
+    "options": [
+      "get_type_hints doesn't work",
+      "No bug - prints type hints dict",
+      "Cannot get type hints",
+      "Both B and C"
+    ],
+    "correct_answer": "No bug - prints type hints dict",
+    "topic": "Introspection",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What will this code output?\n\nfrom itertools import cycle\n\ndata = cycle([1, 2, 3])\nfor _ in range(7):\n    print(next(data), end=' ')",
+    "options": [
+      "1 2 3 1 2 3 1",
+      "Error",
+      "Infinite loop",
+      "1 2 3"
+    ],
+    "correct_answer": "1 2 3 1 2 3 1",
+    "topic": "Standard Library",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the output?\n\nfrom typing import Sequence\n\nclass MyClass:\n    def __getitem__(self, index):\n        return index * 2\n    \n    def __len__(self):\n        return 5\n\nobj = MyClass()\nprint(obj[3])",
+    "options": [
+      "3",
+      "6",
+      "Error",
+      "None"
+    ],
+    "correct_answer": "6",
+    "topic": "Dunder Methods",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the issue:\n\nfrom multiprocessing import Pool\n\ndef worker(x):\n    return x * 2\n\nwith Pool(processes=2) as pool:\n    result = pool.map(worker, [1, 2, 3, 4, 5])\n    print(result)",
+    "options": [
+      "Multiprocessing doesn't work in context",
+      "No bug - prints [2, 4, 6, 8, 10]",
+      "Pool cannot use map()",
+      "Both B and C"
+    ],
+    "correct_answer": "No bug - prints [2, 4, 6, 8, 10]",
+    "topic": "Concurrency",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What will this print?\n\nfrom typing import ClassVar\n\nclass MyClass:\n    count: ClassVar[int] = 0\n    \n    def __init__(self):\n        MyClass.count += 1\n\nobj1 = MyClass()\nobj2 = MyClass()\nprint(MyClass.count)",
+    "options": [
+      "0",
+      "1",
+      "2",
+      "Error"
+    ],
+    "correct_answer": "2",
+    "topic": "Type Hints",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the bug:\n\nfrom typing import Generic, TypeVar\n\nT = TypeVar('T')\n\nclass Container(Generic[T]):\n    def __init__(self, value: T):\n        self.value = value\n\nc = Container(42)\nprint(c.value)",
+    "options": [
+      "Generic TypeVar is incorrect",
+      "No bug - prints 42",
+      "Cannot use Generic with custom classes",
+      "Both B and C"
+    ],
+    "correct_answer": "No bug - prints 42",
+    "topic": "Type Hints",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the output?\n\nfrom operator import methodcaller\n\ndata = ['hello', 'world']\nresult = list(map(methodcaller('upper'), data))\nprint(result)",
+    "options": [
+      "['hello', 'world']",
+      "['HELLO', 'WORLD']",
+      "Error",
+      "None"
+    ],
+    "correct_answer": "['HELLO', 'WORLD']",
+    "topic": "Higher-order Functions",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the issue:\n\nfrom typing import assert_never\n\ndef func(x: int) -> str:\n    if x > 0:\n        return 'positive'\n    elif x < 0:\n        return 'negative'\n    else:\n        return 'zero'\n\nprint(func(5))",
+    "options": [
+      "assert_never is required",
+      "No bug - prints 'positive'",
+      "assert_never cannot be used",
+      "Both B and C"
+    ],
+    "correct_answer": "No bug - prints 'positive'",
+    "topic": "Type Hints",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What will this print?\n\nfrom itertools import groupby\n\ndata = [1, 1, 2, 2, 3, 3]\ngroups = [(k, list(g)) for k, g in groupby(data)]\nprint(groups)",
+    "options": [
+      "[(1, [1, 1]), (2, [2, 2]), (3, [3, 3])]",
+      "[(1, 2), (2, 2), (3, 2)]",
+      "Error",
+      "None"
+    ],
+    "correct_answer": "[(1, [1, 1]), (2, [2, 2]), (3, [3, 3])]",
+    "topic": "Standard Library",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the bug:\n\nfrom typing import Protocol\n\nclass Drawable(Protocol):\n    def draw(self) -> None: ...\n\nclass Circle:\n    def draw(self) -> None:\n        print('Drawing circle')\n\ndef render(obj: Drawable) -> None:\n    obj.draw()\n\nrender(Circle())",
+    "options": [
+      "Protocol doesn't support structural typing",
+      "No bug - prints 'Drawing circle'",
+      "Circle doesn't inherit from Drawable",
+      "Both B and C"
+    ],
+    "correct_answer": "No bug - prints 'Drawing circle'",
+    "topic": "Type Hints",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the output?\n\nfrom collections import OrderedDict\n\nod = OrderedDict([('b', 2), ('a', 1), ('c', 3)])\nprint(list(od.keys()))",
+    "options": [
+      "['a', 'b', 'c']",
+      "['b', 'a', 'c']",
+      "Error",
+      "None"
+    ],
+    "correct_answer": "['b', 'a', 'c']",
+    "topic": "Data Structures",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the issue:\n\nfrom contextlib import asynccontextmanager\n\n@asynccontextmanager\nasync def my_context():\n    print('Enter')\n    yield\n    print('Exit')\n\n# Assuming async context is used correctly\nprint('Setup')",
+    "options": [
+      "asynccontextmanager requires async with",
+      "No bug - asynccontextmanager defined",
+      "Cannot use async with print",
+      "Both A and C"
+    ],
+    "correct_answer": "No bug - asynccontextmanager defined",
+    "topic": "Async Programming",
+    "difficulty": "hard"
+  }
+]

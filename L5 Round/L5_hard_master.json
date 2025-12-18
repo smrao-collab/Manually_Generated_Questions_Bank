@@ -1,0 +1,902 @@
+[
+  {
+    "question": "You're managing a crisis where a critical system is down affecting thousands of customers. Stakeholders are demanding updates every 15 minutes, but your team needs to focus on resolution. How should you manage communication?",
+    "options": [
+      "Provide updates every 15 minutes as requested",
+      "Designate a crisis communicator to provide structured updates on a set cadence; you focus on resolution with your team",
+      "Ignore stakeholders until resolution is complete",
+      "Speculate on timelines to calm stakeholders"
+    ],
+    "correct_answer": "Designate a crisis communicator to provide structured updates on a set cadence; you focus on resolution with your team",
+    "topic": "Communication",
+    "difficulty": "hard"
+  },
+  {
+    "question": "You're leading an initiative that requires significant organizational change across multiple departments with competing interests. How should you build coalitions and drive adoption?",
+    "options": [
+      "Impose the change from the top down",
+      "Identify key influencers in each department, involve them early in design, address their concerns, and create peer-led adoption",
+      "Hope that change management communications will suffice",
+      "Focus only on your department"
+    ],
+    "correct_answer": "Identify key influencers in each department, involve them early in design, address their concerns, and create peer-led adoption",
+    "topic": "Communication",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A high-level executive is micromanaging your team and hindering productivity, but you can't directly challenge their authority. How should you address this?",
+    "options": [
+      "Accept the micromanagement",
+      "Seek a private conversation to understand their concerns, propose a communication structure that addresses their needs while preserving team autonomy",
+      "Circumvent them",
+      "Escalate to their boss"
+    ],
+    "correct_answer": "Seek a private conversation to understand their concerns, propose a communication structure that addresses their needs while preserving team autonomy",
+    "topic": "Communication",
+    "difficulty": "hard"
+  },
+  {
+    "question": "You're discovering that your direct reports have fundamentally different understandings of the company's direction and vision. How should you align them?",
+    "options": [
+      "Tell them your interpretation without discussion",
+      "Hold facilitated sessions to discuss the vision, align understanding, and co-create team-level implications and strategy",
+      "Assume alignment will happen naturally",
+      "Document a directive without dialogue"
+    ],
+    "correct_answer": "Hold facilitated sessions to discuss the vision, align understanding, and co-create team-level implications and strategy",
+    "topic": "Teamwork",
+    "difficulty": "hard"
+  },
+  {
+    "question": "You need to deliver layoff notifications to your team. How should you prepare and execute this sensitively while maintaining business continuity?",
+    "options": [
+      "Call people one by one with minimal explanation",
+      "Prepare thoroughly with HR, manage logistics (severance, references), communicate clearly and compassionately, and support remaining team members",
+      "Announce it in a group setting",
+      "Inform people via email"
+    ],
+    "correct_answer": "Prepare thoroughly with HR, manage logistics (severance, references), communicate clearly and compassionately, and support remaining team members",
+    "topic": "Communication",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Two of your senior leaders have a fundamental philosophical disagreement about strategy that's escalating. As their boss, how should you approach conflict resolution?",
+    "options": [
+      "Side with the one you agree with",
+      "Facilitate a structured discussion where both present their logic, find common ground, and make a transparent decision on the path forward",
+      "Let them fight it out",
+      "Make a decision unilaterally without their input"
+    ],
+    "correct_answer": "Facilitate a structured discussion where both present their logic, find common ground, and make a transparent decision on the path forward",
+    "topic": "Communication",
+    "difficulty": "hard"
+  },
+  {
+    "question": "You're leading a transformation initiative that threatens the job security of several key people. How should you handle this ethically while maintaining their engagement?",
+    "options": [
+      "Hide the threat until it's unavoidable",
+      "Be transparent about the trajectory, offer upskilling opportunities, explore role transitions, and provide support for career moves",
+      "Accelerate the threat to get it over with",
+      "Ignore the emotional impact"
+    ],
+    "correct_answer": "Be transparent about the trajectory, offer upskilling opportunities, explore role transitions, and provide support for career moves",
+    "topic": "Communication",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Your organization is being acquired and your team's structure is likely to change. Uncertainty is high. How should you lead through this?",
+    "options": [
+      "Pretend nothing is changing",
+      "Acknowledge the uncertainty, share what you know, set expectations for what will be communicated when, and support team members in planning",
+      "Encourage people to leave",
+      "Make changes without guidance from above"
+    ],
+    "correct_answer": "Acknowledge the uncertainty, share what you know, set expectations for what will be communicated when, and support team members in planning",
+    "topic": "Communication",
+    "difficulty": "hard"
+  },
+  {
+    "question": "You discover that a senior member of your organization has engaged in behavior that violates company values, but they have significant political power. How should you handle this?",
+    "options": [
+      "Ignore it to avoid conflict",
+      "Report it through proper channels; provide evidence and support to those investigating, regardless of political considerations",
+      "Cover it up",
+      "Confront them privately and hope it stops"
+    ],
+    "correct_answer": "Report it through proper channels; provide evidence and support to those investigating, regardless of political considerations",
+    "topic": "Communication",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Your team's key domain expert is leaving and you're in the middle of a critical project. How should you handle knowledge transfer and team morale?",
+    "options": [
+      "Rush them out quickly",
+      "Plan an extended transition, create documentation, establish mentoring pairs, and celebrate their contributions while setting team up for success",
+      "Let them leave immediately",
+      "Blame them for poor timing"
+    ],
+    "correct_answer": "Plan an extended transition, create documentation, establish mentoring pairs, and celebrate their contributions while setting team up for success",
+    "topic": "Teamwork",
+    "difficulty": "hard"
+  },
+  {
+    "question": "You're advocating for a major investment in technology that competes with another department's initiative. Politics are involved. How should you approach this?",
+    "options": [
+      "Lobby behind the scenes against the other department",
+      "Build a strong business case, understand the other department's needs, look for synergies, and present a holistic view to leadership",
+      "Withdraw your proposal to avoid conflict",
+      "Make promises you can't keep"
+    ],
+    "correct_answer": "Build a strong business case, understand the other department's needs, look for synergies, and present a holistic view to leadership",
+    "topic": "Communication",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A team member has become toxic to the team culture despite good technical performance. Removing them would cause short-term disruption. How should you handle this?",
+    "options": [
+      "Tolerate the toxicity to avoid disruption",
+      "Have clear conversations about behavioral expectations, attempt coaching and improvement, and if unsuccessful, proceed with separation despite short-term impact",
+      "Promote them away",
+      "Isolate them on projects"
+    ],
+    "correct_answer": "Have clear conversations about behavioral expectations, attempt coaching and improvement, and if unsuccessful, proceed with separation despite short-term impact",
+    "topic": "Teamwork",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Your organization's strategy is fundamentally flawed based on your analysis, but questioning it could affect your standing. How should you raise this concern?",
+    "options": [
+      "Say nothing and execute the flawed strategy",
+      "Request a meeting with leadership, present your analysis respectfully, ask clarifying questions, and propose alternatives",
+      "Undermine the strategy quietly",
+      "Leave the organization"
+    ],
+    "correct_answer": "Request a meeting with leadership, present your analysis respectfully, ask clarifying questions, and propose alternatives",
+    "topic": "Communication",
+    "difficulty": "hard"
+  },
+  {
+    "question": "You're managing a team across countries with different cultural norms regarding communication, hierarchy, and conflict. How should you build effective cross-cultural teamwork?",
+    "options": [
+      "Impose one culture on everyone",
+      "Learn about each culture, establish explicit communication norms that respect differences, adapt your leadership style, and create psychological safety",
+      "Assume culture doesn't matter",
+      "Keep teams separated by culture"
+    ],
+    "correct_answer": "Learn about each culture, establish explicit communication norms that respect differences, adapt your leadership style, and create psychological safety",
+    "topic": "Teamwork",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Your organization is failing to innovate and losing market share. You've identified that the problem is risk-averse culture. How should you address this systematically?",
+    "options": [
+      "Eliminate all risk management",
+      "Lead by example, celebrate intelligent failures, create innovation spaces with different risk tolerance, and adjust incentive structures",
+      "Blame employees for lack of innovation",
+      "Hire new people with a mandate to innovate"
+    ],
+    "correct_answer": "Lead by example, celebrate intelligent failures, create innovation spaces with different risk tolerance, and adjust incentive structures",
+    "topic": "Adaptability",
+    "difficulty": "hard"
+  },
+  {
+    "question": "You're transitioning your team from a hierarchical to a self-directed model. Team members are initially resistant and anxious. How should you lead this change?",
+    "options": [
+      "Mandate self-direction immediately",
+      "Educate on the rationale, gradually increase autonomy with guardrails, provide coaching, and celebrate wins to build confidence",
+      "Reverse the change if there's resistance",
+      "Criticize those who struggle with autonomy"
+    ],
+    "correct_answer": "Educate on the rationale, gradually increase autonomy with guardrails, provide coaching, and celebrate wins to build confidence",
+    "topic": "Adaptability",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A critical client relationship is at risk due to your organization's internal failures. The client is considering leaving. How should you handle this retention effort?",
+    "options": [
+      "Blame internal teams to the client",
+      "Take ownership, clearly communicate what went wrong, present a credible improvement plan, and propose new terms that address their concerns",
+      "Offer unsustainable discounts to keep them",
+      "Wait for them to escalate further"
+    ],
+    "correct_answer": "Take ownership, clearly communicate what went wrong, present a credible improvement plan, and propose new terms that address their concerns",
+    "topic": "Communication",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Your team is resisting a new performance management system that you believe is necessary for growth. How should you drive adoption while listening to concerns?",
+    "options": [
+      "Force adoption without discussion",
+      "Facilitate design input from the team, pilot the system, gather feedback, refine it, and communicate the performance benefits clearly",
+      "Abandon the new system",
+      "Implement it secretly"
+    ],
+    "correct_answer": "Facilitate design input from the team, pilot the system, gather feedback, refine it, and communicate the performance benefits clearly",
+    "topic": "Communication",
+    "difficulty": "hard"
+  },
+  {
+    "question": "You're asked to lead integration of a recently acquired company with very different culture. Retention risk is high. What's your strategy?",
+    "options": [
+      "Impose your company's culture immediately",
+      "Learn the acquired culture, honor what's valuable, involve leaders from both sides in co-creating integrated culture, and transparently address retention risks",
+      "Keep them separate indefinitely",
+      "Let them figure it out"
+    ],
+    "correct_answer": "Learn the acquired culture, honor what's valuable, involve leaders from both sides in co-creating integrated culture, and transparently address retention risks",
+    "topic": "Teamwork",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Your organization is operating in silos despite company values emphasizing collaboration. How should you break down silos systematically?",
+    "options": [
+      "Criticize silos in all-hands meetings",
+      "Redesign workflows to require cross-silo collaboration, establish shared metrics, create incentives for cooperation, and model collaboration from the top",
+      "Force people to collaborate",
+      "Accept siloed structure as inevitable"
+    ],
+    "correct_answer": "Redesign workflows to require cross-silo collaboration, establish shared metrics, create incentives for cooperation, and model collaboration from the top",
+    "topic": "Teamwork",
+    "difficulty": "hard"
+  },
+  {
+    "question": "You've realized that a major decision you made earlier is causing significant downstream problems. It will be costly to change now. How should you handle it?",
+    "options": [
+      "Hide the problem",
+      "Acknowledge the decision's impact, take responsibility, analyze the path forward thoroughly, and implement the best solution even if it's costly",
+      "Blame those who raised concerns previously",
+      "Continue with the flawed decision"
+    ],
+    "correct_answer": "Acknowledge the decision's impact, take responsibility, analyze the path forward thoroughly, and implement the best solution even if it's costly",
+    "topic": "Communication",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Your organization is going through a period of sustained crisis (pandemic, market downturn, major incident). How should you lead your team through this?",
+    "options": [
+      "Downplay the severity",
+      "Acknowledge the reality, provide clarity on what you know and don't know, establish regular cadence of communication, create stability where possible, and support team wellbeing",
+      "Make frequent changes to adapt",
+      "Assume the crisis will pass without planning"
+    ],
+    "correct_answer": "Acknowledge the reality, provide clarity on what you know and don't know, establish regular cadence of communication, create stability where possible, and support team wellbeing",
+    "topic": "Communication",
+    "difficulty": "hard"
+  },
+  {
+    "question": "You're being groomed for a senior role that would require you to make decisions affecting thousands. How should you prepare for this level of accountability and impact?",
+    "options": [
+      "Assume your current skills are sufficient",
+      "Seek mentorship, study organizational dynamics, practice cross-functional leadership, develop emotional intelligence, and reflect regularly on impact",
+      "Take the role and learn on the job",
+      "Decline to avoid risk"
+    ],
+    "correct_answer": "Seek mentorship, study organizational dynamics, practice cross-functional leadership, develop emotional intelligence, and reflect regularly on impact",
+    "topic": "Adaptability",
+    "difficulty": "hard"
+  },
+  {
+    "question": "You're leading a function where talent quality is uneven. You have limited budget to replace people. How should you approach capability building?",
+    "options": [
+      "Hire new people at senior positions",
+      "Conduct capability assessments, create individual development plans, invest in high-potential people, provide coaching, and make tough decisions about fit",
+      "Accept the capability gap",
+      "Blame individuals for not being better"
+    ],
+    "correct_answer": "Conduct capability assessments, create individual development plans, invest in high-potential people, provide coaching, and make tough decisions about fit",
+    "topic": "Teamwork",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Your team's work is critical to multiple parts of the business, but leadership doesn't recognize it. Resources are being allocated elsewhere. How should you influence resource allocation?",
+    "options": [
+      "Complain about unfair treatment",
+      "Quantify business impact, build relationships with stakeholders dependent on your work, involve them in advocating for resources, and propose creative alternatives",
+      "Reduce commitments without explaining why",
+      "Escalate in frustration"
+    ],
+    "correct_answer": "Quantify business impact, build relationships with stakeholders dependent on your work, involve them in advocating for resources, and propose creative alternatives",
+    "topic": "Communication",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A trusted lieutenant of yours has engaged in something ethically questionable (but not illegal). How should you handle this?",
+    "options": [
+      "Overlook it because they're valuable",
+      "Have a direct conversation about ethical expectations, understand their reasoning, discuss implications, and determine consequences",
+      "Immediately fire them",
+      "Report them without talking to them first"
+    ],
+    "correct_answer": "Have a direct conversation about ethical expectations, understand their reasoning, discuss implications, and determine consequences",
+    "topic": "Communication",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Your organization is facing a talent exodus to competitors. Retention efforts haven't worked. How should you approach this as a leader?",
+    "options": [
+      "Accept the exodus",
+      "Conduct stay interviews with valued people, analyze root causes systematically, address the gaps (comp, culture, growth), and rebuild retention strategy",
+      "Criticize people for leaving",
+      "Hire quickly to replace people"
+    ],
+    "correct_answer": "Conduct stay interviews with valued people, analyze root causes systematically, address the gaps (comp, culture, growth), and rebuild retention strategy",
+    "topic": "Communication",
+    "difficulty": "hard"
+  },
+  {
+    "question": "You're leading a team that needs to execute a vision that the majority of the team doubts will succeed. How should you lead without losing credibility?",
+    "options": [
+      "Criticize those who doubt",
+      "Acknowledge concerns transparently, present the rationale and evidence supporting the vision, ask for commitment to testing assumptions, and adjust as data emerges",
+      "Hide doubts from the team",
+      "Demand blind obedience"
+    ],
+    "correct_answer": "Acknowledge concerns transparently, present the rationale and evidence supporting the vision, ask for commitment to testing assumptions, and adjust as data emerges",
+    "topic": "Communication",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Your organization's diversity and inclusion efforts are failing due to systemic issues. How should you lead change in this area?",
+    "options": [
+      "Hold training sessions and declare victory",
+      "Assess systemic barriers rigorously, set accountability for leaders, change hiring and promotion processes, create inclusive culture, and measure progress",
+      "Assume the market will solve it",
+      "Focus only on awareness without action"
+    ],
+    "correct_answer": "Assess systemic barriers rigorously, set accountability for leaders, change hiring and promotion processes, create inclusive culture, and measure progress",
+    "topic": "Teamwork",
+    "difficulty": "hard"
+  },
+  {
+    "question": "You're inheriting a team with historical conflict between members. Trust is low. How should you rebuild trust?",
+    "options": [
+      "Ignore history and expect it to move forward",
+      "Acknowledge the history, facilitate facilitated dialogue if willing participants, establish new norms, and build trust through collaborative success",
+      "Replace conflicting people",
+      "Separate them completely"
+    ],
+    "correct_answer": "Acknowledge the history, facilitate facilitated dialogue if willing participants, establish new norms, and build trust through collaborative success",
+    "topic": "Teamwork",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Your company is making a strategic pivot that you think will fail. But the decision is made at the board level. How should you lead your team?",
+    "options": [
+      "Sabotage the pivot",
+      "Execute the pivot professionally, monitor results carefully, provide honest feedback to leadership, and be ready to propose adjustments if needed",
+      "Quit",
+      "Passive-aggressively resist"
+    ],
+    "correct_answer": "Execute the pivot professionally, monitor results carefully, provide honest feedback to leadership, and be ready to propose adjustments if needed",
+    "topic": "Communication",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Your team's autonomy is being constrained by a cross-functional partner who has outdated processes. Your team is frustrated. How should you resolve this?",
+    "options": [
+      "Tell your team to just deal with it",
+      "Understand the partner's constraints, build relationship with their leadership, collaborate on modernizing the process, and involve your team in the solution",
+      "Work around them without addressing",
+      "Escalate immediately"
+    ],
+    "correct_answer": "Understand the partner's constraints, build relationship with their leadership, collaborate on modernizing the process, and involve your team in the solution",
+    "topic": "Teamwork",
+    "difficulty": "hard"
+  },
+  {
+    "question": "You're being asked to make a decision with significant consequences but incomplete information. Waiting for more information has opportunity costs. How should you decide?",
+    "options": [
+      "Delay indefinitely until perfect information arrives",
+      "Assess the value of additional information vs. opportunity cost, make the decision with available data, and establish checkpoints to adjust",
+      "Flip a coin",
+      "Escalate to avoid responsibility"
+    ],
+    "correct_answer": "Assess the value of additional information vs. opportunity cost, make the decision with available data, and establish checkpoints to adjust",
+    "topic": "Communication",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A significant security or compliance issue is discovered involving your team. How should you respond to this crisis?",
+    "options": [
+      "Hide it internally and hope it goes unnoticed",
+      "Immediately involve compliance/legal, assess scope and impact, communicate appropriately to stakeholders, implement fixes, and establish preventative measures",
+      "Blame the team",
+      "Assume it's no big deal"
+    ],
+    "correct_answer": "Immediately involve compliance/legal, assess scope and impact, communicate appropriately to stakeholders, implement fixes, and establish preventative measures",
+    "topic": "Communication",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Your organization values innovation, but your team is under pressure to deliver reliable operations. How should you balance these?",
+    "options": [
+      "Choose one and sacrifice the other",
+      "Allocate time and resources to both (e.g., 70% operations, 30% innovation), create psychological safety for experimentation, and measure both reliability and innovation",
+      "Ignore innovation",
+      "Abandon reliability for innovation"
+    ],
+    "correct_answer": "Allocate time and resources to both (e.g., 70% operations, 30% innovation), create psychological safety for experimentation, and measure both reliability and innovation",
+    "topic": "Adaptability",
+    "difficulty": "hard"
+  },
+  {
+    "question": "You're developing a succession plan for your role. Talent for your replacement is limited. How should you approach this?",
+    "options": [
+      "Avoid succession planning to keep yourself indispensable",
+      "Identify high-potential people, create development plans, provide stretch assignments, mentor them, and establish a realistic timeline for readiness",
+      "Assume your replacement will just appear",
+      "Promote someone before they're ready"
+    ],
+    "correct_answer": "Identify high-potential people, create development plans, provide stretch assignments, mentor them, and establish a realistic timeline for readiness",
+    "topic": "Teamwork",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Your team members have widely varying levels of ambition and career goals. How should you lead this diverse group effectively?",
+    "options": [
+      "Assume everyone wants the same path",
+      "Understand individual aspirations, provide tailored development, offer multiple career paths, and create roles that leverage different motivations",
+      "Force everyone to aim for advancement",
+      "Ignore individual differences"
+    ],
+    "correct_answer": "Understand individual aspirations, provide tailored development, offer multiple career paths, and create roles that leverage different motivations",
+    "topic": "Teamwork",
+    "difficulty": "hard"
+  },
+  {
+    "question": "You're facing a situation where your professional integrity is being tested by organizational pressure. How should you handle this?",
+    "options": [
+      "Compromise your integrity to fit in",
+      "Clearly articulate your principles, document your concerns, seek guidance from trusted advisors, and make decisions aligned with your values",
+      "Leave immediately without discussion",
+      "Do what's asked while hating yourself"
+    ],
+    "correct_answer": "Clearly articulate your principles, document your concerns, seek guidance from trusted advisors, and make decisions aligned with your values",
+    "topic": "Communication",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Your organization is competing for market share and some competitors are using questionable practices. Pressure exists to follow suit. How should you lead?",
+    "options": [
+      "Follow competitors into questionable practices",
+      "Maintain ethical standards while competing effectively, communicate this commitment to the team and customers, and trust it's a long-term advantage",
+      "Try questionable practices secretly",
+      "Give up and accept losing market share"
+    ],
+    "correct_answer": "Maintain ethical standards while competing effectively, communicate this commitment to the team and customers, and trust it's a long-term advantage",
+    "topic": "Communication",
+    "difficulty": "hard"
+  },
+  {
+    "question": "You're leading through a period of significant self-doubt and uncertainty. How should you show up for your team?",
+    "options": [
+      "Hide your uncertainty and pretend to have all answers",
+      "Be authentic about uncertainty while projecting confidence in the team and the process, seek counsel from mentors, and learn as you go",
+      "Show your doubts openly to the team",
+      "Resign because you're not confident"
+    ],
+    "correct_answer": "Be authentic about uncertainty while projecting confidence in the team and the process, seek counsel from mentors, and learn as you go",
+    "topic": "Communication",
+    "difficulty": "hard"
+  },
+  {
+    "question": "You're leading a org-wide transformation that will fundamentally change how work gets done. Buy-in is weak. How should you drive adoption across silos?",
+    "options": [
+      "Mandate compliance",
+      "Create a coalition of respected leaders across silos, involve them early in design, address their concerns directly, and use them as change champions",
+      "Focus on your own department first",
+      "Hire external consultants to impose change"
+    ],
+    "correct_answer": "Create a coalition of respected leaders across silos, involve them early in design, address their concerns directly, and use them as change champions",
+    "topic": "Communication",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Your organization has a toxic leader in a critical role. Removing them creates political risk and operational disruption. How should you handle this?",
+    "options": [
+      "Protect them to avoid conflict",
+      "Document the impact thoroughly, build a case with stakeholders, plan succession, and execute the change despite disruption",
+      "Reassign them without addressing",
+      "Promote them to get them out of the way"
+    ],
+    "correct_answer": "Document the impact thoroughly, build a case with stakeholders, plan succession, and execute the change despite disruption",
+    "topic": "Communication",
+    "difficulty": "hard"
+  },
+  {
+    "question": "You've been offered an opportunity that's a significant step up, but it requires you to leave your current team mid-project. How should you navigate this decision?",
+    "options": [
+      "Take the opportunity immediately",
+      "Evaluate the opportunity carefully, assess the impact on your team and project, communicate early with stakeholders, and plan a smooth transition",
+      "Decline to be loyal to your team",
+      "Take the job but don't tell anyone"
+    ],
+    "correct_answer": "Evaluate the opportunity carefully, assess the impact on your team and project, communicate early with stakeholders, and plan a smooth transition",
+    "topic": "Communication",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Two business units have fundamentally misaligned visions for the company's future. Both have merit. How should you facilitate resolution?",
+    "options": [
+      "Pick one and impose it",
+      "Facilitate senior leadership to debate openly, explore hybrid approaches, make a transparent decision, and help the losing side accept it",
+      "Let them work it out alone",
+      "Escalate to the board immediately"
+    ],
+    "correct_answer": "Facilitate senior leadership to debate openly, explore hybrid approaches, make a transparent decision, and help the losing side accept it",
+    "topic": "Communication",
+    "difficulty": "hard"
+  },
+  {
+    "question": "You're uncovering evidence of a widespread systemic issue in your organization that leadership seems unaware of. This will require painful changes. How should you proceed?",
+    "options": [
+      "Hide the findings to avoid disruption",
+      "Document comprehensively, engage key stakeholders confidentially, present findings clearly, and drive systematic addressing despite the pain",
+      "Tell everyone informally and create chaos",
+      "Wait for someone else to discover it"
+    ],
+    "correct_answer": "Document comprehensively, engage key stakeholders confidentially, present findings clearly, and drive systematic addressing despite the pain",
+    "topic": "Communication",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Your organization's market position is declining but the majority of leadership remains optimistic. You have data showing the threat. How should you act?",
+    "options": [
+      "Become cynical and disengage",
+      "Present the data compellingly, create scenarios and contingencies, propose strategic options, and advocate for proactive response",
+      "Ignore the data yourself",
+      "Leak the information to the media"
+    ],
+    "correct_answer": "Present the data compellingly, create scenarios and contingencies, propose strategic options, and advocate for proactive response",
+    "topic": "Communication",
+    "difficulty": "hard"
+  },
+  {
+    "question": "You're managing a function that's being eliminated in a strategic pivot. You need to lead your team through this while maintaining performance and morale. How should you approach this?",
+    "options": [
+      "Prepare to abandon them when it happens",
+      "Be honest about the timeline, help people plan next steps, provide support for transitions, maintain performance expectations, and celebrate contributions",
+      "Keep it secret as long as possible",
+      "Tell them to find new jobs immediately"
+    ],
+    "correct_answer": "Be honest about the timeline, help people plan next steps, provide support for transitions, maintain performance expectations, and celebrate contributions",
+    "topic": "Communication",
+    "difficulty": "hard"
+  },
+  {
+    "question": "You're inheriting a team that's deeply skeptical of leadership and has low trust. Trust was broken by predecessors. How should you rebuild it?",
+    "options": [
+      "Ignore the trust issue and focus on results",
+      "Acknowledge the past, be consistent and transparent in communications, follow through on commitments, listen without defensiveness, and gradually rebuild through small wins",
+      "Change the entire team",
+      "Demand trust immediately"
+    ],
+    "correct_answer": "Acknowledge the past, be consistent and transparent in communications, follow through on commitments, listen without defensiveness, and gradually rebuild through small wins",
+    "topic": "Teamwork",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Your organization is facing a reputational crisis due to a leader's behavior. Transparency vs. protecting the leader is the dilemma. How should you advise leadership?",
+    "options": [
+      "Recommend complete silence",
+      "Advise transparency about the action taken, acknowledge the breach, outline preventative measures, and demonstrate that values matter",
+      "Recommend blaming external factors",
+      "Recommend attacking critics"
+    ],
+    "correct_answer": "Advise transparency about the action taken, acknowledge the breach, outline preventative measures, and demonstrate that values matter",
+    "topic": "Communication",
+    "difficulty": "hard"
+  },
+  {
+    "question": "You're managing a diverse team with distinct generational and cultural differences. Conflict is emerging around work styles. How should you build cohesion?",
+    "options": [
+      "Impose one work style on everyone",
+      "Celebrate differences, create forums for understanding diverse perspectives, establish norms that accommodate multiple styles, and leverage diversity as strength",
+      "Separate people by similarity",
+      "Ignore the differences"
+    ],
+    "correct_answer": "Celebrate differences, create forums for understanding diverse perspectives, establish norms that accommodate multiple styles, and leverage diversity as strength",
+    "topic": "Teamwork",
+    "difficulty": "hard"
+  },
+  {
+    "question": "You're faced with a choice between short-term results and long-term sustainability. Leadership is pushing for short-term wins. How should you navigate this?",
+    "options": [
+      "Sacrifice long-term for short-term",
+      "Present the trade-offs analysis, show long-term risks, propose a balanced approach, and help leadership understand the consequences of choices",
+      "Ignore short-term pressure",
+      "Resign in protest"
+    ],
+    "correct_answer": "Present the trade-offs analysis, show long-term risks, propose a balanced approach, and help leadership understand the consequences of choices",
+    "topic": "Communication",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A key partnership is dissolving due to fundamental disagreement. The impact is significant. How should you handle this professionally?",
+    "options": [
+      "Blame the partner publicly",
+      "Acknowledge the situation candidly, focus on minimizing impact, explore whether resolution is possible, and plan transition if necessary",
+      "Pretend nothing is wrong",
+      "Escalate dramatically"
+    ],
+    "correct_answer": "Acknowledge the situation candidly, focus on minimizing impact, explore whether resolution is possible, and plan transition if necessary",
+    "topic": "Communication",
+    "difficulty": "hard"
+  },
+  {
+    "question": "You're observing that your organization's structure is optimized for the past, not the future. Change is resisted because people are invested in the current structure. How should you lead this?",
+    "options": [
+      "Maintain the current structure",
+      "Model and promote future-oriented thinking, connect structural changes to strategic imperatives, involve key stakeholders in redesign, and phase changes thoughtfully",
+      "Eliminate the structure suddenly",
+      "Hire externally to bypass resistance"
+    ],
+    "correct_answer": "Model and promote future-oriented thinking, connect structural changes to strategic imperatives, involve key stakeholders in redesign, and phase changes thoughtfully",
+    "topic": "Adaptability",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Your team's psychological safety is low because of fear of failure. Innovation and healthy risk-taking have suffered. How should you rebuild safety?",
+    "options": [
+      "Tell people to stop being afraid",
+      "Model vulnerability by discussing your own failures, reward intelligent risk-taking, protect people from excessive punishment for failures, and build trust through consistency",
+      "Eliminate all risk",
+      "Replace cautious people"
+    ],
+    "correct_answer": "Model vulnerability by discussing your own failures, reward intelligent risk-taking, protect people from excessive punishment for failures, and build trust through consistency",
+    "topic": "Communication",
+    "difficulty": "hard"
+  },
+  {
+    "question": "You're leading through a period where the organization's stated values conflict with how decisions are actually made. This is eroding trust. How should you address this?",
+    "options": [
+      "Ignore the gap",
+      "Name the inconsistency, advocate for alignment, model value-aligned behavior, and help leadership acknowledge and address the gap",
+      "Adopt the behaviors of leadership",
+      "Leave the organization"
+    ],
+    "correct_answer": "Name the inconsistency, advocate for alignment, model value-aligned behavior, and help leadership acknowledge and address the gap",
+    "topic": "Communication",
+    "difficulty": "hard"
+  },
+  {
+    "question": "You're managing a strategic initiative that requires strong cross-functional collaboration, but departmental leaders are prioritizing their own metrics. How should you align incentives?",
+    "options": [
+      "Accept the siloed behavior",
+      "Propose shared metrics aligned to the initiative, involve leaders in designing incentive structure, make collaboration a success measure, and track progress",
+      "Compete with other departments",
+      "Go over their heads"
+    ],
+    "correct_answer": "Propose shared metrics aligned to the initiative, involve leaders in designing incentive structure, make collaboration a success measure, and track progress",
+    "topic": "Communication",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Your organization is experiencing burnout at scale. People are leaving. Senior leadership is in denial. How should you drive awareness and change?",
+    "options": [
+      "Accept burnout as inevitable",
+      "Present data on burnout and retention impact, highlight business costs, propose systemic solutions, and model better work practices yourself",
+      "Blame individuals for not managing stress",
+      "Accept resignations quietly"
+    ],
+    "correct_answer": "Present data on burnout and retention impact, highlight business costs, propose systemic solutions, and model better work practices yourself",
+    "topic": "Communication",
+    "difficulty": "hard"
+  },
+  {
+    "question": "You're inheriting a team where previous leadership left things in chaos. Clarity on expectations and priorities is urgently needed. How should you approach this?",
+    "options": [
+      "Impose order immediately",
+      "Assess the situation thoroughly, communicate findings transparently, co-create order with the team, and establish clear expectations going forward",
+      "Assume chaos is normal",
+      "Make decisions unilaterally"
+    ],
+    "correct_answer": "Assess the situation thoroughly, communicate findings transparently, co-create order with the team, and establish clear expectations going forward",
+    "topic": "Communication",
+    "difficulty": "hard"
+  },
+  {
+    "question": "You're managing a team with high technical expertise but significant interpersonal challenges. They're effective but unhappy. How should you improve their experience?",
+    "options": [
+      "Accept that experts are difficult",
+      "Invest in team building, facilitate connection, address root causes of unhappiness, and leverage their expertise while building people skills",
+      "Replace the team",
+      "Isolate them further"
+    ],
+    "correct_answer": "Invest in team building, facilitate connection, address root causes of unhappiness, and leverage their expertise while building people skills",
+    "topic": "Teamwork",
+    "difficulty": "hard"
+  },
+  {
+    "question": "You're facing a situation where being promoted into a role would mean managing people who were previously peers. How should you navigate this transition?",
+    "options": [
+      "Become distant to establish authority",
+      "Be clear about the role change, establish professional boundaries, have individual conversations, and work on respect-based credibility",
+      "Avoid the promotion",
+      "Maintain old relationships unchanged"
+    ],
+    "correct_answer": "Be clear about the role change, establish professional boundaries, have individual conversations, and work on respect-based credibility",
+    "topic": "Communication",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Your organization is expanding globally and cultural differences in how work gets done are creating friction. How should you build a cohesive global culture?",
+    "options": [
+      "Impose headquarters culture globally",
+      "Understand and respect local cultures, establish core values that unite while allowing local adaptation, rotate leaders across regions, and celebrate diversity",
+      "Keep global teams separate",
+      "Hire only from headquarters culture"
+    ],
+    "correct_answer": "Understand and respect local cultures, establish core values that unite while allowing local adaptation, rotate leaders across regions, and celebrate diversity",
+    "topic": "Teamwork",
+    "difficulty": "hard"
+  },
+  {
+    "question": "You're managing a function that's underfunded relative to its importance. How should you advocate for resources without appearing to be begging?",
+    "options": [
+      "Accept underfunding",
+      "Build a strong business case, connect to strategic imperatives, show the cost of underfunding, propose creative alternatives, and engage stakeholders who benefit from your function",
+      "Go public with the complaint",
+      "Lower expectations dramatically"
+    ],
+    "correct_answer": "Build a strong business case, connect to strategic imperatives, show the cost of underfunding, propose creative alternatives, and engage stakeholders who benefit from your function",
+    "topic": "Communication",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A high-performing team is becoming insular and resistant to outside perspectives. Innovation is suffering. How should you challenge this dynamic?",
+    "options": [
+      "Leave them alone because they're high-performing",
+      "Bring in external perspectives, create cross-team initiatives, challenge assumptions respectfully, and reward openness to new ideas",
+      "Break up the team",
+      "Remove the team leader"
+    ],
+    "correct_answer": "Bring in external perspectives, create cross-team initiatives, challenge assumptions respectfully, and reward openness to new ideas",
+    "topic": "Communication",
+    "difficulty": "hard"
+  },
+  {
+    "question": "You're managing through a significant market disruption affecting your industry. Uncertainty is high. How should you lead decisively without overconfidence?",
+    "options": [
+      "Pretend to have all the answers",
+      "Acknowledge uncertainty transparently, make decisions based on best available data, establish rapid feedback loops, and adjust as new information emerges",
+      "Delay decisions until certainty exists",
+      "Panic and react dramatically"
+    ],
+    "correct_answer": "Acknowledge uncertainty transparently, make decisions based on best available data, establish rapid feedback loops, and adjust as new information emerges",
+    "topic": "Communication",
+    "difficulty": "hard"
+  },
+  {
+    "question": "You're uncovering that a peer leader is sabotaging your initiatives. You need to address this without creating open conflict. How should you proceed?",
+    "options": [
+      "Retaliate by sabotaging theirs",
+      "Document the pattern, have a candid private conversation, understand their motivations, propose cooperation, and involve leadership if unresolved",
+      "Complain to leadership immediately",
+      "Ignore it and let it play out"
+    ],
+    "correct_answer": "Document the pattern, have a candid private conversation, understand their motivations, propose cooperation, and involve leadership if unresolved",
+    "topic": "Communication",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Your team's future role is uncertain due to organizational changes. You need to keep them engaged and productive. How should you approach this?",
+    "options": [
+      "Hide the uncertainty",
+      "Be honest about what you know and don't know, help them explore future possibilities, provide support for contingencies, and maintain focus on current priorities",
+      "Encourage them to leave",
+      "Make false promises about stability"
+    ],
+    "correct_answer": "Be honest about what you know and don't know, help them explore future possibilities, provide support for contingencies, and maintain focus on current priorities",
+    "topic": "Communication",
+    "difficulty": "hard"
+  },
+  {
+    "question": "You're managing a team where burnout symptoms are visible but people deny the problem. How should you intervene?",
+    "options": [
+      "Force people to take time off",
+      "Create safe forums for honest conversation, normalize discussing overwhelm, adjust workload and expectations, and involve HR if needed",
+      "Ignore the symptoms",
+      "Blame individuals for not managing themselves"
+    ],
+    "correct_answer": "Create safe forums for honest conversation, normalize discussing overwhelm, adjust workload and expectations, and involve HR if needed",
+    "topic": "Communication",
+    "difficulty": "hard"
+  },
+  {
+    "question": "You're establishing a new team and need to set the culture from the beginning. How should you be intentional about this?",
+    "options": [
+      "Hope good culture emerges naturally",
+      "Define values and norms explicitly, model them visibly, address violations early, celebrate adherence, and revisit periodically",
+      "Impose culture without discussion",
+      "Assume people know how to behave"
+    ],
+    "correct_answer": "Define values and norms explicitly, model them visibly, address violations early, celebrate adherence, and revisit periodically",
+    "topic": "Teamwork",
+    "difficulty": "hard"
+  },
+  {
+    "question": "You're managing a portfolio of initiatives with varying priorities and success is ambiguous. How should you measure impact fairly?",
+    "options": [
+      "Only count successful initiatives",
+      "Establish diverse metrics aligned to each initiative's goals, assess learnings even from unsuccessful ones, adjust portfolio based on learnings",
+      "Avoid measuring",
+      "Blame teams for poor results"
+    ],
+    "correct_answer": "Establish diverse metrics aligned to each initiative's goals, assess learnings even from unsuccessful ones, adjust portfolio based on learnings",
+    "topic": "Communication",
+    "difficulty": "hard"
+  },
+  {
+    "question": "You're noticing patterns in your organization that suggest systemic bias. Calling it out could create defensiveness. How should you address this?",
+    "options": [
+      "Ignore the bias to avoid conflict",
+      "Present data objectively, discuss patterns without blame, invite exploration of root causes, propose concrete changes",
+      "Shame individuals for bias",
+      "Only discuss privately"
+    ],
+    "correct_answer": "Present data objectively, discuss patterns without blame, invite exploration of root causes, propose concrete changes",
+    "topic": "Communication",
+    "difficulty": "hard"
+  },
+  {
+    "question": "You're inheriting a role where your predecessor was loved but left things incomplete. How should you honor legacy while moving forward?",
+    "options": [
+      "Immediately change everything to assert yourself",
+      "Acknowledge your predecessor's contributions, understand what they started, complete important work, and chart a thoughtful way forward",
+      "Replicate everything they did",
+      "Criticize their work to establish yourself"
+    ],
+    "correct_answer": "Acknowledge your predecessor's contributions, understand what they started, complete important work, and chart a thoughtful way forward",
+    "topic": "Communication",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Your team is skeptical of organizational vision due to past failures in execution. How should you rebuild confidence in leadership's direction?",
+    "options": [
+      "Dismiss their skepticism",
+      "Validate it based on history, propose how this time will be different, involve the team in planning, communicate progress regularly",
+      "Hide the vision",
+      "Change the vision to avoid skepticism"
+    ],
+    "correct_answer": "Validate it based on history, propose how this time will be different, involve the team in planning, communicate progress regularly",
+    "topic": "Communication",
+    "difficulty": "hard"
+  },
+  {
+    "question": "You're facing a choice between loyalty to a struggling leader and the wellbeing of your team. How should you navigate this?",
+    "options": [
+      "Blindly support the leader",
+      "Assess the impact objectively, have candid conversations with the leader about concerns, consider implications for your team, make a decision based on ethics and data",
+      "Throw the leader under the bus",
+      "Do nothing and hope it resolves"
+    ],
+    "correct_answer": "Assess the impact objectively, have candid conversations with the leader about concerns, consider implications for your team, make a decision based on ethics and data",
+    "topic": "Communication",
+    "difficulty": "hard"
+  },
+  {
+    "question": "You're managing a team that's distributed across time zones and struggling with asynchronous collaboration. How should you design your communication?",
+    "options": [
+      "Schedule all meetings during one time zone's business hours",
+      "Create norms that value asynchronous communication, use time zone rotation for synchronous meetings, document decisions and progress visibly, build in overlap time strategically",
+      "Expect people to always be available",
+      "Only hire in one location"
+    ],
+    "correct_answer": "Create norms that value asynchronous communication, use time zone rotation for synchronous meetings, document decisions and progress visibly, build in overlap time strategically",
+    "topic": "Teamwork",
+    "difficulty": "hard"
+  },
+  {
+    "question": "You're discovering that remote work has hidden interpersonal issues that weren't apparent when people were in the office. How should you address this?",
+    "options": [
+      "Force everyone back to the office",
+      "Create intentional connection opportunities, establish norms for digital communication, provide training on remote collaboration, monitor for isolation",
+      "Accept that remote work harms relationships",
+      "Ignore the issues"
+    ],
+    "correct_answer": "Create intentional connection opportunities, establish norms for digital communication, provide training on remote collaboration, monitor for isolation",
+    "topic": "Teamwork",
+    "difficulty": "hard"
+  }
+]

@@ -1,0 +1,182 @@
+[
+  {
+    "question": "What is the fundamental characteristic of a Python string?",
+    "options": [
+      "It is an ordered sequence of characters.",
+      "It is a mutable collection of numbers.",
+      "It is an unordered set of unique elements.",
+      "It is a fixed-size array of boolean values."
+    ],
+    "correct_answer": "It is an ordered sequence of characters.",
+    "topic": "Strings",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which of the following describes how Python strings are handled regarding modification after creation?",
+    "options": [
+      "Strings are immutable, meaning they cannot be changed after creation.",
+      "Strings are mutable, meaning their characters can be changed directly.",
+      "Strings are partially mutable, allowing changes to only the first character.",
+      "String mutability depends on the Python version being used."
+    ],
+    "correct_answer": "Strings are immutable, meaning they cannot be changed after creation.",
+    "topic": "Strings",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which operator is commonly used to combine two or more strings into a single string in Python?",
+    "options": [
+      "The addition operator (+)",
+      "The subtraction operator (-)",
+      "The multiplication operator (*)",
+      "The division operator (/)"
+    ],
+    "correct_answer": "The addition operator (+)",
+    "topic": "Strings",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What characteristic best describes Python lists?",
+    "options": [
+      "Immutable and unordered",
+      "Mutable and ordered",
+      "Fixed-size and homogeneous",
+      "Dynamic and non-indexable"
+    ],
+    "correct_answer": "Mutable and ordered",
+    "topic": "Lists",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which statement is true regarding the elements a Python list can contain?",
+    "options": [
+      "All elements must be of the same data type.",
+      "Elements must be numbers only.",
+      "Elements can be of different data types.",
+      "Elements can only be other lists."
+    ],
+    "correct_answer": "Elements can be of different data types.",
+    "topic": "Lists",
+    "difficulty": "easy"
+  },
+  {
+    "question": "How are individual elements in a Python list typically accessed?",
+    "options": [
+      "By their value",
+      "By their memory address",
+      "By their index",
+      "By their name"
+    ],
+    "correct_answer": "By their index",
+    "topic": "Lists",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which of the following correctly defines a string variable named 'greeting' with the value 'Hello' in Python?",
+    "options": [
+      "greeting = 'Hello'",
+      "greeting = Hello",
+      "greeting = 123",
+      "greeting = [Hello]"
+    ],
+    "correct_answer": "greeting = 'Hello'",
+    "topic": "Strings",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the result of concatenating the strings 'Python' and 'World' using the '+' operator as in `'Python' + ' ' + 'World'`?",
+    "options": [
+      "'PythonWorld'",
+      "'Python World'",
+      "'Python' 'World'",
+      "TypeError"
+    ],
+    "correct_answer": "'Python World'",
+    "topic": "Strings",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the output of `len('programming')`?",
+    "options": [
+      "11",
+      "10",
+      "12",
+      "Error"
+    ],
+    "correct_answer": "11",
+    "topic": "Strings",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which Linux command is used to list the contents of the current directory?",
+    "options": [
+      "A. `pwd`",
+      "B. `cd`",
+      "C. `ls`",
+      "D. `mkdir`"
+    ],
+    "correct_answer": "C",
+    "topic": "Linux",
+    "difficulty": "easy"
+  },
+  {
+    "question": "To navigate into a directory named 'my_project' from the current directory in Linux, which command would you use?",
+    "options": [
+      "A. `open my_project`",
+      "B. `cd my_project`",
+      "C. `mv my_project`",
+      "D. `goto my_project`"
+    ],
+    "correct_answer": "B",
+    "topic": "Linux",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What Linux command would you use to display the entire content of a text file named `script.py` directly in the terminal?",
+    "options": [
+      "A. `read script.py`",
+      "B. `view script.py`",
+      "C. `cat script.py`",
+      "D. `show script.py`"
+    ],
+    "correct_answer": "C",
+    "topic": "Linux",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the output of `type(5 / 2)` in Python?",
+    "options": [
+      "A. <class 'int'>",
+      "B. <class 'float'>",
+      "C. <class 'str'>",
+      "D. <class 'tuple'>"
+    ],
+    "correct_answer": "B",
+    "topic": "Data Types",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What will be the value of `my_list` after executing the following code?\n`my_list = [1, 2, 3]`\n`my_list.append(4)`\n`my_list[1] = 0`",
+    "options": [
+      "A. [1, 2, 3, 4]",
+      "B. [1, 0, 3, 4]",
+      "C. [1, 0, 4]",
+      "D. [0, 2, 3, 4]"
+    ],
+    "correct_answer": "B",
+    "topic": "Lists",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the output of the following Python code?\n`x = 10`\n`if x > 15:`\n  `print(\"A\")`\n`elif x > 5:`\n  `print(\"B\")`\n`else:`\n  `print(\"C\")`",
+    "options": [
+      "A. A",
+      "B. B",
+      "C. C",
+      "D. No output"
+    ],
+    "correct_answer": "B",
+    "topic": "Control Statements",
+    "difficulty": "easy"
+  }
+]

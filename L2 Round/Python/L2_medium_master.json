@@ -1,0 +1,506 @@
+[
+  {
+    "question": "How does data hiding strengthen object-oriented design?",
+    "options": ["By increasing execution speed", "By preventing unauthorized access to internal state", "By reducing file size", "By enabling multiple inheritance"],
+    "correct_answer": "By preventing unauthorized access to internal state",
+    "topic": "OOP",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which characteristic defines a higher-order function?",
+    "options": ["Functions that use loops", "Functions that accept or return other functions", "Functions with multiple parameters", "Functions that are recursive"],
+    "correct_answer": "Functions that accept or return other functions",
+    "topic": "HOF",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the main limitation of lambda functions in Python?",
+    "options": ["Cannot use variables", "Limited to single expression", "Cannot return values", "Cannot take arguments"],
+    "correct_answer": "Limited to single expression",
+    "topic": "Lambda",
+    "difficulty": "medium"
+  },
+  {
+    "question": "How can you reset an exhausted iterator to iterate again?",
+    "options": ["Call reset() method", "Call iter() again on original iterable", "Use reverse() method", "Cannot be reset"],
+    "correct_answer": "Call iter() again on original iterable",
+    "topic": "Iterators",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What advantage do decorators provide over modifying source code directly?",
+    "options": ["Faster execution", "Separation of concerns and reusability", "Reducing memory usage", "Enabling multithreading"],
+    "correct_answer": "Separation of concerns and reusability",
+    "topic": "Decorators",
+    "difficulty": "medium"
+  },
+  {
+    "question": "How do generators differ from regular functions?",
+    "options": ["Use return instead of yield", "Use yield and maintain state between calls", "Cannot accept arguments", "Execute immediately"],
+    "correct_answer": "Use yield and maintain state between calls",
+    "topic": "Generators",
+    "difficulty": "medium"
+  },
+  {
+    "question": "When should you use the 'finally' block in exception handling?",
+    "options": ["To catch additional exceptions", "For cleanup code that must run regardless of exceptions", "To prevent exceptions", "To log exceptions only"],
+    "correct_answer": "For cleanup code that must run regardless of exceptions",
+    "topic": "Exceptions",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is abstraction in object-oriented programming?",
+    "options": ["Hiding complex implementation details", "Creating multiple objects", "Inheriting from parent class", "Defining variables"],
+    "correct_answer": "Hiding complex implementation details",
+    "topic": "OOP",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which built-in function is a common example of a higher-order function?",
+    "options": ["len()", "map()", "type()", "str()"],
+    "correct_answer": "map()",
+    "topic": "HOF",
+    "difficulty": "medium"
+  },
+  {
+    "question": "When are lambda functions most appropriately used?",
+    "options": ["Complex multi-line logic", "Simple, short operations passed as arguments", "Class definitions", "Exception handling"],
+    "correct_answer": "Simple, short operations passed as arguments",
+    "topic": "Lambda",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What advantage do iterators provide over loading entire sequences into memory?",
+    "options": ["Faster processing", "Memory efficiency through lazy evaluation", "Better error handling", "Easier syntax"],
+    "correct_answer": "Memory efficiency through lazy evaluation",
+    "topic": "Iterators",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Can decorators be stacked on a single function?",
+    "options": ["No, only one per function", "Yes, applied from bottom to top", "Yes, applied from top to bottom", "Only in Python 3.9+"],
+    "correct_answer": "Yes, applied from bottom to top",
+    "topic": "Decorators",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the memory advantage of using generators?",
+    "options": ["Store all values upfront", "Generate values on-demand", "Use heap memory", "Compress data automatically"],
+    "correct_answer": "Generate values on-demand",
+    "topic": "Generators",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the difference between 'except Exception' and bare 'except'?",
+    "options": ["No difference", "except Exception catches most errors; bare except catches everything including system exits", "Bare except is more specific", "except Exception is deprecated"],
+    "correct_answer": "except Exception catches most errors; bare except catches everything including system exits",
+    "topic": "Exceptions",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is multiple inheritance in Python?",
+    "options": ["One class inheriting from another", "A class inheriting from multiple parent classes", "Creating multiple instances", "Defining multiple methods"],
+    "correct_answer": "A class inheriting from multiple parent classes",
+    "topic": "OOP",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What does the 'filter()' higher-order function do?",
+    "options": ["Transforms elements", "Selects elements based on condition", "Reduces to single value", "Sorts elements"],
+    "correct_answer": "Selects elements based on condition",
+    "topic": "HOF",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Can lambda functions contain statements?",
+    "options": ["Yes, any statements", "No, only expressions", "Only assignment statements", "Only return statements"],
+    "correct_answer": "No, only expressions",
+    "topic": "Lambda",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What error is raised when an iterator reaches its end?",
+    "options": ["StopIteration", "EndOfIteration", "IndexError", "IteratorError"],
+    "correct_answer": "StopIteration",
+    "topic": "Iterators",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is a common use case for decorators?",
+    "options": ["Data storage", "Logging, timing, or access control", "Variable declaration", "Loop optimization"],
+    "correct_answer": "Logging, timing, or access control",
+    "topic": "Decorators",
+    "difficulty": "medium"
+  },
+  {
+    "question": "How many times can you consume a generator's values?",
+    "options": ["Unlimited times", "Once, then must recreate", "Twice maximum", "Depends on size"],
+    "correct_answer": "Once, then must recreate",
+    "topic": "Generators",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Why create custom exception classes?",
+    "options": ["Improve performance", "Provide domain-specific error information", "Reduce code size", "Enable multithreading"],
+    "correct_answer": "Provide domain-specific error information",
+    "topic": "Exceptions",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the super() function used for?",
+    "options": ["Creating superclasses", "Calling parent class methods", "Defining static methods", "Improving performance"],
+    "correct_answer": "Calling parent class methods",
+    "topic": "OOP",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What does the 'reduce()' function do?",
+    "options": ["Filters elements", "Applies function cumulatively to reduce to single value", "Sorts elements", "Maps elements"],
+    "correct_answer": "Applies function cumulatively to reduce to single value",
+    "topic": "HOF",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Can lambda functions access variables from enclosing scope?",
+    "options": ["No, completely isolated", "Yes, through closure", "Only global variables", "Only with nonlocal keyword"],
+    "correct_answer": "Yes, through closure",
+    "topic": "Lambda",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the relationship between iterables and iterators?",
+    "options": ["They are the same", "Iterables can produce iterators", "Iterators contain iterables", "No relationship"],
+    "correct_answer": "Iterables can produce iterators",
+    "topic": "Iterators",
+    "difficulty": "medium"
+  },
+  {
+    "question": "How can decorators accept configuration arguments?",
+    "options": ["Not possible", "By creating decorator factories", "Only in Python 3.9+", "Only with @staticmethod"],
+    "correct_answer": "By creating decorator factories",
+    "topic": "Decorators",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is a generator expression?",
+    "options": ["Function that returns generator", "Compact syntax similar to list comprehension", "Type of iterator", "Decorator syntax"],
+    "correct_answer": "Compact syntax similar to list comprehension",
+    "topic": "Generators",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Why catch specific exceptions rather than generic ones?",
+    "options": ["Faster execution", "Better error handling and debugging", "Required by Python", "Uses less memory"],
+    "correct_answer": "Better error handling and debugging",
+    "topic": "Exceptions",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What distinguishes class methods from instance methods?",
+    "options": ["@staticmethod decorator", "@classmethod decorator and cls parameter", "@property decorator", "No special marker"],
+    "correct_answer": "@classmethod decorator and cls parameter",
+    "topic": "OOP",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What module contains the reduce() function?",
+    "options": ["itertools", "functools", "collections", "builtin"],
+    "correct_answer": "functools",
+    "topic": "HOF",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the syntax difference between lambda and regular functions?",
+    "options": ["No difference", "Lambda uses 'lambda' keyword, no def or return", "Lambda requires parentheses", "Lambda must have name"],
+    "correct_answer": "Lambda uses 'lambda' keyword, no def or return",
+    "topic": "Lambda",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Can you create an iterator from any sequence?",
+    "options": ["No, only from lists", "Yes, using iter() function", "Only from tuples", "Only from strings"],
+    "correct_answer": "Yes, using iter() function",
+    "topic": "Iterators",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What does the '@property' decorator enable?",
+    "options": ["Creating static methods", "Creating getter methods that act like attributes", "Defining class variables", "Documenting code"],
+    "correct_answer": "Creating getter methods that act like attributes",
+    "topic": "Decorators",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Can generators be used in list comprehensions?",
+    "options": ["No, incompatible", "Yes, for memory-efficient processing", "Only in Python 3.8+", "Only with special syntax"],
+    "correct_answer": "Yes, for memory-efficient processing",
+    "topic": "Generators",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is exception chaining?",
+    "options": ["Catching multiple exceptions", "Linking original exception to new exception", "Creating exception hierarchy", "Handling exceptions in sequence"],
+    "correct_answer": "Linking original exception to new exception",
+    "topic": "Exceptions",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is composition in OOP?",
+    "options": ["Inheriting from multiple classes", "Building complex objects from simpler ones", "Creating abstract classes", "Defining interfaces"],
+    "correct_answer": "Building complex objects from simpler ones",
+    "topic": "OOP",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is a closure in the context of higher-order functions?",
+    "options": ["Function that closes files", "Function that remembers enclosing scope", "Function that terminates program", "Function without return"],
+    "correct_answer": "Function that remembers enclosing scope",
+    "topic": "HOF",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Can lambda functions be assigned to variables?",
+    "options": ["No, anonymous only", "Yes, though regular functions are preferred for named use", "Only in Python 3.9+", "Only for debugging"],
+    "correct_answer": "Yes, though regular functions are preferred for named use",
+    "topic": "Lambda",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which statement allows a generator to pass control to another iterator?",
+    "options": ["delegate", "yield from", "return from", "pass to"],
+    "correct_answer": "yield from",
+    "topic": "Generators",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What distinguishes '@staticmethod' from regular methods?",
+    "options": ["Modifies class state", "Doesn't access instance or class", "Is abstract", "Is private"],
+    "correct_answer": "Doesn't access instance or class",
+    "topic": "Decorators",
+    "difficulty": "medium"
+  },
+  {
+    "question": "When does the 'else' clause execute in try-except blocks?",
+    "options": ["When any exception occurs", "When no exception occurs", "Always after try", "Never executes"],
+    "correct_answer": "When no exception occurs",
+    "topic": "Exceptions",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is duck typing in Python?",
+    "options": ["Strong type checking", "Type determined by behavior rather than inheritance", "Type conversion", "Type annotation"],
+    "correct_answer": "Type determined by behavior rather than inheritance",
+    "topic": "OOP",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is partial function application?",
+    "options": ["Incomplete function definition", "Fixing some arguments of a function", "Function that returns None", "Half-executed function"],
+    "correct_answer": "Fixing some arguments of a function",
+    "topic": "HOF",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Are lambda functions first-class objects?",
+    "options": ["No, limited objects", "Yes, can be passed and returned like any object", "Only in Python 3.10+", "Depends on usage"],
+    "correct_answer": "Yes, can be passed and returned like any object",
+    "topic": "Lambda",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is an infinite iterator?",
+    "options": ["Iterator with error", "Iterator that never stops yielding values", "Iterator that loops once", "Broken iterator"],
+    "correct_answer": "Iterator that never stops yielding values",
+    "topic": "Iterators",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Can decorators modify the original function?",
+    "options": ["No, creates wrapper", "Yes, can modify or replace entirely", "Only add functionality", "Only remove functionality"],
+    "correct_answer": "Yes, can modify or replace entirely",
+    "topic": "Decorators",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What does the send() method do with generators?",
+    "options": ["Send data to generator", "Stop generator", "Restart generator", "Clone generator"],
+    "correct_answer": "Send data to generator",
+    "topic": "Generators",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Why explicitly raise exceptions in code?",
+    "options": ["Improve performance", "Signal error conditions in program logic", "Stop execution", "Log errors"],
+    "correct_answer": "Signal error conditions in program logic",
+    "topic": "Exceptions",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is method resolution order (MRO)?",
+    "options": ["Order of defining methods", "Order Python searches for methods in inheritance", "Alphabetical ordering", "Execution order"],
+    "correct_answer": "Order Python searches for methods in inheritance",
+    "topic": "OOP",
+    "difficulty": "medium"
+  },
+  {
+    "question": "How does the 'sorted()' function demonstrate higher-order function usage?",
+    "options": ["It sorts only numbers", "It accepts a key function to customize sorting", "It modifies original", "It only works on lists"],
+    "correct_answer": "It accepts a key function to customize sorting",
+    "topic": "HOF",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Can lambda functions call other functions?",
+    "options": ["No, completely isolated", "Yes, can call any function", "Only built-in functions", "Only lambda functions"],
+    "correct_answer": "Yes, can call any function",
+    "topic": "Lambda",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What does the itertools module provide?",
+    "options": ["Creating classes", "Iterator building blocks", "Exception handling", "Type checking"],
+    "correct_answer": "Iterator building blocks",
+    "topic": "Iterators",
+    "difficulty": "medium"
+  },
+  {
+    "question": "How do you preserve decorated function's name and docstring?",
+    "options": ["Use @preserve", "Use functools.wraps", "Manually copy attributes", "Not possible"],
+    "correct_answer": "Use functools.wraps",
+    "topic": "Decorators",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Do generators preserve local variables between yields?",
+    "options": ["No, lost after yield", "Yes, variables persist", "Only global variables", "Must pass as parameters"],
+    "correct_answer": "Yes, variables persist",
+    "topic": "Generators",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which exception class should most custom exceptions inherit from?",
+    "options": ["BaseException", "Exception", "Error", "CustomError"],
+    "correct_answer": "Exception",
+    "topic": "Exceptions",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What are magic methods in Python classes?",
+    "options": ["Hidden methods", "Methods with double underscores for operator overloading", "Static methods", "Abstract methods"],
+    "correct_answer": "Methods with double underscores for operator overloading",
+    "topic": "OOP",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is function composition?",
+    "options": ["Writing functions", "Combining functions to create new functions", "Decomposing functions", "Calling functions"],
+    "correct_answer": "Combining functions to create new functions",
+    "topic": "HOF",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What happens if a lambda function has multiple expressions?",
+    "options": ["Returns tuple", "Syntax error", "Returns last expression", "Returns None"],
+    "correct_answer": "Syntax error",
+    "topic": "Lambda",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is lazy evaluation in iterators?",
+    "options": ["Slow execution", "Computing values only when needed", "Caching results", "Parallel processing"],
+    "correct_answer": "Computing values only when needed",
+    "topic": "Iterators",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Can decorators be applied to classes?",
+    "options": ["No, only functions", "Yes, class decorators exist", "Only in Python 3.10+", "Only with metaclasses"],
+    "correct_answer": "Yes, class decorators exist",
+    "topic": "Decorators",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What does the close() method do to a generator?",
+    "options": ["Saves state", "Stops generator and raises GeneratorExit", "Restarts generator", "Returns all values"],
+    "correct_answer": "Stops generator and raises GeneratorExit",
+    "topic": "Generators",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the 'raise from' syntax used for?",
+    "options": ["Raising multiple exceptions", "Explicit exception chaining", "Conditional raising", "Re-raising exceptions"],
+    "correct_answer": "Explicit exception chaining",
+    "topic": "Exceptions",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What distinguishes instance variables from class variables?",
+    "options": ["No difference", "Instance variables are per object; class variables are shared", "Instance variables are faster", "Class variables are deprecated"],
+    "correct_answer": "Instance variables are per object; class variables are shared",
+    "topic": "OOP",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is currying in functional programming?",
+    "options": ["Cooking functions", "Transforming function with multiple args into sequence of functions", "Function optimization", "Function documentation"],
+    "correct_answer": "Transforming function with multiple args into sequence of functions",
+    "topic": "HOF",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Can lambda functions have default arguments?",
+    "options": ["No, not supported", "Yes, same syntax as regular functions", "Only in Python 3.10+", "Only positional defaults"],
+    "correct_answer": "Yes, same syntax as regular functions",
+    "topic": "Lambda",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What should the __iter__() method return?",
+    "options": ["List of elements", "The iterator object itself", "Length of iterable", "None"],
+    "correct_answer": "The iterator object itself",
+    "topic": "Iterators",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What challenge does maintaining decorator state across calls present?",
+    "options": ["Performance issues", "Preserving state while wrapping functions", "Type safety problems", "Import conflicts"],
+    "correct_answer": "Preserving state while wrapping functions",
+    "topic": "Decorators",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Can generators be recursive?",
+    "options": ["No, causes infinite loop", "Yes, can yield from recursive calls", "Only with special syntax", "Deprecated feature"],
+    "correct_answer": "Yes, can yield from recursive calls",
+    "topic": "Generators",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What do context managers ensure in exception scenarios?",
+    "options": ["Catching all exceptions", "Resource cleanup even if exceptions occur", "Logging errors", "Preventing exceptions"],
+    "correct_answer": "Resource cleanup even if exceptions occur",
+    "topic": "Exceptions",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What defines an abstract class?",
+    "options": ["Class with no methods", "Class that cannot be instantiated and defines interface", "Class without attributes", "Deprecated class"],
+    "correct_answer": "Class that cannot be instantiated and defines interface",
+    "topic": "OOP",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What do the 'any()' and 'all()' functions test?",
+    "options": ["Create iterables", "If any/all elements are truthy", "Count elements", "Sort elements"],
+    "correct_answer": "If any/all elements are truthy",
+    "topic": "HOF",
+    "difficulty": "medium"
+  },
+  {
+    "question": "When might you prefer regular functions over lambda?",
+    "options": ["Lambda is slower", "Better readability and debugging for complex logic", "Regular functions are newer", "Lambda has bugs"],
+    "correct_answer": "Better readability and debugging for complex logic",
+    "topic": "Lambda",
+    "difficulty": "medium"
+  }
+]

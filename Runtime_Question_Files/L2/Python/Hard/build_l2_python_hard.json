@@ -1,0 +1,74 @@
+[
+  {
+    "question": "Which standard Python library is most commonly used for making HTTP requests in a synchronous or asynchronous manner?",
+    "options": [
+      "A. `urllib`",
+      "B. `http.client`",
+      "C. `socket`",
+      "D. `requests` (third-party, but defacto standard)"
+    ],
+    "correct_answer": "D",
+    "topic": "Libraries",
+    "difficulty": "hard"
+  },
+  {
+    "question": "You need to programmatically parse command-line arguments (like `--input file.txt`) for your Python script. Which standard library module is specifically designed for this purpose?",
+    "options": [
+      "A. `sys`",
+      "B. `os`",
+      "C. `argparse`",
+      "D. `configparser`"
+    ],
+    "correct_answer": "C",
+    "topic": "Libraries",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Consider the following Python code using the `collections` library:\n\n```python\nfrom collections import defaultdict\n\ndata = [('apple', 1), ('banana', 2), ('apple', 3), ('orange', 4)]\ncounts = defaultdict(int)\n\nfor key, value in data:\n    counts[key] += value\n\nprint(counts['apple'])\n```\n\nWhat will be the output of this code?",
+    "options": [
+      "A. `1`",
+      "B. `3`",
+      "C. `4`",
+      "D. `KeyError`"
+    ],
+    "correct_answer": "C",
+    "topic": "Libraries",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What will be the output of the following Python code?\n`import re`\n`text = \"apple, banana, cherry, date\"`\n`pattern = r'\\b(b\\w*a)\\b'`\n`match = re.search(pattern, text)`\n`if match:`\n  `print(match.group(1))`\n`else:`\n  `print(\"No match\")`",
+    "options": [
+      "A. banana",
+      "B. apple",
+      "C. b\\w*a",
+      "D. No match"
+    ],
+    "correct_answer": "A",
+    "topic": "Regular Expressions",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the final state of `data` after executing the following code?\n`data = {'x': 1, 'y': 2}`\n`data.setdefault('z', 3)`\n`data.setdefault('x', 10)`\n`print(data)`",
+    "options": [
+      "A. {'x': 10, 'y': 2, 'z': 3}",
+      "B. {'x': 1, 'y': 2, 'z': 3}",
+      "C. {'x': 1, 'y': 2}",
+      "D. {'x': 10, 'y': 2}"
+    ],
+    "correct_answer": "B",
+    "topic": "Dictionary Methods",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Consider a file named `my_file.txt` with content \"Hello\\nWorld\". What is the output of the following Python code?\n`with open('my_file.txt', 'r') as f:`\n  `content = f.readlines()`\n  `print(len(content))`",
+    "options": [
+      "A. 1",
+      "B. 2",
+      "C. 12 (length of \"Hello\\nWorld\")",
+      "D. Error"
+    ],
+    "correct_answer": "B",
+    "topic": "File Handling",
+    "difficulty": "hard"
+  }
+]

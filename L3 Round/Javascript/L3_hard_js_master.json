@@ -1,0 +1,782 @@
+[
+  {
+    "question": "What is the output?\n\nlet x = 0;\nPromise.resolve().then(() => x++).then(() => console.log(x));\nsetTimeout(() => console.log(x), 0);\nx++;\nconsole.log(x);",
+    "options": [
+      "1, 1, 1 - all execute in order",
+      "1, 2, 2 - microtask runs before macrotask",
+      "2, 1, 1 - setTimeout runs first",
+      "Error - promise execution fails"
+    ],
+    "correct_answer": "1, 2, 2 - microtask runs before macrotask",
+    "topic": "Event Loop",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the bug in this code:\n\nlet obj = {};\nObject.defineProperty(obj, 'x', {\n  get() { return 5; },\n  set(val) { }\n});\nobj.x = 10;\nconsole.log(obj.x);",
+    "options": [
+      "10 - value is set",
+      "5 - getter always returns 5",
+      "undefined - property is read-only",
+      "Error - defineProperty fails"
+    ],
+    "correct_answer": "5 - getter always returns 5",
+    "topic": "Objects",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What does this output?\n\nfunction* gen() {\n  yield 1;\n  yield 2;\n  yield 3;\n}\nlet g = gen();\nconsole.log(g.next(), g.next(), g.next());",
+    "options": [
+      "1 2 3 - all values at once",
+      "{value:1,done:false} {value:2,done:false} {value:3,done:false} - each step returns object",
+      "Error - generator invalid",
+      "undefined - iteration fails"
+    ],
+    "correct_answer": "{value:1,done:false} {value:2,done:false} {value:3,done:false} - each step returns object",
+    "topic": "Generators",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the bug:\n\nlet obj = new Proxy({}, {\n  get(target, prop) {\n    return 'intercepted';\n  }\n});\nconsole.log(obj.anything);",
+    "options": [
+      "undefined - property not found",
+      "'intercepted' - proxy intercepts all gets",
+      "Error - Proxy invalid",
+      "null - handler fails"
+    ],
+    "correct_answer": "'intercepted' - proxy intercepts all gets",
+    "topic": "Proxies",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the output?\n\nlet x = 1;\nfunction outer() {\n  let x = 2;\n  function inner() {\n    let x = 3;\n    console.log(x);\n  }\n  return inner;\n}\nouter()();",
+    "options": [
+      "1 - global x",
+      "2 - outer x",
+      "3 - inner x",
+      "undefined - scope chain fails"
+    ],
+    "correct_answer": "3 - inner x",
+    "topic": "Scope Chain",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the bug:\n\nclass Parent {\n  constructor() { this.x = 1; }\n}\nclass Child extends Parent {\n  constructor() {\n    super();\n    this.y = 2;\n  }\n}\nlet c = new Child();\nconsole.log(c.x, c.y);",
+    "options": [
+      "undefined, 2 - super doesn't work",
+      "1, 2 - both properties set",
+      "Error - extends invalid",
+      "null, 2 - x not inherited"
+    ],
+    "correct_answer": "1, 2 - both properties set",
+    "topic": "Classes",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What does this output?\n\nlet x = [1, 2, 3];\nlet result = x.reduce((acc, val) => acc + val, 0);\nconsole.log(result);",
+    "options": [
+      "[1, 2, 3] - reduce returns array",
+      "6 - sum of elements",
+      "undefined - reduce fails",
+      "Error - initial value required"
+    ],
+    "correct_answer": "6 - sum of elements",
+    "topic": "Arrays",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the bug:\n\nlet obj = { a: 1, b: 2 };\nObject.freeze(obj);\nobj.a = 99;\nconsole.log(obj.a);",
+    "options": [
+      "99 - freeze doesn't work",
+      "1 - frozen objects cannot be modified",
+      "undefined - property deleted",
+      "Error - freeze fails"
+    ],
+    "correct_answer": "1 - frozen objects cannot be modified",
+    "topic": "Objects",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the output?\n\nfunction test(x = 5) {\n  return x * 2;\n}\nconsole.log(test());",
+    "options": [
+      "undefined - default parameter unused",
+      "10 - default parameter used",
+      "NaN - no argument passed",
+      "Error - default syntax invalid"
+    ],
+    "correct_answer": "10 - default parameter used",
+    "topic": "Functions",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the bug:\n\nlet x = this;\nfunction test() {\n  console.log(this);\n}\ntest();",
+    "options": [
+      "same as x - this is consistent",
+      "undefined or global - this context different in function",
+      "Error - this binding fails",
+      "null - this is undefined"
+    ],
+    "correct_answer": "undefined or global - this context different in function",
+    "topic": "Execution Context",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What does this output?\n\nlet x = new WeakMap();\nlet obj = {};\nx.set(obj, 'value');\nconsole.log(x.get(obj));",
+    "options": [
+      "undefined - WeakMap.get fails",
+      "'value' - WeakMap stores weak references",
+      "Error - WeakMap invalid",
+      "null - value not found"
+    ],
+    "correct_answer": "'value' - WeakMap stores weak references",
+    "topic": "Data Structures",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the bug:\n\nasync function test() {\n  try {\n    let x = await Promise.reject('error');\n  } catch (e) {\n    console.log('caught:', e);\n  }\n}\ntest();",
+    "options": [
+      "Nothing logs - exception not caught",
+      "'caught: error' logs - catch handles rejection",
+      "Error - catch doesn't work",
+      "undefined - async fails"
+    ],
+    "correct_answer": "'caught: error' logs - catch handles rejection",
+    "topic": "Async/Await",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the output?\n\nlet x = new Proxy([1, 2, 3], {\n  get(target, prop) {\n    return target[prop] * 2;\n  }\n});\nconsole.log(x[0]);",
+    "options": [
+      "1 - proxy doesn't modify",
+      "2 - get handler intercepts and doubles",
+      "undefined - proxy invalid on arrays",
+      "Error - proxy handler fails"
+    ],
+    "correct_answer": "2 - get handler intercepts and doubles",
+    "topic": "Proxies",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the bug:\n\nlet x = Symbol.for('test');\nlet y = Symbol.for('test');\nconsole.log(x === y);",
+    "options": [
+      "false - Symbol.for creates unique symbols",
+      "true - Symbol.for creates shared symbol registry",
+      "undefined - symbols cannot compare",
+      "Error - Symbol.for invalid"
+    ],
+    "correct_answer": "true - Symbol.for creates shared symbol registry",
+    "topic": "Symbols",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What does this output?\n\nlet x = { a: 1 };\nlet y = Object.create(x);\ndelete y.a;\nconsole.log(y.a);",
+    "options": [
+      "undefined - a is deleted",
+      "1 - y.a comes from prototype x",
+      "Error - delete fails",
+      "null - property not found"
+    ],
+    "correct_answer": "1 - y.a comes from prototype x",
+    "topic": "Prototype Chain",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the bug:\n\nlet fn = function() {};\nfn.x = 5;\nlet fn2 = fn;\nfn.x = 10;\nconsole.log(fn2.x);",
+    "options": [
+      "5 - fn2 has its own property",
+      "10 - fn2 references same function",
+      "undefined - function property fails",
+      "Error - cannot add property"
+    ],
+    "correct_answer": "10 - fn2 references same function",
+    "topic": "Functions",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the output?\n\nlet x = Promise.resolve(1).then(() => { throw new Error('test'); });\nx.catch(e => console.log(e.message));",
+    "options": [
+      "Nothing - error not caught",
+      "'test' logs - catch handles error",
+      "Error - catch doesn't work",
+      "undefined - promise fails"
+    ],
+    "correct_answer": "'test' logs - catch handles error",
+    "topic": "Promises",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the bug:\n\nlet x = '123';\nlet y = x.valueOf();\nconsole.log(typeof y);",
+    "options": [
+      "'string' - valueOf returns string",
+      "'object' - valueOf converts to object",
+      "'number' - valueOf converts to number",
+      "Error - valueOf invalid"
+    ],
+    "correct_answer": "'string' - valueOf returns string",
+    "topic": "Type Coercion",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What does this output?\n\nlet x = new Reflect.Proxy({}, {\n  get: () => 'intercepted'\n});\nconsole.log(x.any);",
+    "options": [
+      "Error - Reflect.Proxy doesn't exist",
+      "'intercepted' - Proxy interceptsaccess",
+      "undefined - proxy invalid",
+      "null - handler fails"
+    ],
+    "correct_answer": "Error - Reflect.Proxy doesn't exist",
+    "topic": "Reflect API",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the output?\n\nconsole.log('1');\nPromise.resolve().then(() => console.log('2'));\nqueueMicrotask(() => console.log('3'));\nconsole.log('4');",
+    "options": [
+      "1, 2, 3, 4 - order of execution",
+      "1, 4, 2, 3 - microtasks batch together",
+      "1, 4, 3, 2 - different microtask order",
+      "Error - microtask queue invalid"
+    ],
+    "correct_answer": "1, 4, 2, 3 - microtasks batch together",
+    "topic": "Event Loop",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the bug:\n\nlet parent = { x: 1 };\nlet child = Object.create(parent);\nchild.x = 2;\ndelete child.x;\nconsole.log(child.x);",
+    "options": [
+      "undefined - x completely deleted",
+      "1 - parent's x accessible after deletion",
+      "2 - child's x persists",
+      "Error - delete fails"
+    ],
+    "correct_answer": "1 - parent's x accessible after deletion",
+    "topic": "Prototype Chain",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the output?\n\nlet x = 5;\nfunction test() {\n  let x = 10;\n  eval('x = 20');\n  return x;\n}\nconsole.log(test());",
+    "options": [
+      "5 - eval affects global",
+      "20 - eval modifies local scope",
+      "10 - eval invalid",
+      "Error - eval fails"
+    ],
+    "correct_answer": "20 - eval modifies local scope",
+    "topic": "Execution Context",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the bug:\n\nconsole.log(typeof x);\nlet x = 5;",
+    "options": [
+      "'undefined' - hoisting gives undefined",
+      "Error - ReferenceError from TDZ",
+      "5 - x accessible",
+      "null - temporal dead zone empty"
+    ],
+    "correct_answer": "Error - ReferenceError from TDZ",
+    "topic": "Hoisting",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the output?\n\nPromise.reject('error')\n  .catch(e => { throw new Error('new'); })\n  .then(() => console.log('then'))\n  .catch(e => console.log('caught'));",
+    "options": [
+      "Logs: then (error handled)",
+      "Logs: caught (error rethrown)",
+      "Error - rejection not caught",
+      "undefined - promise fails"
+    ],
+    "correct_answer": "Logs: caught (error rethrown)",
+    "topic": "Promises",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the bug:\n\nlet obj = Object.freeze({ x: 1 });\nlet proxy = new Proxy(obj, {\n  get: () => 'intercepted'\n});\nconsole.log(proxy.x);",
+    "options": [
+      "'intercepted' - proxy always intercepts",
+      "1 - proxy can't violate freeze invariant",
+      "Error - proxy invalid",
+      "undefined - proxy fails"
+    ],
+    "correct_answer": "1 - proxy can't violate freeze invariant",
+    "topic": "Proxies",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the output?\n\nfunction* gen1() { yield 1; }\nfunction* gen2() {\n  yield* gen1();\n  yield 2;\n}\n\nlet g = gen2();\nconsole.log(g.next().value, g.next().value);",
+    "options": [
+      "undefined undefined - delegation fails",
+      "1 2 - yield* delegates",
+      "1 undefined - only first value",
+      "Error - invalid yield*"
+    ],
+    "correct_answer": "1 2 - yield* delegates",
+    "topic": "Generators",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the bug:\n\nlet obj = {};\nObject.defineProperty(obj, 'x', {\n  value: 5,\n  writable: false\n});\nobj.x = 10;\nconsole.log(obj.x);",
+    "options": [
+      "10 - assignment works",
+      "5 - read-only property unchanged",
+      "undefined - property inaccessible",
+      "Error - defineProperty fails"
+    ],
+    "correct_answer": "5 - read-only property unchanged",
+    "topic": "Objects",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the output?\n\nlet obj = {};\nlet weakMap = new WeakMap();\nweakMap.set(obj, 'value');\ndelete obj;\nconsole.log(weakMap.get(obj));",
+    "options": [
+      "'value' - WeakMap holds reference",
+      "undefined - obj removed",
+      "Error - WeakMap invalid",
+      "null - gc removes entry"
+    ],
+    "correct_answer": "undefined - obj removed",
+    "topic": "Memory Management",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the bug:\n\nasync function test() {\n  throw new Error('err');\n}\n\ntest()\n  .catch(e => console.log('caught'));",
+    "options": [
+      "undefined - async error not caught",
+      "Logs: caught (error caught)",
+      "Error - uncaught exception",
+      "null - catch fails"
+    ],
+    "correct_answer": "Logs: caught (error caught)",
+    "topic": "Async/Await",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the output?\n\nlet s1 = Symbol.for('x');\nlet s2 = Symbol.for('x');\nconsole.log(s1 === s2);",
+    "options": [
+      "false - each Symbol is unique",
+      "true - Symbol.for uses registry",
+      "undefined - comparison invalid",
+      "Error - Symbol invalid"
+    ],
+    "correct_answer": "true - Symbol.for uses registry",
+    "topic": "Symbols",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the bug:\n\nlet handler = { get: (t, p) => Reflect.get(t, p) };\nlet obj = { x: 5 };\nlet proxy = new Proxy(obj, handler);\nconsole.log(proxy.x);",
+    "options": [
+      "undefined - handler invalid",
+      "5 - Reflect proxies through",
+      "Error - Reflect invalid",
+      "null - proxy fails"
+    ],
+    "correct_answer": "5 - Reflect proxies through",
+    "topic": "Reflect API",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the output?\n\n'use strict';\nfunction test() {\n  function inner() { return this; }\n  return inner();\n}\nconsole.log(test() === undefined);",
+    "options": [
+      "false - this is global",
+      "true - strict mode makes this undefined",
+      "Error - strict mode invalid",
+      "null - this binding fails"
+    ],
+    "correct_answer": "true - strict mode makes this undefined",
+    "topic": "Execution Context",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the bug:\n\nlet counters = [];\nfor (let i = 0; i < 2; i++) {\n  counters.push(() => i);\n}\nconsole.log(counters[0](), counters[1]());",
+    "options": [
+      "1, 1 - both see final i",
+      "0, 1 - each closure captures own i",
+      "undefined undefined - closure fails",
+      "Error - invalid closure"
+    ],
+    "correct_answer": "0, 1 - each closure captures own i",
+    "topic": "Closures",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the output?\n\nlet str = 'hello';\nlet charAt = str.charAt;\nconsole.log(charAt.call('world', 0));",
+    "options": [
+      "undefined - detached method fails",
+      "'w' - call binds context",
+      "Error - invalid call",
+      "'h' - original string"
+    ],
+    "correct_answer": "'w' - call binds context",
+    "topic": "Methods",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the bug:\n\nlet arr = [1, [2, [3, 4]]];\nlet flat1 = arr.flat(1);\nconsole.log(flat1.length);",
+    "options": [
+      "2 - flat fails",
+      "3 - flattens one level",
+      "4 - full flattening",
+      "Error - invalid depth"
+    ],
+    "correct_answer": "3 - flattens one level",
+    "topic": "Arrays",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the output?\n\nlet obj = { visible: 1 };\nObject.defineProperty(obj, 'hidden', { value: 2, enumerable: false });\nconsole.log(Object.getOwnPropertyNames(obj).length);",
+    "options": [
+      "1 - only enumerable keys",
+      "2 - includes non-enumerable",
+      "undefined - getOwnPropertyNames invalid",
+      "Error - invalid descriptor"
+    ],
+    "correct_answer": "2 - includes non-enumerable",
+    "topic": "Objects",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the bug:\n\nPromise.resolve(1)\n  .then(x => Promise.resolve(x + 1))\n  .then(x => console.log(x));",
+    "options": [
+      "undefined - promise chain fails",
+      "2 - chained promises resolve",
+      "1 - only first value",
+      "Error - chaining invalid"
+    ],
+    "correct_answer": "2 - chained promises resolve",
+    "topic": "Promises",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the output?\n\nasync function* asyncGen() {\n  yield 1;\n}\n\n(async () => {\n  for await (let x of asyncGen()) {\n    console.log(x);\n  }\n})();",
+    "options": [
+      "undefined - async iterator invalid",
+      "Logs: 1 (iteration works)",
+      "Error - for await invalid",
+      "null - generator fails"
+    ],
+    "correct_answer": "Logs: 1 (iteration works)",
+    "topic": "Generators",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the bug:\n\nlet obj = {\n  set x(v) { console.log('setter'); },\n  get x() { return 5; }\n};\nobj.x = 10;",
+    "options": [
+      "undefined - setter/getter invalid",
+      "Logs: setter (setter executes)",
+      "Returns 5 (getter executes)",
+      "Error - conflicting accessors"
+    ],
+    "correct_answer": "Logs: setter (setter executes)",
+    "topic": "Objects",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the output?\n\nfunction fn() { return this.x; }\nlet obj = { x: 42 };\nconsole.log(fn.apply(obj));",
+    "options": [
+      "undefined - apply invalid",
+      "42 - apply sets this context",
+      "Error - cannot apply",
+      "null - context fails"
+    ],
+    "correct_answer": "42 - apply sets this context",
+    "topic": "Functions",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the bug:\n\nlet map = new Map();\nlet key1 = { id: 1 };\nlet key2 = { id: 1 };\nmap.set(key1, 'value1');\nmap.set(key2, 'value2');\nconsole.log(map.size);",
+    "options": [
+      "1 - objects are same key",
+      "2 - objects are different keys",
+      "undefined - Map invalid",
+      "Error - invalid key"
+    ],
+    "correct_answer": "2 - objects are different keys",
+    "topic": "Data Structures",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the output?\n\nlet regex = /x/g;\nlet str = 'xyx';\nconsole.log(regex.test(str), regex.test(str));",
+    "options": [
+      "true, true - matches every time",
+      "true, false - lastIndex stateful",
+      "Error - regex invalid",
+      "false, true - state reverses"
+    ],
+    "correct_answer": "true, false - lastIndex stateful",
+    "topic": "Regular Expressions",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the bug:\n\nlet { a, ...rest } = { a: 1, b: 2, c: 3 };\nconsole.log(Object.keys(rest).length);",
+    "options": [
+      "undefined - rest destructuring invalid",
+      "2 - rest captures b and c",
+      "3 - rest captures all",
+      "Error - invalid syntax"
+    ],
+    "correct_answer": "2 - rest captures b and c",
+    "topic": "Objects",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the output?\n\nlet result = Array.from([1, 2, 3], x => x * 2);\nconsole.log(result[1]);",
+    "options": [
+      "undefined - mapping invalid",
+      "4 - Array.from applies mapping",
+      "[2] - returns mapped array",
+      "Error - invalid call"
+    ],
+    "correct_answer": "4 - Array.from applies mapping",
+    "topic": "Arrays",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the bug:\n\nlet a = NaN;\nlet b = NaN;\nconsole.log(a === b, Object.is(a, b));",
+    "options": [
+      "true, true - both consider equal",
+      "false, true - === different from Object.is",
+      "true, false - opposite",
+      "Error - comparison invalid"
+    ],
+    "correct_answer": "false, true - === different from Object.is",
+    "topic": "Operators",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the output?\n\nPromise.allSettled([\n  Promise.resolve(1),\n  Promise.reject('error')\n]).then(results => console.log(results.length));",
+    "options": [
+      "undefined - allSettled invalid",
+      "2 - allSettled returns all",
+      "1 - only resolved",
+      "Error - mixed states"
+    ],
+    "correct_answer": "2 - allSettled returns all",
+    "topic": "Promises",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the bug:\n\nclass Obj {\n  [Symbol.toStringTag] = 'Custom';\n}\n\nlet obj = new Obj();\nconsole.log(Object.prototype.toString.call(obj));",
+    "options": [
+      "[object Object] - symbol ignored",
+      "[object Custom] - symbol applied",
+      "Error - invalid symbol",
+      "undefined - class invalid"
+    ],
+    "correct_answer": "[object Custom] - symbol applied",
+    "topic": "Classes",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the output?\n\nfunction* gen() {\n  yield 1;\n  return 2;\n}\n\nlet g = gen();\nconsole.log(g.next(), g.next());",
+    "options": [
+      "undefined undefined - generator invalid",
+      "{value:1,done:false} {value:2,done:true} - return in generator",
+      "{value:1} {value:2} - only values",
+      "Error - return invalid"
+    ],
+    "correct_answer": "{value:1,done:false} {value:2,done:true} - return in generator",
+    "topic": "Generators",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the bug:\n\nlet obj = { x: 1 };\nlet proxy = new Proxy(obj, {\n  deleteProperty: (t, p) => {\n    console.log('deleted');\n    return true;\n  }\n});\ndelete proxy.x;",
+    "options": [
+      "undefined - deleteProperty invalid",
+      "Logs: deleted (trap called)",
+      "Error - delete fails",
+      "null - trap ignored"
+    ],
+    "correct_answer": "Logs: deleted (trap called)",
+    "topic": "Proxies",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the output?\n\nlet buffer = new ArrayBuffer(4);\nlet view = new Uint32Array(buffer);\nview[0] = 255;\nconsole.log(view[0]);",
+    "options": [
+      "undefined - ArrayBuffer invalid",
+      "255 - view stores value",
+      "Error - invalid view",
+      "null - buffer empty"
+    ],
+    "correct_answer": "255 - view stores value",
+    "topic": "Typed Arrays",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the bug:\n\nlet formatter = new Intl.DateTimeFormat('en-US');\nlet date = new Date(2024, 0, 1);\nconsole.log(typeof formatter.format(date));",
+    "options": [
+      "undefined - Intl invalid",
+      "'string' - formatter returns string",
+      "'date' - returns date object",
+      "Error - invalid API"
+    ],
+    "correct_answer": "'string' - formatter returns string",
+    "topic": "Internationalization",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the output?\n\nlet ws = new WeakSet();\nlet obj = {};\nws.add(obj);\nconsole.log(ws.has(obj));",
+    "options": [
+      "undefined - WeakSet invalid",
+      "true - object in set",
+      "false - weak reference lost",
+      "Error - invalid operation"
+    ],
+    "correct_answer": "true - object in set",
+    "topic": "Data Structures",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the bug:\n\nlet obj = {};\nlet proxy = new Proxy(obj, {\n  has: () => true\n});\nconsole.log('x' in proxy);",
+    "options": [
+      "undefined - has trap invalid",
+      "true - has trap intercepts",
+      "false - property missing",
+      "Error - invalid trap"
+    ],
+    "correct_answer": "true - has trap intercepts",
+    "topic": "Proxies",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the output?\n\nlet p = new Promise((resolve, reject) => {\n  console.log('executor');\n  resolve(1);\n});\n\nconsole.log('after');",
+    "options": [
+      "Logs: after, executor",
+      "Logs: executor, after",
+      "Error - timing invalid",
+      "undefined - promise fails"
+    ],
+    "correct_answer": "Logs: executor, after",
+    "topic": "Promises",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the bug:\n\nlet { a: x, ...rest } = { a: 1, b: 2 };\nconsole.log(x, rest.a);",
+    "options": [
+      "1 undefined - renamed, rest excludes a",
+      "undefined undefined - destructuring fails",
+      "1 2 - all accessible",
+      "Error - invalid syntax"
+    ],
+    "correct_answer": "1 undefined - renamed, rest excludes a",
+    "topic": "Objects",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the output?\n\nlet s1 = new Set([1, 2, 3]);\nlet s2 = new Set([2, 3, 4]);\nlet diff = new Set([...s1].filter(x => !s2.has(x)));\nconsole.log(diff.size);",
+    "options": [
+      "undefined - Set operation invalid",
+      "1 - one element in difference",
+      "3 - full set",
+      "Error - invalid filter"
+    ],
+    "correct_answer": "1 - one element in difference",
+    "topic": "Data Structures",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the bug:\n\nlet obj = { x: 1 };\nObject.seal(obj);\nobj.x = 2;\nobj.y = 3;\nconsole.log(obj.y);",
+    "options": [
+      "3 - sealed allows modification",
+      "undefined - sealed prevents addition",
+      "2 - only x exists",
+      "Error - seal invalid"
+    ],
+    "correct_answer": "undefined - sealed prevents addition",
+    "topic": "Objects",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the output?\n\nPromise.resolve(1)\n  .then(x => Promise.resolve(x + 1))\n  .then(x => x + 1)\n  .then(x => console.log(x));",
+    "options": [
+      "undefined - chaining fails",
+      "3 - all operations chain",
+      "1 - only first value",
+      "Error - invalid chain"
+    ],
+    "correct_answer": "3 - all operations chain",
+    "topic": "Promises",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the bug:\n\nlet imported = require('./module.js');\nconsole.log(typeof imported);",
+    "options": [
+      "undefined - require invalid",
+      "'object' - module is object",
+      "Error - circular dependency",
+      "'function' - export function"
+    ],
+    "correct_answer": "'object' - module is object",
+    "topic": "Modules",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the output?\n\nlet arr = new Uint8Array([0x01, 0x02]);\nlet view = new Uint16Array(arr.buffer);\nconsole.log(view[0]);",
+    "options": [
+      "undefined - typed array invalid",
+      "513 or 258 - depends on endianness",
+      "256 - fixed value",
+      "Error - invalid view"
+    ],
+    "correct_answer": "513 or 258 - depends on endianness",
+    "topic": "Typed Arrays",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the bug:\n\nlet obj = { a: 1 };\nObject.defineProperty(obj, 'b', { value: 2, enumerable: false });\nlet sym = Symbol('c');\nobj[sym] = 3;\nconsole.log(Reflect.ownKeys(obj).length);",
+    "options": [
+      "1 - only enumerable",
+      "3 - includes all own properties",
+      "2 - non-enumerable included",
+      "Error - Reflect invalid"
+    ],
+    "correct_answer": "3 - includes all own properties",
+    "topic": "Reflect API",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the output?\n\nPromise.any([\n  Promise.reject('e1'),\n  Promise.reject('e2')\n]).catch(e => console.log(e.errors.length));",
+    "options": [
+      "undefined - any invalid",
+      "2 - all rejections collected",
+      "1 - first rejection",
+      "Error - mixed rejections"
+    ],
+    "correct_answer": "2 - all rejections collected",
+    "topic": "Promises",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the bug:\n\nlet arrow = () => ({ x: 1 });\nconsole.log(arrow().x);",
+    "options": [
+      "undefined - arrow invalid",
+      "1 - object returned implicitly",
+      "Error - parentheses needed",
+      "null - return fails"
+    ],
+    "correct_answer": "1 - object returned implicitly",
+    "topic": "Arrow Functions",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the output?\n\nlet obj = { z: 1 };\nobj[2] = 'two';\nobj.a = 'a';\nconsole.log(Object.keys(obj)[0]);",
+    "options": [
+      "'z' - insertion order",
+      "2 or '2' - numeric keys first",
+      "'a' - alphabetic order",
+      "Error - enumeration invalid"
+    ],
+    "correct_answer": "2 or '2' - numeric keys first",
+    "topic": "Objects",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the bug:\n\nlet fn = function() { return 'original'; };\nlet proxy = new Proxy(fn, {\n  apply: () => 'intercepted'\n});\nconsole.log(proxy());",
+    "options": [
+      "'original' - proxy invalid",
+      "'intercepted' - apply trap called",
+      "Error - cannot proxy function",
+      "undefined - trap fails"
+    ],
+    "correct_answer": "'intercepted' - apply trap called",
+    "topic": "Proxies",
+    "difficulty": "hard"
+  }
+]

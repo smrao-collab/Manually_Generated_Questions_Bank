@@ -1,0 +1,449 @@
+[
+  {
+    "question": "Identify the subtle issue:\n```python\nclass A:\n    def process(self):\n        print('A')\n\nclass B(A):\n    def process(self):\n        print('B')\n        super().process()\n\nclass C(A):\n    def process(self):\n        print('C')\n        super().process()\n\nclass D(B, C):\n    pass\n\nd = D()\nd.process()\n```\nExpected: B, A",
+    "options": ["Prints B,C,A due to MRO linearization", "Multiple inheritance error", "super() usage wrong", "Missing method override"],
+    "correct_answer": "Prints B,C,A due to MRO linearization",
+    "topic": "Advanced OOP",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What's wrong?\n```python\ndef mutable_default(item, lst=[]):\n    lst.append(item)\n    return lst\n\nprint(mutable_default(1))\nprint(mutable_default(2))\n```\nExpected: [1], [2]",
+    "options": ["Default arg evaluated once, prints [1], [1,2]", "Function definition error", "Append syntax wrong", "Return value incorrect"],
+    "correct_answer": "Default arg evaluated once, prints [1], [1,2]",
+    "topic": "Memory Model",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Find the bug:\n```python\nclass IteratorWithState:\n    def __init__(self, data):\n        self.data = data\n        self.index = 0\n    \n    def __iter__(self):\n        return self\n    \n    def __next__(self):\n        if self.index >= len(self.data):\n            self.index = 0\n            raise StopIteration\n        val = self.data[self.index]\n        self.index += 1\n        return val\n\nit = IteratorWithState([1, 2, 3])\nprint(list(it))\nprint(list(it))\n```\nExpected: [1,2,3], [1,2,3]",
+    "options": ["Reset in __next__ ineffective, second list empty", "Iterator protocol violated", "__iter__ should reset", "StopIteration handling wrong"],
+    "correct_answer": "Reset in __next__ ineffective, second list empty",
+    "topic": "Iterator Protocol",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What's the issue?\n```python\ndef trace(func):\n    def wrapper(*args, **kwargs):\n        print(f'Calling {func.__name__}')\n        return func(*args, **kwargs)\n    return wrapper\n\nclass MyClass:\n    @trace\n    def method(self):\n        return 'result'\n\nobj = MyClass()\nprint(obj.method())\n```\nExpected: Should work normally",
+    "options": ["Nothing wrong, decorator works on methods", "self not passed correctly", "trace decorator error", "method call wrong"],
+    "correct_answer": "Nothing wrong, decorator works on methods",
+    "topic": "Decorator Design",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the subtle bug:\n```python\ndef coroutine():\n    value = None\n    while True:\n        value = yield value * 2 if value else 0\n\nco = coroutine()\nprint(next(co))\nprint(co.send(5))\nprint(co.send(3))\n```\nExpected: 0, 10, 6",
+    "options": ["First send stores value for next iteration", "Coroutine syntax wrong", "yield expression error", "send() usage incorrect"],
+    "correct_answer": "First send stores value for next iteration",
+    "topic": "Generator Internals",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What's wrong?\n```python\ntry:\n    1 / 0\nexcept Exception as e:\n    print('Caught')\n    raise ValueError('New error') from e\nexcept ValueError:\n    print('ValueError caught')\n```\nExpected: Should catch ValueError",
+    "options": ["raise exits try block, ValueError not caught", "Exception chaining wrong", "except order error", "raise syntax incorrect"],
+    "correct_answer": "raise exits try block, ValueError not caught",
+    "topic": "Exception Hierarchy",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Find the performance issue:\n```python\ndef process_items(items):\n    result = ''\n    for item in items:\n        result += str(item)\n    return result\n\ndata = range(10000)\noutput = process_items(data)\n```",
+    "options": ["String concatenation creates new object each time", "Loop inefficient", "str() calls slow", "range() memory issue"],
+    "correct_answer": "String concatenation creates new object each time",
+    "topic": "Performance",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What's the issue?\n```python\nclass Descriptor:\n    def __init__(self, name):\n        self.name = name\n    \n    def __get__(self, obj, objtype=None):\n        return obj.__dict__[self.name]\n    \n    def __set__(self, obj, value):\n        obj.__dict__[self.name] = value\n\nclass MyClass:\n    x = Descriptor('x')\n\nm = MyClass()\nm.x = 10\nprint(m.x)\n```\nExpected: Should work",
+    "options": ["Infinite recursion: descriptor stores in same attr", "Descriptor syntax wrong", "__get__ logic error", "__set__ implementation wrong"],
+    "correct_answer": "Infinite recursion: descriptor stores in same attr",
+    "topic": "Advanced OOP",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the bug:\n```python\nimport sys\n\na = []\nb = [a]\na.append(b)\n\nprint(sys.getrefcount(a))\n```\nExpected: 2",
+    "options": ["Circular reference increases count", "getrefcount syntax wrong", "List operations wrong", "Reference counting error"],
+    "correct_answer": "Circular reference increases count",
+    "topic": "Memory Model",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What's wrong?\n```python\nclass Base:\n    def __init_subclass__(cls, **kwargs):\n        super().__init_subclass__(**kwargs)\n        cls.subclass_count = getattr(Base, 'subclass_count', 0) + 1\n\nclass Child1(Base):\n    pass\n\nclass Child2(Base):\n    pass\n\nprint(Base.subclass_count)\n```\nExpected: Should fail",
+    "options": ["Nothing wrong, counts subclasses correctly", "__init_subclass__ syntax error", "Attribute access wrong", "Inheritance broken"],
+    "correct_answer": "Nothing wrong, counts subclasses correctly",
+    "topic": "Advanced OOP",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Find the error:\n```python\nclass LazyIterator:\n    def __init__(self, func, count):\n        self.func = func\n        self.count = count\n        self.current = 0\n    \n    def __iter__(self):\n        self.current = 0\n        return self\n    \n    def __next__(self):\n        if self.current >= self.count:\n            raise StopIteration\n        result = self.func(self.current)\n        self.current += 1\n        return result\n\nli = LazyIterator(lambda x: x ** 2, 3)\nprint(sum(li))\nprint(sum(li))\n```\nExpected: 5, 5",
+    "options": ["Nothing wrong, __iter__ resets correctly", "Iterator protocol error", "Lambda capture wrong", "sum() usage incorrect"],
+    "correct_answer": "Nothing wrong, __iter__ resets correctly",
+    "topic": "Iterator Protocol",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What's the issue?\n```python\nimport functools\n\ndef method_decorator(func):\n    @functools.wraps(func)\n    def wrapper(self, *args, **kwargs):\n        print(f'Calling {func.__name__}')\n        return func(self, *args, **kwargs)\n    return wrapper\n\nclass MyClass:\n    @staticmethod\n    @method_decorator\n    def static_method(x):\n        return x * 2\n\nprint(MyClass.static_method(5))\n```",
+    "options": ["Decorator expects self, conflicts with staticmethod", "Decorator order wrong", "staticmethod syntax error", "Function call incorrect"],
+    "correct_answer": "Decorator expects self, conflicts with staticmethod",
+    "topic": "Decorator Design",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the subtle bug:\n```python\ndef generator_with_finally():\n    try:\n        yield 1\n        yield 2\n    finally:\n        print('Cleanup')\n\ngen = generator_with_finally()\nprint(next(gen))\n```\nExpected: Should not print \"Cleanup\"",
+    "options": ["Nothing wrong, finally only on close/exception", "Generator syntax error", "try-finally wrong", "yield placement incorrect"],
+    "correct_answer": "Nothing wrong, finally only on close/exception",
+    "topic": "Generator Internals",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What's wrong?\n```python\nclass MyException(Exception):\n    pass\n\ntry:\n    try:\n        raise MyException('Inner')\n    except MyException:\n        raise Exception('Outer') from None\nexcept MyException as e:\n    print('Caught MyException')\nexcept Exception as e:\n    print('Caught Exception')\n```\nExpected: Should catch MyException",
+    "options": ["Raises Exception, outer except catches it", "from None suppresses context", "Nested try error", "except order wrong"],
+    "correct_answer": "Raises Exception, outer except catches it",
+    "topic": "Exception Hierarchy",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Find the performance issue:\n```python\ndef find_duplicates(items):\n    duplicates = []\n    for i, item in enumerate(items):\n        if item in items[i+1:]:\n            if item not in duplicates:\n                duplicates.append(item)\n    return duplicates\n\ndata = list(range(1000))\nresult = find_duplicates(data)\n```",
+    "options": ["O(n²) complexity from slice and 'in' checks", "enumerate usage wrong", "List operations slow", "Logic error"],
+    "correct_answer": "O(n²) complexity from slice and 'in' checks",
+    "topic": "Performance",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What's the issue?\n```python\nclass Meta(type):\n    def __call__(cls, *args, **kwargs):\n        instance = super().__call__(*args, **kwargs)\n        instance.created_at = 'now'\n        return instance\n\nclass MyClass(metaclass=Meta):\n    def __init__(self, value):\n        self.value = value\n\nm = MyClass(10)\nprint(m.created_at)\n```\nExpected: Should fail",
+    "options": ["Nothing wrong, metaclass adds attribute", "Meta.__call__ syntax error", "Metaclass usage wrong", "Instance creation broken"],
+    "correct_answer": "Nothing wrong, metaclass adds attribute",
+    "topic": "Advanced OOP",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the bug:\n```python\nx = 256\ny = 256\nprint(x is y)\n\na = 257\nb = 257\nprint(a is b)\n```\nExpected: Both True",
+    "options": ["Small int caching, first True, second False", "is operator wrong", "Integer comparison error", "Variable assignment wrong"],
+    "correct_answer": "Small int caching, first True, second False",
+    "topic": "Memory Model",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What's wrong?\n```python\nfrom collections.abc import Iterator\n\nclass MyIterator(Iterator):\n    def __init__(self, data):\n        self.data = data\n        self.index = 0\n    \n    def __next__(self):\n        if self.index >= len(self.data):\n            raise StopIteration\n        val = self.data[self.index]\n        self.index += 1\n        return val\n\nit = MyIterator([1, 2, 3])\nprint(list(it))\n```\nExpected: [1,2,3]",
+    "options": ["Nothing wrong, ABC provides __iter__", "Missing __iter__ method", "Iterator ABC usage wrong", "MyIterator syntax error"],
+    "correct_answer": "Nothing wrong, ABC provides __iter__",
+    "topic": "Iterator Protocol",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Find the error:\n```python\ndef parameterized_decorator(param):\n    def decorator(func):\n        @functools.wraps(func)\n        def wrapper(*args, **kwargs):\n            print(f'{param}: {func.__name__}')\n            return func(*args, **kwargs)\n        return wrapper\n    return decorator\n\n@parameterized_decorator('LOG')\ndef my_function(x):\n    return x * 2\n\nprint(my_function(5))\n```",
+    "options": ["Missing functools import", "Decorator factory wrong", "wrapper syntax error", "Function call incorrect"],
+    "correct_answer": "Missing functools import",
+    "topic": "Decorator Design",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What's the issue?\n```python\ndef subgenerator():\n    yield 1\n    yield 2\n    return 3\n\ndef delegating_generator():\n    result = yield from subgenerator()\n    yield result\n\ngen = delegating_generator()\nprint(list(gen))\n```\nExpected: [1,2]",
+    "options": ["Prints [1,2,3], return value yielded", "yield from syntax wrong", "Generator logic error", "return in generator wrong"],
+    "correct_answer": "Prints [1,2,3], return value yielded",
+    "topic": "Generator Internals",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the bug:\n```python\ntry:\n    raise KeyboardInterrupt\nexcept Exception:\n    print('Caught Exception')\nexcept KeyboardInterrupt:\n    print('Caught KeyboardInterrupt')\n```\nExpected: Should catch KeyboardInterrupt",
+    "options": ["KeyboardInterrupt not subclass of Exception", "except order matters", "raise syntax wrong", "Exception too broad"],
+    "correct_answer": "KeyboardInterrupt not subclass of Exception",
+    "topic": "Exception Hierarchy",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What's wrong?\n```python\nimport copy\n\nclass Node:\n    def __init__(self, value):\n        self.value = value\n        self.next = None\n\nhead = Node(1)\nhead.next = Node(2)\n\nshallow = copy.copy(head)\ndeep = copy.deepcopy(head)\n\nprint(shallow.next is head.next)\nprint(deep.next is head.next)\n```\nExpected: Both False",
+    "options": ["Shallow copy shares references, first True", "copy usage wrong", "Node class error", "is comparison incorrect"],
+    "correct_answer": "Shallow copy shares references, first True",
+    "topic": "Memory Model",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Find the performance issue:\n```python\ndef process_data(data):\n    result = []\n    for item in data:\n        if item not in result:\n            result.append(item)\n    return result\n\nlarge_data = list(range(10000)) * 2\nunique = process_data(large_data)\n```",
+    "options": ["'in' check on list is O(n), overall O(n²)", "append inefficient", "Loop structure wrong", "range() slow"],
+    "correct_answer": "'in' check on list is O(n), overall O(n²)",
+    "topic": "Performance",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What's the issue?\n```python\nclass Singleton(type):\n    _instances = {}\n    \n    def __call__(cls, *args, **kwargs):\n        if cls not in cls._instances:\n            cls._instances[cls] = super().__call__(*args, **kwargs)\n        return cls._instances[cls]\n\nclass MyClass(metaclass=Singleton):\n    def __init__(self, value):\n        self.value = value\n\na = MyClass(1)\nb = MyClass(2)\nprint(a.value, b.value)\n```\nExpected: 1, 2",
+    "options": ["Both have value 1, __init__ called on same instance", "Singleton pattern wrong", "Metaclass syntax error", "Instance creation broken"],
+    "correct_answer": "Both have value 1, __init__ called on same instance",
+    "topic": "Advanced OOP",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the subtle bug:\n```python\nclass CounterIterator:\n    def __init__(self, max_val):\n        self.max_val = max_val\n    \n    def __iter__(self):\n        self.current = 0\n        return self\n    \n    def __next__(self):\n        if self.current >= self.max_val:\n            raise StopIteration\n        self.current += 1\n        return self.current - 1\n\nci = CounterIterator(3)\nfor i in ci:\n    print(i)\n    if i == 1:\n        for j in ci:\n            print(f'  {j}')\n```\nExpected: Nested iteration",
+    "options": ["Shared state causes confusion in nested loops", "Iterator protocol violated", "Nested loop syntax wrong", "__iter__ not called again"],
+    "correct_answer": "Shared state causes confusion in nested loops",
+    "topic": "Iterator Protocol",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What's wrong?\n```python\nimport weakref\n\nclass Cache:\n    def __init__(self):\n        self.cache = weakref.WeakValueDictionary()\n    \n    def store(self, key, value):\n        self.cache[key] = value\n    \n    def get(self, key):\n        return self.cache.get(key)\n\nc = Cache()\nc.store('a', 42)\nprint(c.get('a'))\n```\nExpected: 42",
+    "options": ["Returns None, int not weakly referenceable", "WeakValueDictionary usage wrong", "store method error", "get method error"],
+    "correct_answer": "Returns None, int not weakly referenceable",
+    "topic": "Memory Model",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Find the error:\n```python\ndef decorator_factory(*dec_args, **dec_kwargs):\n    def decorator(func):\n        def wrapper(*args, **kwargs):\n            print(f'Args: {dec_args}')\n            return func(*args, **kwargs)\n        return wrapper\n    return decorator\n\n@decorator_factory(1, 2, x=3)\ndef my_func(a, b):\n    return a + b\n\nprint(my_func(5, 10))\n```\nExpected: Should work",
+    "options": ["Nothing wrong, decorator factory works correctly", "decorator_factory syntax error", "wrapper definition wrong", "Function decoration broken"],
+    "correct_answer": "Nothing wrong, decorator factory works correctly",
+    "topic": "Decorator Design",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What's the issue?\n```python\ndef pipeline():\n    value = yield\n    while True:\n        value = yield value * 2\n\ngen = pipeline()\nnext(gen)\nprint(gen.send(5))\nprint(gen.send(3))\n```\nExpected: 10, 6",
+    "options": ["Nothing wrong, pipeline coroutine works", "Initial yield placement wrong", "send() usage incorrect", "Generator protocol violated"],
+    "correct_answer": "Nothing wrong, pipeline coroutine works",
+    "topic": "Generator Internals",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the bug:\n```python\nimport sys\n\nclass CustomException(Exception):\n    def __init__(self, message, code):\n        super().__init__(message)\n        self.code = code\n\ntry:\n    raise CustomException('Error', 500)\nexcept CustomException as e:\n    exc_info = sys.exc_info()\n    print(type(exc_info[1]).__name__)\n```\nExpected: Exception",
+    "options": ["Prints CustomException, not Exception", "sys.exc_info() usage wrong", "CustomException definition error", "except clause wrong"],
+    "correct_answer": "Prints CustomException, not Exception",
+    "topic": "Exception Hierarchy",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What's wrong?\n```python\nimport sys\n\ndef get_size(obj):\n    return sys.getsizeof(obj)\n\na = []\nb = [1, 2, 3]\n\nprint(get_size(a) < get_size(b))\n```\nExpected: True",
+    "options": ["Nothing wrong, more items = larger size", "getsizeof includes overhead", "List comparison wrong", "Function logic error"],
+    "correct_answer": "Nothing wrong, more items = larger size",
+    "topic": "Performance",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Find the error:\n```python\nclass DataDescriptor:\n    def __get__(self, obj, objtype=None):\n        if obj is None:\n            return self\n        return obj._value\n    \n    def __set__(self, obj, value):\n        if value < 0:\n            raise ValueError('Negative value')\n        obj._value = value\n\nclass MyClass:\n    value = DataDescriptor()\n    \n    def __init__(self, value):\n        self.value = value\n\nm = MyClass(-5)\n```\nExpected: Should raise ValueError",
+    "options": ["Nothing wrong, raises ValueError in __set__", "Descriptor syntax error", "Validation logic wrong", "__init__ bypasses descriptor"],
+    "correct_answer": "Nothing wrong, raises ValueError in __set__",
+    "topic": "Advanced OOP",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What's the issue?\n```python\nclass SharedState:\n    state = {'count': 0}\n    \n    def increment(self):\n        self.state['count'] += 1\n\na = SharedState()\nb = SharedState()\n\na.increment()\nprint(b.state['count'])\n```\nExpected: 0",
+    "options": ["Prints 1, state is class variable shared", "SharedState definition wrong", "increment method error", "Instance creation broken"],
+    "correct_answer": "Prints 1, state is class variable shared",
+    "topic": "Memory Model",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the subtle bug:\n```python\nclass SkipIterator:\n    def __init__(self, data, skip):\n        self.data = data\n        self.skip = skip\n        self.index = 0\n    \n    def __iter__(self):\n        return self\n    \n    def __next__(self):\n        while self.index < len(self.data):\n            if self.index % self.skip != 0:\n                val = self.data[self.index]\n                self.index += 1\n                return val\n            self.index += 1\n        raise StopIteration\n\nsi = SkipIterator([0,1,2,3,4,5], 2)\nprint(list(si))\n```\nExpected: [1,3,5]",
+    "options": ["Nothing wrong, skips even indices", "Skip logic inverted", "__next__ implementation wrong", "Iterator protocol violated"],
+    "correct_answer": "Nothing wrong, skips even indices",
+    "topic": "Iterator Protocol",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What's wrong?\n```python\nclass LoggingMeta(type):\n    def __new__(mcs, name, bases, attrs):\n        for key, value in attrs.items():\n            if callable(value):\n                attrs[key] = mcs.log_calls(value)\n        return super().__new__(mcs, name, bases, attrs)\n    \n    @staticmethod\n    def log_calls(func):\n        def wrapper(*args, **kwargs):\n            print(f'Calling {func.__name__}')\n            return func(*args, **kwargs)\n        return wrapper\n\nclass MyClass(metaclass=LoggingMeta):\n    def method(self):\n        return 'result'\n\nobj = MyClass()\nobj.method()\n```\nExpected: Should log call",
+    "options": ["Nothing wrong, logs method calls", "LoggingMeta syntax error", "Wrapper doesn't preserve self", "__new__ logic wrong"],
+    "correct_answer": "Nothing wrong, logs method calls",
+    "topic": "Advanced OOP",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Find the performance issue:\n```python\ndef merge_dicts(dict1, dict2):\n    result = dict1.copy()\n    for key in dict2:\n        if key in result:\n            result[key] = result[key] + dict2[key]\n        else:\n            result[key] = dict2[key]\n    return result\n\nd1 = {str(i): i for i in range(10000)}\nd2 = {str(i): i for i in range(5000, 15000)}\nmerged = merge_dicts(d1, d2)\n```",
+    "options": ["Nothing significantly wrong, reasonable approach", "copy() is expensive", "'in' check slow", "Loop inefficient"],
+    "correct_answer": "Nothing significantly wrong, reasonable approach",
+    "topic": "Performance",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What's the issue?\n```python\nclass classproperty:\n    def __init__(self, func):\n        self.func = func\n    \n    def __get__(self, obj, objtype=None):\n        return self.func(objtype)\n\nclass MyClass:\n    _value = 10\n    \n    @classproperty\n    def value(cls):\n        return cls._value\n\nprint(MyClass.value)\nobj = MyClass()\nprint(obj.value)\n```\nExpected: Both print 10",
+    "options": ["Nothing wrong, class property works", "classproperty syntax error", "__get__ implementation wrong", "Descriptor usage incorrect"],
+    "correct_answer": "Nothing wrong, class property works",
+    "topic": "Decorator Design",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the bug:\n```python\ndef accumulator_gen():\n    total = 0\n    while True:\n        value = yield total\n        if value is not None:\n            total += value\n\nacc = accumulator_gen()\nprint(next(acc))\nprint(acc.send(5))\nprint(acc.send(None))\nprint(acc.send(3))\n```\nExpected: 0,5,5,8",
+    "options": ["Nothing wrong, coroutine accumulates correctly", "Generator syntax error", "send() with None issues", "Accumulation logic wrong"],
+    "correct_answer": "Nothing wrong, coroutine accumulates correctly",
+    "topic": "Generator Internals",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What's wrong?\n```python\nclass A(Exception):\n    pass\n\nclass B(A):\n    pass\n\nclass C(B):\n    pass\n\ntry:\n    raise C('Error')\nexcept A:\n    print('Caught A')\nexcept B:\n    print('Caught B')\nexcept C:\n    print('Caught C')\n```\nExpected: Should catch C",
+    "options": ["First matching except wins, prints 'Caught A'", "Exception hierarchy wrong", "except order incorrect", "raise syntax error"],
+    "correct_answer": "First matching except wins, prints 'Caught A'",
+    "topic": "Exception Hierarchy",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Find the error:\n```python\nimport gc\n\nclass Node:\n    def __init__(self, value):\n        self.value = value\n        self.ref = None\n\na = Node(1)\nb = Node(2)\na.ref = b\nb.ref = a\n\ndel a\ndel b\n\ngc.collect()\n```\nExpected: Memory leak",
+    "options": ["GC handles circular refs, no leak", "Circular reference creates leak", "del usage wrong", "gc.collect() ineffective"],
+    "correct_answer": "GC handles circular refs, no leak",
+    "topic": "Memory Model",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What's the issue?\n```python\nclass Chainable:\n    def __init__(self, value=0):\n        self.value = value\n    \n    def __iter__(self):\n        return self\n    \n    def __next__(self):\n        if self.value < 3:\n            self.value += 1\n            return self\n        raise StopIteration\n    \n    def double(self):\n        self.value *= 2\n        return self\n\nfor c in Chainable():\n    c.double()\nprint(c.value)\n```\nExpected: 6",
+    "options": ["Nothing wrong, chains operations correctly", "Iterator protocol misused", "double() method error", "Loop logic wrong"],
+    "correct_answer": "Nothing wrong, chains operations correctly",
+    "topic": "Iterator Protocol",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the subtle bug:\n```python\nclass BoundMethod:\n    def __init__(self, func):\n        self.func = func\n    \n    def __get__(self, obj, objtype=None):\n        if obj is None:\n            return self\n        return lambda *args, **kwargs: self.func(obj, *args, **kwargs)\n\nclass MyClass:\n    @BoundMethod\n    def method(self, x):\n        return x * 2\n\nm = MyClass()\nprint(m.method(5))\n```\nExpected: 10",
+    "options": ["Nothing wrong, descriptor binds correctly", "BoundMethod syntax error", "__get__ logic wrong", "Lambda usage incorrect"],
+    "correct_answer": "Nothing wrong, descriptor binds correctly",
+    "topic": "Advanced OOP",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What's wrong?\n```python\ndef stack_decorator(func):\n    def wrapper(*args, **kwargs):\n        import traceback\n        stack = traceback.extract_stack()\n        print(f'Called from: {stack[-2].name}')\n        return func(*args, **kwargs)\n    return wrapper\n\n@stack_decorator\ndef my_function():\n    return 'result'\n\nmy_function()\n```\nExpected: Should print caller name",
+    "options": ["Nothing wrong, prints calling context", "Decorator syntax error", "traceback usage wrong", "Stack extraction incorrect"],
+    "correct_answer": "Nothing wrong, prints calling context",
+    "topic": "Decorator Design",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Find the error:\n```python\ndef generator_chain():\n    yield from range(3)\n    yield from range(3, 6)\n    return 'done'\n\ngen = generator_chain()\nvalues = []\nfor val in gen:\n    values.append(val)\n\nprint(values)\n```\nExpected: [0,1,2,3,4,5]",
+    "options": ["Nothing wrong, yield from chains correctly", "yield from syntax error", "Generator logic wrong", "return statement issues"],
+    "correct_answer": "Nothing wrong, yield from chains correctly",
+    "topic": "Generator Internals",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What's the issue?\n```python\nimport sys\n\ntry:\n    sys.exit(0)\nexcept SystemExit:\n    print('Caught exit')\nexcept:\n    print('Caught something')\n```\nExpected: Program should exit",
+    "options": ["SystemExit caught, program continues", "sys.exit() usage wrong", "Exception handling wrong", "except order incorrect"],
+    "correct_answer": "SystemExit caught, program continues",
+    "topic": "Exception Hierarchy",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the bug:\n```python\nclass ManagedAttribute:\n    def __init__(self, validator):\n        self.validator = validator\n        self.data = {}\n    \n    def __get__(self, obj, objtype=None):\n        if obj is None:\n            return self\n        return self.data.get(id(obj))\n    \n    def __set__(self, obj, value):\n        if not self.validator(value):\n            raise ValueError('Invalid value')\n        self.data[id(obj)] = value\n\nclass Person:\n    age = ManagedAttribute(lambda x: x >= 0)\n\np = Person()\np.age = 25\nprint(p.age)\n```\nExpected: 25",
+    "options": ["Nothing wrong, descriptor manages state", "ManagedAttribute syntax error", "Validator logic wrong", "Dictionary storage flawed"],
+    "correct_answer": "Nothing wrong, descriptor manages state",
+    "topic": "Advanced OOP",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What's wrong?\n```python\nimport sys\n\na = 'hello'\nb = 'hello'\n\nprint(a is b)\nprint(sys.intern(a) is sys.intern(b))\n```\nExpected: False, True",
+    "options": ["String interning, both print True", "is operator usage wrong", "intern() syntax error", "String comparison incorrect"],
+    "correct_answer": "String interning, both print True",
+    "topic": "Memory Model",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Find the error:\n```python\nclass BatchIterator:\n    def __init__(self, data, batch_size):\n        self.data = data\n        self.batch_size = batch_size\n        self.index = 0\n    \n    def __iter__(self):\n        return self\n    \n    def __next__(self):\n        if self.index >= len(self.data):\n            raise StopIteration\n        batch = self.data[self.index:self.index + self.batch_size]\n        self.index += self.batch_size\n        return batch\n\nbi = BatchIterator(list(range(10)), 3)\nfor batch in bi:\n    print(batch)\n```\nExpected: [0,1,2], [3,4,5], [6,7,8], [9]",
+    "options": ["Nothing wrong, batches correctly", "Slicing logic error", "__next__ implementation wrong", "Iterator protocol violated"],
+    "correct_answer": "Nothing wrong, batches correctly",
+    "topic": "Iterator Protocol",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What's the issue?\n```python\ndef counted(func):\n    func.calls = 0\n    def wrapper(*args, **kwargs):\n        wrapper.calls += 1\n        return func(*args, **kwargs)\n    wrapper.calls = func.calls\n    return wrapper\n\n@counted\ndef my_func():\n    pass\n\nmy_func()\nmy_func()\nprint(my_func.calls)\n```\nExpected: 2",
+    "options": ["Nothing wrong, counts calls correctly", "Decorator syntax error", "Counter logic wrong", "wrapper.calls reference broken"],
+    "correct_answer": "Nothing wrong, counts calls correctly",
+    "topic": "Decorator Design",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the bug:\n```python\ndef bidirectional():\n    sent = None\n    while True:\n        value = yield sent\n        sent = f'Echo: {value}' if value else None\n\ngen = bidirectional()\nnext(gen)\nprint(gen.send('Hello'))\nprint(gen.send(None))\nprint(gen.send('World'))\n```\nExpected: Echo: Hello, None, Echo: World",
+    "options": ["Nothing wrong, bidirectional comm works", "Generator protocol violated", "send() logic error", "yield expression wrong"],
+    "correct_answer": "Nothing wrong, bidirectional comm works",
+    "topic": "Generator Internals",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What's wrong?\n```python\nclass NotQuiteAnException:\n    pass\n\ntry:\n    raise NotQuiteAnException()\nexcept NotQuiteAnException:\n    print('Caught')\n```\nExpected: Should catch",
+    "options": ["Can only raise BaseException subclasses", "NotQuiteAnException definition wrong", "raise syntax error", "except clause wrong"],
+    "correct_answer": "Can only raise BaseException subclasses",
+    "topic": "Exception Hierarchy",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Find the performance issue:\n```python\ndef compute_average(numbers):\n    total = sum(numbers)\n    count = len(numbers)\n    return total / count if count > 0 else 0\n\nimport random\ndata = [random.random() for _ in range(1000000)]\nresult = compute_average(data)\n```",
+    "options": ["Nothing significantly wrong, reasonable approach", "sum() and len() both iterate", "Division is slow", "List comprehension inefficient"],
+    "correct_answer": "Nothing significantly wrong, reasonable approach",
+    "topic": "Performance",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What's the issue?\n```python\nclass AutoRegister(type):\n    registry = []\n    \n    def __new__(mcs, name, bases, attrs):\n        cls = super().__new__(mcs, name, bases, attrs)\n        mcs.registry.append(cls)\n        return cls\n\nclass Base(metaclass=AutoRegister):\n    pass\n\nclass Child1(Base):\n    pass\n\nclass Child2(Base):\n    pass\n\nprint(len(Base.registry))\n```\nExpected: 2",
+    "options": ["Prints 3, Base also registered", "AutoRegister logic wrong", "Registry access error", "Inheritance broken"],
+    "correct_answer": "Prints 3, Base also registered",
+    "topic": "Advanced OOP",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the subtle bug:\n```python\nclass SlotExample:\n    __slots__ = ['x', 'y']\n    \n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\n\nobj = SlotExample(1, 2)\nobj.z = 3\nprint(obj.z)\n```\nExpected: 3",
+    "options": ["AttributeError: __slots__ restricts attrs", "__slots__ syntax wrong", "Assignment error", "Print syntax wrong"],
+    "correct_answer": "AttributeError: __slots__ restricts attrs",
+    "topic": "Memory Model",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What's wrong?\n```python\nclass CachingIterator:\n    def __init__(self, iterable):\n        self.iterator = iter(iterable)\n        self.cache = []\n    \n    def __iter__(self):\n        yield from self.cache\n        for item in self.iterator:\n            self.cache.append(item)\n            yield item\n\nci = CachingIterator([1, 2, 3])\nprint(list(ci))\nprint(list(ci))\n```\nExpected: [1,2,3], [1,2,3]",
+    "options": ["Nothing wrong, caches for replay", "__iter__ returns generator", "Iterator protocol violated", "Cache logic wrong"],
+    "correct_answer": "Nothing wrong, caches for replay",
+    "topic": "Iterator Protocol",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Find the error:\n```python\ndef rate_limit(max_calls, period):\n    import time\n    calls = []\n    \n    def decorator(func):\n        def wrapper(*args, **kwargs):\n            now = time.time()\n            calls[:] = [c for c in calls if now - c < period]\n            if len(calls) >= max_calls:\n                raise Exception('Rate limit exceeded')\n            calls.append(now)\n            return func(*args, **kwargs)\n        return wrapper\n    return decorator\n\n@rate_limit(3, 1)\ndef api_call():\n    return 'OK'\n\nfor _ in range(5):\n    try:\n        print(api_call())\n    except Exception as e:\n        print(e)\n```\nExpected: Rate limiting works",
+    "options": ["Nothing wrong, limits rate correctly", "Decorator factory error", "Time comparison wrong", "calls list handling broken"],
+    "correct_answer": "Nothing wrong, limits rate correctly",
+    "topic": "Decorator Design",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What's the issue?\n```python\ndef stateful_generator():\n    state = {'count': 0}\n    while True:\n        command = yield state['count']\n        if command == 'increment':\n            state['count'] += 1\n        elif command == 'reset':\n            state['count'] = 0\n\ngen = stateful_generator()\nnext(gen)\nprint(gen.send('increment'))\nprint(gen.send('increment'))\nprint(gen.send('reset'))\nprint(gen.send('increment'))\n```\nExpected: 1,2,0,1",
+    "options": ["Nothing wrong, state machine works", "Generator syntax error", "Command handling wrong", "send() usage incorrect"],
+    "correct_answer": "Nothing wrong, state machine works",
+    "topic": "Generator Internals",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the bug:\n```python\ntry:\n    raise ValueError('Error')\nexcept ValueError as e:\n    original = e\n    raise TypeError('New error')\n\nprint(original.__context__)\n```\nExpected: Should print None",
+    "options": ["Nothing wrong if caught at outer level", "Exception chaining wrong", "Context attribute error", "raise syntax incorrect"],
+    "correct_answer": "Nothing wrong if caught at outer level",
+    "topic": "Exception Hierarchy",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What's wrong?\n```python\nimport operator\nfrom functools import reduce\n\ndef factorial(n):\n    if n <= 1:\n        return 1\n    return reduce(operator.mul, range(1, n + 1))\n\nprint(factorial(5))\nprint(factorial(0))\n```\nExpected: 120, 1",
+    "options": ["Nothing wrong, factorial works correctly", "reduce with empty range fails", "operator.mul usage wrong", "Base case logic error"],
+    "correct_answer": "Nothing wrong, factorial works correctly",
+    "topic": "Performance",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Find the error:\n```python\nclass ValidatedProperty:\n    def __init__(self, validator=None, default=None):\n        self.validator = validator\n        self.default = default\n        self.data = {}\n    \n    def __set_name__(self, owner, name):\n        self.name = name\n    \n    def __get__(self, obj, objtype=None):\n        if obj is None:\n            return self\n        return self.data.get(id(obj), self.default)\n    \n    def __set__(self, obj, value):\n        if self.validator and not self.validator(value):\n            raise ValueError(f'Invalid {self.name}')\n        self.data[id(obj)] = value\n\nclass Person:\n    age = ValidatedProperty(lambda x: x >= 0, 0)\n\np = Person()\nprint(p.age)\np.age = 25\nprint(p.age)\n```\nExpected: 0, 25",
+    "options": ["Nothing wrong, validated property works", "ValidatedProperty syntax error", "__set_name__ not needed", "Validator logic wrong"],
+    "correct_answer": "Nothing wrong, validated property works",
+    "topic": "Advanced OOP",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What's the issue?\n```python\nclass Lazy:\n    def __init__(self, func):\n        self.func = func\n        self.computed = False\n        self.value = None\n    \n    def __call__(self):\n        if not self.computed:\n            self.value = self.func()\n            self.computed = True\n        return self.value\n\n@Lazy\ndef expensive_computation():\n    print('Computing...')\n    return 42\n\nprint(expensive_computation())\nprint(expensive_computation())\n```\nExpected: Computing... 42, 42",
+    "options": ["Nothing wrong, lazy evaluation works", "Lazy decorator error", "Caching logic wrong", "Function call incorrect"],
+    "correct_answer": "Nothing wrong, lazy evaluation works",
+    "topic": "Decorator Design",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Identify the subtle bug:\n```python\ndef cooperative_generator():\n    received = yield\n    while received:\n        received = yield received.upper()\n\ngen = cooperative_generator()\nnext(gen)\nprint(gen.send('hello'))\nprint(gen.send('world'))\nprint(gen.send(''))\n```\nExpected: HELLO, WORLD, then stops",
+    "options": ["Empty string is falsy, loop exits", "Generator syntax error", "send() logic wrong", "String methods incorrect"],
+    "correct_answer": "Empty string is falsy, loop exits",
+    "topic": "Generator Internals",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What's wrong?\n```python\nimport warnings\n\nwith warnings.catch_warnings():\n    warnings.simplefilter('error')\n    try:\n        warnings.warn('Deprecated', DeprecationWarning)\n    except DeprecationWarning:\n        print('Caught warning as exception')\n```\nExpected: Should not catch",
+    "options": ["Nothing wrong, warnings converted to exceptions", "warnings module usage wrong", "Context manager error", "Exception handling incorrect"],
+    "correct_answer": "Nothing wrong, warnings converted to exceptions",
+    "topic": "Exception Hierarchy",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Find the performance issue:\n```python\ndef remove_duplicates(items):\n    seen = []\n    result = []\n    for item in items:\n        if item not in seen:\n            seen.append(item)\n            result.append(item)\n    return result\n\ndata = list(range(10000))\nunique = remove_duplicates(data)\n```",
+    "options": ["'in' check on list is O(n), use set", "append operations slow", "Loop structure inefficient", "List operations wrong"],
+    "correct_answer": "'in' check on list is O(n), use set",
+    "topic": "Performance",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What's the issue?\n```python\nclass VersionedDict(dict):\n    def __init__(self, *args, **kwargs):\n        super().__init__(*args, **kwargs)\n        self.version = 0\n    \n    def __setitem__(self, key, value):\n        super().__setitem__(key, value)\n        self.version += 1\n\nvd = VersionedDict({'a': 1})\nvd['b'] = 2\nprint(vd.version)\nvd.update({'c': 3})\nprint(vd.version)\n```\nExpected: 1, 2",
+    "options": ["update() doesn't call __setitem__, prints 1,1", "VersionedDict syntax error", "Inheritance wrong", "version tracking broken"],
+    "correct_answer": "update() doesn't call __setitem__, prints 1,1",
+    "topic": "Advanced OOP",
+    "difficulty": "hard"
+  }

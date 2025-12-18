@@ -1,0 +1,1010 @@
+[
+  {
+    "question": "What is the difference between a function declaration and a function expression?",
+    "options": [
+      "Function declarations are hoisted, function expressions are not",
+      "Function expressions cannot use recursion",
+      "Function declarations must have a name",
+      "There is no functional difference"
+    ],
+    "correct_answer": "Function declarations are hoisted, function expressions are not",
+    "topic": "Functions",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is a closure in JavaScript?",
+    "options": [
+      "A function that closes other functions",
+      "A function that has access to variables from its parent scope even after the parent function has returned",
+      "A way to prevent variable access",
+      "A reserved keyword"
+    ],
+    "correct_answer": "A function that has access to variables from its parent scope even after the parent function has returned",
+    "topic": "Closures",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the purpose of the call() method?",
+    "options": [
+      "Calls a function with specified this value and arguments",
+      "Calls the next function in queue",
+      "Calls a function multiple times",
+      "Calls a parent function"
+    ],
+    "correct_answer": "Calls a function with specified this value and arguments",
+    "topic": "OOP Concepts",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the difference between call(), apply(), and bind()?",
+    "options": [
+      "call() and apply() invoke the function immediately, bind() returns a new function",
+      "apply() uses an array for arguments",
+      "All three are identical",
+      "bind() modifies the original function"
+    ],
+    "correct_answer": "call() and apply() invoke the function immediately, bind() returns a new function",
+    "topic": "OOP Concepts",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is an arrow function's behavior with the this keyword?",
+    "options": [
+      "Arrow functions have their own this binding",
+      "Arrow functions inherit this from the enclosing scope",
+      "Arrow functions cannot use this",
+      "Arrow functions bind this to the window object"
+    ],
+    "correct_answer": "Arrow functions inherit this from the enclosing scope",
+    "topic": "Arrow Functions",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is a higher-order function?",
+    "options": [
+      "A function with multiple parameters",
+      "A function that takes other functions as arguments or returns a function",
+      "A function with a high complexity score",
+      "A function used in mathematics"
+    ],
+    "correct_answer": "A function that takes other functions as arguments or returns a function",
+    "topic": "Higher-Order Functions",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What does the async keyword do?",
+    "options": [
+      "Makes a function run asynchronously and return a Promise",
+      "Makes a function run synchronously",
+      "Declares a constant",
+      "Declares a variable"
+    ],
+    "correct_answer": "Makes a function run asynchronously and return a Promise",
+    "topic": "Async/Await",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the purpose of the await keyword?",
+    "options": [
+      "Waits for a Promise to resolve and returns the resolved value",
+      "Waits for a variable to be declared",
+      "Skips code execution",
+      "Pauses the entire program"
+    ],
+    "correct_answer": "Waits for a Promise to resolve and returns the resolved value",
+    "topic": "Async/Await",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the difference between let and var in terms of scope?",
+    "options": [
+      "Both have global scope",
+      "let is block-scoped, var is function-scoped",
+      "var is block-scoped, let is function-scoped",
+      "They are identical"
+    ],
+    "correct_answer": "let is block-scoped, var is function-scoped",
+    "topic": "Variables",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is temporal dead zone?",
+    "options": [
+      "A time period where the program stops",
+      "The time before a variable declared with let or const is initialized",
+      "The time after a variable is declared",
+      "A JavaScript error"
+    ],
+    "correct_answer": "The time before a variable declared with let or const is initialized",
+    "topic": "Variables",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is object destructuring?",
+    "options": [
+      "Breaking an object into parts",
+      "Extracting properties from an object into variables",
+      "Deleting object properties",
+      "Combining objects"
+    ],
+    "correct_answer": "Extracting properties from an object into variables",
+    "topic": "ES6+ Features",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is array destructuring?",
+    "options": [
+      "Breaking an array into parts",
+      "Extracting elements from an array into variables",
+      "Combining arrays",
+      "Sorting arrays"
+    ],
+    "correct_answer": "Extracting elements from an array into variables",
+    "topic": "ES6+ Features",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the difference between shallow copy and deep copy?",
+    "options": [
+      "Shallow copy copies the reference, deep copy copies all nested values",
+      "Shallow copy is faster",
+      "Deep copy is only for arrays",
+      "They are the same thing"
+    ],
+    "correct_answer": "Shallow copy copies the reference, deep copy copies all nested values",
+    "topic": "Objects",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the purpose of Object.assign()?",
+    "options": [
+      "Assigns a variable",
+      "Copies properties from source objects to a target object",
+      "Compares two objects",
+      "Deletes object properties"
+    ],
+    "correct_answer": "Copies properties from source objects to a target object",
+    "topic": "Objects",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the purpose of the for...in loop?",
+    "options": [
+      "Iterates over array indices",
+      "Iterates over object property names and array indices",
+      "Iterates over array values",
+      "Iterates over function parameters"
+    ],
+    "correct_answer": "Iterates over object property names and array indices",
+    "topic": "Loops",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the purpose of the for...of loop?",
+    "options": [
+      "Iterates over object keys",
+      "Iterates over iterable values",
+      "Iterates over object properties",
+      "Iterates over function calls"
+    ],
+    "correct_answer": "Iterates over iterable values",
+    "topic": "Loops",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the difference between for...in and for...of?",
+    "options": [
+      "for...in iterates over values, for...of iterates over keys",
+      "for...in iterates over keys/indices, for...of iterates over values",
+      "They are the same",
+      "for...of only works on arrays"
+    ],
+    "correct_answer": "for...in iterates over keys/indices, for...of iterates over values",
+    "topic": "Loops",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is a Promise in JavaScript?",
+    "options": [
+      "A variable that promises to exist",
+      "An object representing the eventual completion of an async operation",
+      "A reserved keyword",
+      "A type of function"
+    ],
+    "correct_answer": "An object representing the eventual completion of an async operation",
+    "topic": "Promises",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What are the three states of a Promise?",
+    "options": [
+      "true, false, null",
+      "pending, fulfilled, rejected",
+      "waiting, running, stopped",
+      "start, middle, end"
+    ],
+    "correct_answer": "pending, fulfilled, rejected",
+    "topic": "Promises",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What does Promise.all() do?",
+    "options": [
+      "Waits for all promises to settle",
+      "Waits for the first promise to resolve",
+      "Combines multiple promises",
+      "Rejects all promises"
+    ],
+    "correct_answer": "Waits for all promises to settle",
+    "topic": "Promises",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What does Promise.race() do?",
+    "options": [
+      "Starts a race between promises",
+      "Returns the result of the first promise to settle",
+      "Waits for all promises to complete",
+      "Rejects all promises"
+    ],
+    "correct_answer": "Returns the result of the first promise to settle",
+    "topic": "Promises",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is try-catch used for?",
+    "options": [
+      "Trying different code options",
+      "Handling errors in code execution",
+      "Creating loops",
+      "Declaring variables"
+    ],
+    "correct_answer": "Handling errors in code execution",
+    "topic": "Error Handling",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the difference between throw and throw new Error()?",
+    "options": [
+      "They are the same",
+      "throw can throw any value, throw new Error() specifically throws an Error object",
+      "throw new Error() can throw any value",
+      "There is no Error object in JavaScript"
+    ],
+    "correct_answer": "throw can throw any value, throw new Error() specifically throws an Error object",
+    "topic": "Error Handling",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the finally block used for?",
+    "options": [
+      "Handling errors",
+      "Code that executes regardless of try-catch outcome",
+      "Finalizing variables",
+      "Closing connections"
+    ],
+    "correct_answer": "Code that executes regardless of try-catch outcome",
+    "topic": "Error Handling",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is prototype-based inheritance?",
+    "options": [
+      "Inheritance through classes",
+      "Inheritance through prototypes rather than classes",
+      "Creating multiple instances",
+      "A design pattern"
+    ],
+    "correct_answer": "Inheritance through prototypes rather than classes",
+    "topic": "Prototype Chain",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the prototype chain?",
+    "options": [
+      "A chain of promises",
+      "A series of objects linked through prototypes for property lookup",
+      "A method to create objects",
+      "A reserved keyword"
+    ],
+    "correct_answer": "A series of objects linked through prototypes for property lookup",
+    "topic": "Prototype Chain",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the purpose of Object.create()?",
+    "options": [
+      "Creates a new object instance",
+      "Creates a new object with specified prototype",
+      "Creates a copy of an object",
+      "Creates a class"
+    ],
+    "correct_answer": "Creates a new object with specified prototype",
+    "topic": "OOP Concepts",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the difference between inheritance and composition?",
+    "options": [
+      "They are the same",
+      "Inheritance is 'is-a', composition is 'has-a'",
+      "Inheritance is faster",
+      "Composition uses prototypes"
+    ],
+    "correct_answer": "Inheritance is 'is-a', composition is 'has-a'",
+    "topic": "OOP Concepts",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the purpose of static methods in classes?",
+    "options": [
+      "Methods that run quickly",
+      "Methods that belong to the class itself, not instances",
+      "Methods that don't return values",
+      "Methods used for inheritance"
+    ],
+    "correct_answer": "Methods that belong to the class itself, not instances",
+    "topic": "OOP Concepts",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the purpose of the extends keyword?",
+    "options": [
+      "Extends the scope of a variable",
+      "Extends the duration of code",
+      "Creates a subclass that inherits from a parent class",
+      "Extends array length"
+    ],
+    "correct_answer": "Creates a subclass that inherits from a parent class",
+    "topic": "OOP Concepts",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is module in JavaScript?",
+    "options": [
+      "A variable name",
+      "A separate file or code block with its own scope",
+      "A type of loop",
+      "A function parameter"
+    ],
+    "correct_answer": "A separate file or code block with its own scope",
+    "topic": "Modules",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the purpose of import and export?",
+    "options": [
+      "Creating variables",
+      "Module dependencies and code sharing",
+      "Looping through data",
+      "Function declarations"
+    ],
+    "correct_answer": "Module dependencies and code sharing",
+    "topic": "Modules",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the difference between default export and named export?",
+    "options": [
+      "They are the same",
+      "default export exports one value, named export exports multiple named values",
+      "named export is faster",
+      "default export cannot be used with classes"
+    ],
+    "correct_answer": "default export exports one value, named export exports multiple named values",
+    "topic": "Modules",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is a callback hell or pyramid of doom?",
+    "options": [
+      "A deep nesting of callback functions",
+      "An error in callbacks",
+      "A type of loop",
+      "A JavaScript pattern"
+    ],
+    "correct_answer": "A deep nesting of callback functions",
+    "topic": "Callbacks",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the difference between microtask and macrotask?",
+    "options": [
+      "They are the same",
+      "Microtasks execute before macrotasks in the event loop",
+      "Macrotasks are smaller",
+      "Microtasks are deprecated"
+    ],
+    "correct_answer": "Microtasks execute before macrotasks in the event loop",
+    "topic": "Event Loop",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the event loop?",
+    "options": [
+      "A circular loop in code",
+      "A mechanism that handles async operations and callback execution",
+      "A type of array loop",
+      "A reserved keyword"
+    ],
+    "correct_answer": "A mechanism that handles async operations and callback execution",
+    "topic": "Event Loop",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the difference between setTimeout and setInterval?",
+    "options": [
+      "They are the same",
+      "setTimeout runs once after a delay, setInterval runs repeatedly at intervals",
+      "setInterval runs once",
+      "setTimeout is async, setInterval is sync"
+    ],
+    "correct_answer": "setTimeout runs once after a delay, setInterval runs repeatedly at intervals",
+    "topic": "Timers",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the this keyword in a method?",
+    "options": [
+      "Refers to the function",
+      "Refers to the object the method belongs to",
+      "Refers to the window object",
+      "Refers to the parent scope"
+    ],
+    "correct_answer": "Refers to the object the method belongs to",
+    "topic": "OOP Concepts",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the difference between Object.freeze() and Object.seal()?",
+    "options": [
+      "They are the same",
+      "Object.freeze() prevents all modifications, Object.seal() allows value changes but not property addition/deletion",
+      "Object.seal() is deprecated",
+      "Object.freeze() is slower"
+    ],
+    "correct_answer": "Object.freeze() prevents all modifications, Object.seal() allows value changes but not property addition/deletion",
+    "topic": "Objects",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the purpose of Object.defineProperty()?",
+    "options": [
+      "Defines a new object",
+      "Defines or modifies a property with more control",
+      "Deletes properties",
+      "Creates a class"
+    ],
+    "correct_answer": "Defines or modifies a property with more control",
+    "topic": "Objects",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What are getters and setters in JavaScript?",
+    "options": [
+      "Methods to create variables",
+      "Functions that get and set property values with additional logic",
+      "Data types",
+      "Variable names"
+    ],
+    "correct_answer": "Functions that get and set property values with additional logic",
+    "topic": "OOP Concepts",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the purpose of JSON.stringify()?",
+    "options": [
+      "Converts a string to JSON",
+      "Converts an object to a JSON string",
+      "Parses JSON",
+      "Validates JSON"
+    ],
+    "correct_answer": "Converts an object to a JSON string",
+    "topic": "JSON",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the purpose of JSON.parse()?",
+    "options": [
+      "Converts an object to JSON",
+      "Converts a JSON string to an object",
+      "Validates JSON",
+      "Creates JSON structures"
+    ],
+    "correct_answer": "Converts a JSON string to an object",
+    "topic": "JSON",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the WeakMap data structure?",
+    "options": [
+      "A regular map with weak performance",
+      "A map with weakly referenced keys that can be garbage collected",
+      "A deprecated data structure",
+      "A map that stores weak values"
+    ],
+    "correct_answer": "A map with weakly referenced keys that can be garbage collected",
+    "topic": "Data Structures",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the Set data structure?",
+    "options": [
+      "A variable assignment",
+      "An ordered collection of unique values",
+      "A type of array",
+      "A reserved keyword"
+    ],
+    "correct_answer": "An ordered collection of unique values",
+    "topic": "Data Structures",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the Map data structure?",
+    "options": [
+      "A geographical map",
+      "A collection of key-value pairs (keys can be of any type)",
+      "A type of object",
+      "A method to transform arrays"
+    ],
+    "correct_answer": "A collection of key-value pairs (keys can be of any type)",
+    "topic": "Data Structures",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the difference between == and === in type coercion?",
+    "options": [
+      "== coerces types before comparison, === does not",
+      "=== coerces types",
+      "They are the same",
+      "== is always safer"
+    ],
+    "correct_answer": "== coerces types before comparison, === does not",
+    "topic": "Operators",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is type coercion?",
+    "options": [
+      "Forcing a type change",
+      "Automatic conversion of values from one type to another",
+      "Creating new types",
+      "Comparing types"
+    ],
+    "correct_answer": "Automatic conversion of values from one type to another",
+    "topic": "Data Types",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is truthy coercion?",
+    "options": [
+      "Forcing true values",
+      "Converting values to boolean in boolean context",
+      "Making values true",
+      "A reserved keyword"
+    ],
+    "correct_answer": "Converting values to boolean in boolean context",
+    "topic": "Data Types",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the difference between substring() and substr()?",
+    "options": [
+      "They are the same",
+      "substring() takes start and end indices, substr() takes start and length",
+      "substr() is faster",
+      "substring() is deprecated"
+    ],
+    "correct_answer": "substring() takes start and end indices, substr() takes start and length",
+    "topic": "Strings",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the purpose of String.prototype.padStart()?",
+    "options": [
+      "Starts a new string",
+      "Pads the beginning of a string with another string",
+      "Padding arrays",
+      "Removing characters"
+    ],
+    "correct_answer": "Pads the beginning of a string with another string",
+    "topic": "Strings",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the purpose of Object.getPrototypeOf()?",
+    "options": [
+      "Gets the prototype of an object",
+      "Creates a new prototype",
+      "Deletes prototypes",
+      "Returns an array"
+    ],
+    "correct_answer": "Gets the prototype of an object",
+    "topic": "Prototype Chain",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the purpose of isPrototypeOf()?",
+    "options": [
+      "Checks if one object is the prototype of another",
+      "Creates a prototype",
+      "Deletes prototypes",
+      "Returns an array"
+    ],
+    "correct_answer": "Checks if one object is the prototype of another",
+    "topic": "Prototype Chain",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the purpose of Object.hasOwnProperty()?",
+    "options": [
+      "Checks if an object has properties",
+      "Checks if an object has its own (not inherited) property",
+      "Inherited properties",
+      "Deletes properties"
+    ],
+    "correct_answer": "Checks if an object has its own (not inherited) property",
+    "topic": "Objects",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the purpose of Array.isArray()?",
+    "options": [
+      "Returns an array",
+      "Checks if a value is an array",
+      "Creates an array",
+      "Deletes an array"
+    ],
+    "correct_answer": "Checks if a value is an array",
+    "topic": "Arrays",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the purpose of flat() method?",
+    "options": [
+      "Makes an array flat",
+      "Flattens nested arrays into a single level",
+      "Removes duplicates",
+      "Sorts an array"
+    ],
+    "correct_answer": "Flattens nested arrays into a single level",
+    "topic": "Arrays",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the purpose of flatMap() method?",
+    "options": [
+      "Maps and flattens in two steps",
+      "Maps each element and flattens the result",
+      "Removes duplicates",
+      "Creates a flat map"
+    ],
+    "correct_answer": "Maps each element and flattens the result",
+    "topic": "Arrays",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is optional chaining (?.) in JavaScript?",
+    "options": [
+      "Optional function calls",
+      "Safely accessing nested object properties, returning undefined if property doesn't exist",
+      "Creating optional parameters",
+      "A loop structure"
+    ],
+    "correct_answer": "Safely accessing nested object properties, returning undefined if property doesn't exist",
+    "topic": "ES6+ Features",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is nullish coalescing (??)?",
+    "options": [
+      "Joining null values",
+      "Returns the right operand if left is null or undefined",
+      "Comparing null values",
+      "A type of operator"
+    ],
+    "correct_answer": "Returns the right operand if left is null or undefined",
+    "topic": "Operators",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the difference between Rest and Spread operators?",
+    "options": [
+      "They are the same",
+      "Spread expands, Rest collects into an array",
+      "Rest is deprecated",
+      "Spread only works on arrays"
+    ],
+    "correct_answer": "Spread expands, Rest collects into an array",
+    "topic": "Operators",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is Symbol in JavaScript?",
+    "options": [
+      "A mathematical symbol",
+      "A primitive data type representing a unique identifier",
+      "A type of object",
+      "A reserved keyword"
+    ],
+    "correct_answer": "A primitive data type representing a unique identifier",
+    "topic": "Data Types",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the purpose of Symbol.iterator?",
+    "options": [
+      "Creates a symbol",
+      "Defines the iterator method for an object",
+      "Iterates over symbols",
+      "Creates an iterator"
+    ],
+    "correct_answer": "Defines the iterator method for an object",
+    "topic": "Iterators",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is a generator function?",
+    "options": [
+      "A function that generates values",
+      "A function that can be paused and resumed using yield",
+      "A function that creates objects",
+      "A reserved keyword"
+    ],
+    "correct_answer": "A function that can be paused and resumed using yield",
+    "topic": "Generators",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the purpose of the yield keyword?",
+    "options": [
+      "Yields results",
+      "Pauses a generator and returns a value",
+      "Continues execution",
+      "Returns from a function"
+    ],
+    "correct_answer": "Pauses a generator and returns a value",
+    "topic": "Generators",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is regular expression (RegExp) in JavaScript?",
+    "options": [
+      "An expression that is regular",
+      "A pattern used for string matching and manipulation",
+      "A type of variable",
+      "A loop structure"
+    ],
+    "correct_answer": "A pattern used for string matching and manipulation",
+    "topic": "RegExp",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the purpose of the match() method?",
+    "options": [
+      "Matches objects",
+      "Returns matches of a regex pattern in a string",
+      "Compares strings",
+      "Sorts characters"
+    ],
+    "correct_answer": "Returns matches of a regex pattern in a string",
+    "topic": "RegExp",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the purpose of the replace() method?",
+    "options": [
+      "Replaces objects",
+      "Replaces occurrences of a substring with another substring",
+      "Deletes characters",
+      "Moves characters"
+    ],
+    "correct_answer": "Replaces occurrences of a substring with another substring",
+    "topic": "Strings",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the purpose of the split() method?",
+    "options": [
+      "Splits objects",
+      "Splits a string into an array based on a separator",
+      "Combines strings",
+      "Removes characters"
+    ],
+    "correct_answer": "Splits a string into an array based on a separator",
+    "topic": "Strings",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What does memoization achieve in JavaScript?",
+    "options": [
+      "Storing memories of past executions",
+      "Caching function results to improve performance",
+      "Optimizing loop iterations",
+      "Improving code readability"
+    ],
+    "correct_answer": "Caching function results to improve performance",
+    "topic": "Performance Optimization",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is currying in functional programming?",
+    "options": [
+      "Cooking method in programming",
+      "Transforming a function to accept one argument at a time",
+      "Creating partial functions",
+      "Combining multiple functions"
+    ],
+    "correct_answer": "Transforming a function to accept one argument at a time",
+    "topic": "Functional Programming",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the purpose of event delegation?",
+    "options": [
+      "Assigning events to specific elements",
+      "Using a parent listener to handle events on multiple children",
+      "Creating event chains",
+      "Preventing event bubbling"
+    ],
+    "correct_answer": "Using a parent listener to handle events on multiple children",
+    "topic": "DOM Events",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is debouncing?",
+    "options": [
+      "Removing bugs from code",
+      "Limiting function calls by waiting for inactivity before executing",
+      "Preventing function execution",
+      "Speeding up function execution"
+    ],
+    "correct_answer": "Limiting function calls by waiting for inactivity before executing",
+    "topic": "Performance Optimization",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is throttling?",
+    "options": [
+      "Reducing engine speed",
+      "Executing a function at most once per specified time interval",
+      "Limiting concurrent operations",
+      "Slowing down execution"
+    ],
+    "correct_answer": "Executing a function at most once per specified time interval",
+    "topic": "Performance Optimization",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the difference between debouncing and throttling?",
+    "options": [
+      "They are identical",
+      "Debouncing waits for inactivity, throttling executes at intervals",
+      "Throttling is always better",
+      "Debouncing works for events, throttling doesn't"
+    ],
+    "correct_answer": "Debouncing waits for inactivity, throttling executes at intervals",
+    "topic": "Performance Optimization",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is partial application?",
+    "options": [
+      "Applying to a partial function",
+      "Fixing some arguments of a function returning a new function",
+      "Partial execution of code",
+      "Function overloading"
+    ],
+    "correct_answer": "Fixing some arguments of a function returning a new function",
+    "topic": "Functional Programming",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is function composition?",
+    "options": [
+      "Combining functions into one",
+      "Creating new functions by combining existing functions",
+      "Function chaining",
+      "Function nesting"
+    ],
+    "correct_answer": "Creating new functions by combining existing functions",
+    "topic": "Functional Programming",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What does Object.entries() return?",
+    "options": [
+      "Object keys only",
+      "Object values only",
+      "Array of [key, value] pairs",
+      "Object type information"
+    ],
+    "correct_answer": "Array of [key, value] pairs",
+    "topic": "Objects",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the difference between Object.freeze() and const?",
+    "options": [
+      "They are identical",
+      "const prevents reassignment, Object.freeze() prevents property modification",
+      "const is for variables, Object.freeze() for functions",
+      "They serve different purposes entirely"
+    ],
+    "correct_answer": "const prevents reassignment, Object.freeze() prevents property modification",
+    "topic": "Objects",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the purpose of Proxy in JavaScript?",
+    "options": [
+      "Forwarding requests over network",
+      "Intercepting and customizing fundamental operations on objects",
+      "Creating proxy servers",
+      "Preventing object access"
+    ],
+    "correct_answer": "Intercepting and customizing fundamental operations on objects",
+    "topic": "Advanced Objects",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the purpose of Reflect API?",
+    "options": [
+      "Reflecting light in code",
+      "Providing methods for interceptable JavaScript operations",
+      "Reading function code",
+      "Modifying function behavior"
+    ],
+    "correct_answer": "Providing methods for interceptable JavaScript operations",
+    "topic": "Advanced Objects",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is lazy loading?",
+    "options": [
+      "Loading code slowly",
+      "Deferring loading of resources until needed",
+      "Asynchronous loading",
+      "Background loading"
+    ],
+    "correct_answer": "Deferring loading of resources until needed",
+    "topic": "Performance Optimization",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the difference between Promise.then() and async/await?",
+    "options": [
+      "They are the same",
+      "async/await is cleaner syntax for promise handling",
+      "Promise.then() is asynchronous",
+      ".then() doesn't block execution"
+    ],
+    "correct_answer": "async/await is cleaner syntax for promise handling",
+    "topic": "Async/Await",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the purpose of finally() in promises?",
+    "options": [
+      "Finally executing code",
+      "Code that executes regardless of promise resolution or rejection",
+      "Finalizing promise chains",
+      "Ending async operations"
+    ],
+    "correct_answer": "Code that executes regardless of promise resolution or rejection",
+    "topic": "Promises",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the difference between null coalescing and optional chaining?",
+    "options": [
+      "They are identical",
+      "Null coalescing (??) provides defaults, optional chaining (?.) safely accesses",
+      "Optional chaining handles null",
+      "Null coalescing prevents errors"
+    ],
+    "correct_answer": "Null coalescing (??) provides defaults, optional chaining (?.) safely accesses",
+    "topic": "ES6+ Features",
+    "difficulty": "medium"
+  }
+]

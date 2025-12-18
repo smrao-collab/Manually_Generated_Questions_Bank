@@ -1,0 +1,902 @@
+[
+  {
+    "question": "A product's price increases by 20%, then decreases by 10%. What is the net change?",
+    "options": [
+      "8% increase",
+      "10% increase",
+      "12% increase",
+      "15% increase"
+    ],
+    "correct_answer": "8% increase",
+    "topic": "Percentages",
+    "difficulty": "medium"
+  },
+  {
+    "question": "If a value increases by 25% and then by 20%, what is the total percentage increase?",
+    "options": [
+      "42%",
+      "45%",
+      "48%",
+      "50%"
+    ],
+    "correct_answer": "50%",
+    "topic": "Percentages",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A quantity decreases by 30%, then increases by 30%. What is the net change?",
+    "options": [
+      "9% decrease",
+      "18% decrease",
+      "0%",
+      "9% increase"
+    ],
+    "correct_answer": "9% decrease",
+    "topic": "Percentages",
+    "difficulty": "medium"
+  },
+  {
+    "question": "The population of a city was 10,00,000 in 2020 and grew by 15% in 2021. What is the population in 2021?",
+    "options": [
+      "11,00,000",
+      "11,50,000",
+      "12,00,000",
+      "12,50,000"
+    ],
+    "correct_answer": "11,50,000",
+    "topic": "Percentages",
+    "difficulty": "medium"
+  },
+  {
+    "question": "The average salary of 5 people is ₹40,000. If one person earning ₹60,000 leaves, what is the new average?",
+    "options": [
+      "₹35,000",
+      "₹36,000",
+      "₹37,000",
+      "₹38,000"
+    ],
+    "correct_answer": "₹37,000",
+    "topic": "Averages",
+    "difficulty": "medium"
+  },
+  {
+    "question": "10 students score an average of 75. 5 more students join with an average score of 85. What is the new average?",
+    "options": [
+      "78",
+      "79",
+      "80",
+      "81"
+    ],
+    "correct_answer": "78",
+    "topic": "Averages",
+    "difficulty": "medium"
+  },
+  {
+    "question": "₹1200 is divided among A, B, C in the ratio 2:3:5. How much does B get?",
+    "options": [
+      "₹240",
+      "₹360",
+      "₹600",
+      "₹720"
+    ],
+    "correct_answer": "₹360",
+    "topic": "Ratios & Proportions",
+    "difficulty": "medium"
+  },
+  {
+    "question": "If A:B = 3:4 and B:C = 2:3, what is A:B:C?",
+    "options": [
+      "3:4:6",
+      "6:8:12",
+      "3:4:3",
+      "2:3:4"
+    ],
+    "correct_answer": "6:8:12",
+    "topic": "Ratios & Proportions",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A shopkeeper buys 10 items at ₹50 each and sells them at ₹70 each. What is the total profit?",
+    "options": [
+      "₹100",
+      "₹150",
+      "₹200",
+      "₹250"
+    ],
+    "correct_answer": "₹200",
+    "topic": "Profit & Loss",
+    "difficulty": "medium"
+  },
+  {
+    "question": "If marked price is ₹1000, discount is 20%, and profit is 25%, what is the cost price?",
+    "options": [
+      "₹600",
+      "₹640",
+      "₹700",
+      "₹750"
+    ],
+    "correct_answer": "₹640",
+    "topic": "Profit & Loss",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A train travels 300 km in 5 hours. Another train travels 400 km in 5 hours. What is the difference in their speeds?",
+    "options": [
+      "20 km/hr",
+      "30 km/hr",
+      "40 km/hr",
+      "50 km/hr"
+    ],
+    "correct_answer": "20 km/hr",
+    "topic": "Time, Speed & Distance",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A car travels at 60 km/hr for 2 hours and then at 80 km/hr for 3 hours. What is the average speed?",
+    "options": [
+      "70 km/hr",
+      "72 km/hr",
+      "75 km/hr",
+      "80 km/hr"
+    ],
+    "correct_answer": "72 km/hr",
+    "topic": "Time, Speed & Distance",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Complete: 1, 4, 9, 16, 25, ?",
+    "options": [
+      "35",
+      "36",
+      "38",
+      "42"
+    ],
+    "correct_answer": "36",
+    "topic": "Number Series",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Complete: 2, 6, 12, 20, 30, ?",
+    "options": [
+      "40",
+      "42",
+      "45",
+      "50"
+    ],
+    "correct_answer": "42",
+    "topic": "Number Series",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Complete: 1, 3, 7, 15, 31, ?",
+    "options": [
+      "61",
+      "62",
+      "63",
+      "64"
+    ],
+    "correct_answer": "63",
+    "topic": "Number Series",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A person walks 10m east, then 15m north, then 10m west. What is his final distance from the starting point?",
+    "options": [
+      "15 m",
+      "20 m",
+      "25 m",
+      "30 m"
+    ],
+    "correct_answer": "15 m",
+    "topic": "Directions",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A walks 20m north, 30m east, then 20m south. How far is A from the starting point?",
+    "options": [
+      "20 m",
+      "25 m",
+      "30 m",
+      "35 m"
+    ],
+    "correct_answer": "30 m",
+    "topic": "Directions",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A's mother's brother's daughter is A's __?",
+    "options": [
+      "Cousin",
+      "Sister",
+      "Niece",
+      "Aunt"
+    ],
+    "correct_answer": "Cousin",
+    "topic": "Blood Relations",
+    "difficulty": "medium"
+  },
+  {
+    "question": "If X is Y's brother and Y is Z's mother, then X is Z's __?",
+    "options": [
+      "Uncle",
+      "Father",
+      "Cousin",
+      "Grandfather"
+    ],
+    "correct_answer": "Uncle",
+    "topic": "Blood Relations",
+    "difficulty": "medium"
+  },
+  {
+    "question": "If FAST is coded as GBRV, how is SLOW coded?",
+    "options": [
+      "TMPY",
+      "TMPZ",
+      "TNPZ",
+      "TNPY"
+    ],
+    "correct_answer": "TMPY",
+    "topic": "Coding-Decoding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "If APPLE is coded as 12345, then PALE is coded as?",
+    "options": [
+      "1234",
+      "1243",
+      "1342",
+      "2143"
+    ],
+    "correct_answer": "2143",
+    "topic": "Coding-Decoding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which word is a synonym of 'expedite'?",
+    "options": [
+      "Accelerate",
+      "Delay",
+      "Halt",
+      "Stop"
+    ],
+    "correct_answer": "Accelerate",
+    "topic": "Synonyms & Antonyms",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which word is an antonym of 'meticulous'?",
+    "options": [
+      "Careful",
+      "Careless",
+      "Precise",
+      "Thorough"
+    ],
+    "correct_answer": "Careless",
+    "topic": "Synonyms & Antonyms",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Choose the correct sentence:",
+    "options": [
+      "He have completed the work",
+      "He has completed the work",
+      "He do complete the work",
+      "He did completed the work"
+    ],
+    "correct_answer": "He has completed the work",
+    "topic": "Grammar",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Correct: 'If I was you, I would accept the offer.'",
+    "options": [
+      "'was' to 'were'",
+      "'would' to 'could'",
+      "'accept' to 'accepted'",
+      "No correction needed"
+    ],
+    "correct_answer": "'was' to 'were'",
+    "topic": "Grammar",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Arrange in order: A) He scored a goal. B) The match began. C) The team celebrated. D) He was awarded Man of the Match.",
+    "options": [
+      "ABCD",
+      "ABDC",
+      "ACBD",
+      "BCAD"
+    ],
+    "correct_answer": "ABCD",
+    "topic": "Para Jumbles",
+    "difficulty": "medium"
+  },
+  {
+    "question": "The weather was ____ so the picnic was postponed.",
+    "options": [
+      "beautiful",
+      "rainy",
+      "sunny",
+      "clear"
+    ],
+    "correct_answer": "rainy",
+    "topic": "Cloze Test",
+    "difficulty": "medium"
+  },
+  {
+    "question": "If the cost of 8 items is ₹240, what is the cost of 12 items?",
+    "options": [
+      "₹300",
+      "₹320",
+      "₹360",
+      "₹400"
+    ],
+    "correct_answer": "₹360",
+    "topic": "Percentages",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A mixture contains 60% water and 40% salt. If 100 liters of mixture is taken, how much salt is there?",
+    "options": [
+      "30 L",
+      "40 L",
+      "50 L",
+      "60 L"
+    ],
+    "correct_answer": "40 L",
+    "topic": "Percentages",
+    "difficulty": "medium"
+  },
+  {
+    "question": "The average of 6 numbers is 30. If one number is replaced by 42, the new average is 32. What was the original number?",
+    "options": [
+      "24",
+      "28",
+      "30",
+      "32"
+    ],
+    "correct_answer": "30",
+    "topic": "Averages",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A recipe requires flour to sugar in ratio 4:1. If 8 cups of flour are used, how much sugar is needed?",
+    "options": [
+      "1 cup",
+      "2 cups",
+      "3 cups",
+      "4 cups"
+    ],
+    "correct_answer": "2 cups",
+    "topic": "Ratios & Proportions",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A trader bought items for ₹500 and sold them for ₹650. If the overhead cost is ₹50, what is the net profit?",
+    "options": [
+      "₹100",
+      "₹150",
+      "₹200",
+      "₹250"
+    ],
+    "correct_answer": "₹100",
+    "topic": "Profit & Loss",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Two pipes can fill a tank in 8 and 12 hours respectively. How long will it take to fill the tank with both pipes?",
+    "options": [
+      "4.8 hours",
+      "5 hours",
+      "6 hours",
+      "7 hours"
+    ],
+    "correct_answer": "4.8 hours",
+    "topic": "Time & Work",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A boat travels 30 km upstream in 6 hours and 30 km downstream in 3 hours. What is the speed of the boat?",
+    "options": [
+      "5 km/hr",
+      "7.5 km/hr",
+      "10 km/hr",
+      "12.5 km/hr"
+    ],
+    "correct_answer": "7.5 km/hr",
+    "topic": "Time, Speed & Distance",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Complete: 10, 20, 40, 80, ?",
+    "options": [
+      "100",
+      "120",
+      "140",
+      "160"
+    ],
+    "correct_answer": "160",
+    "topic": "Number Series",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Complete: 121, 144, 169, 196, ?",
+    "options": [
+      "220",
+      "225",
+      "230",
+      "235"
+    ],
+    "correct_answer": "225",
+    "topic": "Number Series",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A person walks 8m north, 6m east, then 8m south. What is the distance from start?",
+    "options": [
+      "4 m",
+      "6 m",
+      "8 m",
+      "10 m"
+    ],
+    "correct_answer": "6 m",
+    "topic": "Directions",
+    "difficulty": "medium"
+  },
+  {
+    "question": "If A's father's sister is B, then A is B's __?",
+    "options": [
+      "Nephew",
+      "Niece",
+      "Cousin",
+      "Grandson"
+    ],
+    "correct_answer": "Nephew",
+    "topic": "Blood Relations",
+    "difficulty": "medium"
+  },
+  {
+    "question": "If HELLO is coded as GDKKN, how is WORLD coded?",
+    "options": [
+      "VNQKC",
+      "VNQLC",
+      "VNQLZ",
+      "VNQKZ"
+    ],
+    "correct_answer": "VNQLC",
+    "topic": "Coding-Decoding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Synonym of 'obsolete' is?",
+    "options": [
+      "Modern",
+      "Outdated",
+      "New",
+      "Recent"
+    ],
+    "correct_answer": "Outdated",
+    "topic": "Synonyms & Antonyms",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Choose the correct form: 'If I ____ known, I would have helped.'",
+    "options": [
+      "had",
+      "have",
+      "was",
+      "were"
+    ],
+    "correct_answer": "had",
+    "topic": "Grammar",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Arrange: A) She entered the room. B) She saw a letter on the table. C) She opened it. D) The letter was from her mother.",
+    "options": [
+      "ABCD",
+      "ABDC",
+      "ACBD",
+      "BACD"
+    ],
+    "correct_answer": "ABCD",
+    "topic": "Para Jumbles",
+    "difficulty": "medium"
+  },
+  {
+    "question": "The student was ____ about his poor performance.",
+    "options": [
+      "happy",
+      "pleased",
+      "anxious",
+      "delighted"
+    ],
+    "correct_answer": "anxious",
+    "topic": "Cloze Test",
+    "difficulty": "medium"
+  },
+  {
+    "question": "If the profit is 25% and cost is ₹400, what is the selling price?",
+    "options": [
+      "₹450",
+      "₹475",
+      "₹500",
+      "₹550"
+    ],
+    "correct_answer": "₹500",
+    "topic": "Profit & Loss",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A reduces from 100 to 90. What is the percentage decrease?",
+    "options": [
+      "9%",
+      "10%",
+      "11%",
+      "12%"
+    ],
+    "correct_answer": "10%",
+    "topic": "Percentages",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Average of 20, 40, 60, 80 is?",
+    "options": [
+      "40",
+      "50",
+      "60",
+      "70"
+    ],
+    "correct_answer": "50",
+    "topic": "Averages",
+    "difficulty": "medium"
+  },
+  {
+    "question": "If A:B = 5:6 and there are 55 items of A, how many items of B?",
+    "options": [
+      "60",
+      "66",
+      "70",
+      "75"
+    ],
+    "correct_answer": "66",
+    "topic": "Ratios & Proportions",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A shop sells 100 items at ₹10 each and 50 items at ₹20 each. Average price per item?",
+    "options": [
+      "₹12",
+      "₹13.33",
+      "₹14",
+      "₹15"
+    ],
+    "correct_answer": "₹13.33",
+    "topic": "Averages",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Complete: 5, 15, 45, ?",
+    "options": [
+      "90",
+      "120",
+      "135",
+      "150"
+    ],
+    "correct_answer": "135",
+    "topic": "Number Series",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A travels 50 km north, then turns west and travels 30 km. Direct distance from start?",
+    "options": [
+      "80 km",
+      "20 km",
+      "58.31 km",
+      "40 km"
+    ],
+    "correct_answer": "58.31 km",
+    "topic": "Directions",
+    "difficulty": "medium"
+  },
+  {
+    "question": "X's son is Y's father. How are X and Y related?",
+    "options": [
+      "Father-Son",
+      "Grandfather-Grandson",
+      "Uncle-Nephew",
+      "Cousins"
+    ],
+    "correct_answer": "Grandfather-Grandson",
+    "topic": "Blood Relations",
+    "difficulty": "medium"
+  },
+  {
+    "question": "If CAT is coded as 312, DOG is coded as 456, then COAT is coded as?",
+    "options": [
+      "3412",
+      "3142",
+      "3124",
+      "3214"
+    ],
+    "correct_answer": "3142",
+    "topic": "Coding-Decoding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Antonym of 'verbose' is?",
+    "options": [
+      "Talkative",
+      "Concise",
+      "Lengthy",
+      "Wordy"
+    ],
+    "correct_answer": "Concise",
+    "topic": "Synonyms & Antonyms",
+    "difficulty": "medium"
+  },
+  {
+    "question": "The correct sentence is: A) He is one of the best player. B) He is one of the best players.",
+    "options": [
+      "A",
+      "B",
+      "Both",
+      "Neither"
+    ],
+    "correct_answer": "B",
+    "topic": "Grammar",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A company has 1000 employees. After a 20% layoff, 30% of remaining resign. How many work?",
+    "options": [
+      "500",
+      "560",
+      "600",
+      "640"
+    ],
+    "correct_answer": "560",
+    "topic": "Percentages",
+    "difficulty": "medium"
+  },
+  {
+    "question": "If 3 books cost ₹180, how much do 7 books cost?",
+    "options": [
+      "₹350",
+      "₹400",
+      "₹420",
+      "₹480"
+    ],
+    "correct_answer": "₹420",
+    "topic": "Ratios & Proportions",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A factory produces 1200 items in 8 hours. How many items in 15 hours?",
+    "options": [
+      "2100",
+      "2250",
+      "2400",
+      "2550"
+    ],
+    "correct_answer": "2250",
+    "topic": "Time & Work",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A car covers 150 km with average speed 75 km/hr. Time taken?",
+    "options": [
+      "1 hour",
+      "1.5 hours",
+      "2 hours",
+      "2.5 hours"
+    ],
+    "correct_answer": "2 hours",
+    "topic": "Time, Speed & Distance",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Complete: 2, 4, 8, 16, ?",
+    "options": [
+      "24",
+      "28",
+      "32",
+      "36"
+    ],
+    "correct_answer": "32",
+    "topic": "Number Series",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Complete: 3, 9, 27, ?",
+    "options": [
+      "54",
+      "72",
+      "81",
+      "90"
+    ],
+    "correct_answer": "81",
+    "topic": "Number Series",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A walks 5 units east, 12 units north. Shortest path back?",
+    "options": [
+      "13 units",
+      "17 units",
+      "15 units",
+      "20 units"
+    ],
+    "correct_answer": "13 units",
+    "topic": "Directions",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Pointing to a man, a woman says, 'He is the father of my brother's only son.' The man is her __?",
+    "options": [
+      "Brother",
+      "Cousin",
+      "Uncle",
+      "Father"
+    ],
+    "correct_answer": "Cousin",
+    "topic": "Blood Relations",
+    "difficulty": "medium"
+  },
+  {
+    "question": "If TRAIN is coded as USBJO, then PLANE is coded as?",
+    "options": [
+      "QNBOF",
+      "QMBOF",
+      "QNBOF",
+      "QMBNF"
+    ],
+    "correct_answer": "QMBOF",
+    "topic": "Coding-Decoding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Synonym of 'augment' is?",
+    "options": [
+      "Decrease",
+      "Increase",
+      "Divide",
+      "Separate"
+    ],
+    "correct_answer": "Increase",
+    "topic": "Synonyms & Antonyms",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Choose correct: 'Neither...nor requires ____ verb form.",
+    "options": [
+      "plural",
+      "singular",
+      "either",
+      "both"
+    ],
+    "correct_answer": "singular",
+    "topic": "Grammar",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Arrange: A) The bird flew away. B) A cat approached. C) The bird sat on a tree. D) A loud noise startled everyone.",
+    "options": [
+      "DCAB",
+      "CDBA",
+      "DBCA",
+      "ACDB"
+    ],
+    "correct_answer": "DCAB",
+    "topic": "Para Jumbles",
+    "difficulty": "medium"
+  },
+  {
+    "question": "He ____ for 10 years without achieving success.",
+    "options": [
+      "try",
+      "tried",
+      "trying",
+      "tries"
+    ],
+    "correct_answer": "tried",
+    "topic": "Cloze Test",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A merchant buys goods for ₹5000 and marks them up 40%. He gives 10% discount. Profit?",
+    "options": [
+      "₹700",
+      "₹800",
+      "₹900",
+      "₹1000"
+    ],
+    "correct_answer": "₹700",
+    "topic": "Profit & Loss",
+    "difficulty": "medium"
+  },
+  {
+    "question": "If price increases from 100 to 120 to 132, total percentage increase?",
+    "options": [
+      "32%",
+      "45%",
+      "50%",
+      "55%"
+    ],
+    "correct_answer": "32%",
+    "topic": "Percentages",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Average of first 10 natural numbers?",
+    "options": [
+      "5",
+      "5.5",
+      "6",
+      "6.5"
+    ],
+    "correct_answer": "5.5",
+    "topic": "Averages",
+    "difficulty": "medium"
+  },
+  {
+    "question": "If 2A = 3B = 4C, ratio A:B:C = ?",
+    "options": [
+      "6:4:3",
+      "2:3:4",
+      "4:3:2",
+      "12:8:6"
+    ],
+    "correct_answer": "6:4:3",
+    "topic": "Ratios & Proportions",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Complete: 11, 22, 44, ?",
+    "options": [
+      "55",
+      "66",
+      "77",
+      "88"
+    ],
+    "correct_answer": "88",
+    "topic": "Number Series",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A goes 8 km south, then 15 km east. Distance from start?",
+    "options": [
+      "17 km",
+      "20 km",
+      "22 km",
+      "25 km"
+    ],
+    "correct_answer": "17 km",
+    "topic": "Directions",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A's daughter is B's mother. How are A and B related?",
+    "options": [
+      "Grandfather-Grandson",
+      "Father-Son",
+      "Uncle-Nephew",
+      "Cousin"
+    ],
+    "correct_answer": "Grandfather-Grandson",
+    "topic": "Blood Relations",
+    "difficulty": "medium"
+  },
+  {
+    "question": "If BIRD is coded as 2486, then GIRL is coded as?",
+    "options": [
+      "6486",
+      "6184",
+      "6418",
+      "6481"
+    ],
+    "correct_answer": "6486",
+    "topic": "Coding-Decoding",
+    "difficulty": "medium"
+  }
+]

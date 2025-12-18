@@ -1,0 +1,74 @@
+[
+  {
+    "question": "What Python keyword is used to define a block of code that should be monitored for exceptions?",
+    "options": [
+      "A. `catch`",
+      "B. `handle`",
+      "C. `raise`",
+      "D. `try`"
+    ],
+    "correct_answer": "D",
+    "topic": "Exceptions",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Consider the following Python code snippet:\n\n```python\ntry:\n    print(1 / 0)\nexcept ________:\n    print('An error occurred.')\n```\n\nWhich specific exception type should fill the blank to correctly catch the error that occurs?",
+    "options": [
+      "A. `ValueError`",
+      "B. `TypeError`",
+      "C. `ZeroDivisionError`",
+      "D. `ArithmeticError`"
+    ],
+    "correct_answer": "C",
+    "topic": "Exceptions",
+    "difficulty": "medium"
+  },
+  {
+    "question": "In Python's exception handling, which block of code is guaranteed to execute whether an exception occurred or not?",
+    "options": [
+      "A. `except`",
+      "B. `else`",
+      "C. `finally`",
+      "D. `try`"
+    ],
+    "correct_answer": "C",
+    "topic": "Exceptions",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the output of the following Python code?\n`def greet(name, message=\"Hello\"):`\n  `print(f\"{message}, {name}!\")`\n`greet(\"Alice\", \"Hi\")`\n`greet(\"Bob\")`",
+    "options": [
+      "A. Hi, Alice!\nHello, Bob!",
+      "B. Hello, Alice!\nHello, Bob!",
+      "C. Hi, Alice!\nHi, Bob!",
+      "D. Hello, Alice!\nHi, Bob!"
+    ],
+    "correct_answer": "A",
+    "topic": "Functions",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the output of the following Python code?\n`my_dict = {'a': 1, 'b': 2, 'c': 3}`\n`my_dict['b'] = my_dict.get('d', 0) + 5`\n`print(my_dict['b'])`",
+    "options": [
+      "A. 2",
+      "B. 5",
+      "C. 7",
+      "D. 0"
+    ],
+    "correct_answer": "B",
+    "topic": "Dictionaries",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the output of the following code?\n`def my_decorator(func):`\n  `def wrapper():`\n    `print(\"Before function call\")`\n    `func()`\n    `print(\"After function call\")`\n  `return wrapper`\n`@my_decorator`\n`def say_hello():`\n  `print(\"Hello!\")`\n`say_hello()`",
+    "options": [
+      "A. Hello!",
+      "B. Before function call\nHello!\nAfter function call",
+      "C. Before function call\nAfter function call",
+      "D. Error"
+    ],
+    "correct_answer": "B",
+    "topic": "Decorators",
+    "difficulty": "medium"
+  }
+]
