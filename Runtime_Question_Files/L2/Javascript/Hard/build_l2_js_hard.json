@@ -1,0 +1,74 @@
+[
+  {
+    "question": "What will be the output of the following code?",
+    "options": [
+      "1, 2",
+      "1, 1",
+      "0, 1",
+      "Error"
+    ],
+    "correct_answer": "1, 2",
+    "topic": "Closures",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What will be the output of the following code?",
+    "options": [
+      "Hello, John",
+      "undefined",
+      "Error",
+      "function() { return 'Hello, ' + this.name; }"
+    ],
+    "correct_answer": "Hello, John",
+    "topic": "Prototypes",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What will be the output of the following code?",
+    "options": [
+      "Buddy makes a sound.",
+      "Buddy barks.",
+      "Error",
+      "Golden Retriever barks."
+    ],
+    "correct_answer": "Buddy barks.",
+    "topic": "Classes",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Consider the following code:\n```javascript\nfunction createCounter() {\n  let count = 0;\n  return function() {\n    count++;\n    return count;\n  };\n}\nconst counter1 = createCounter();\nconst counter2 = createCounter();\nconsole.log(counter1());\nconsole.log(counter2());\nconsole.log(counter1());\n```\nWhat will be the final output logged to the console?",
+    "options": [
+      "A) 1, 1, 2",
+      "B) 1, 2, 3",
+      "C) 1, 2, 1",
+      "D) 2, 2, 3"
+    ],
+    "correct_answer": "A",
+    "topic": "Closures",
+    "difficulty": "hard"
+  },
+  {
+    "question": "You have a constructor function `Person` defined as `function Person(name) { this.name = name; }`. To add a method `sayHello` that all instances of `Person` share and avoid duplicating for each instance, where should `sayHello` be defined?",
+    "options": [
+      "A) Person.sayHello = function() { ... };",
+      "B) this.sayHello = function() { ... }; inside the constructor",
+      "C) Person.prototype.sayHello = function() { ... };",
+      "D) new Person().sayHello = function() { ... };"
+    ],
+    "correct_answer": "C",
+    "topic": "Prototypes",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Which of the following is the correct way to handle a network error (e.g., no internet connection) when using the Fetch API?",
+    "options": [
+      "A) Using a .then() block after the fetch() call",
+      "B) Using a .catch() block after the fetch() call",
+      "C) Checking response.ok inside the first .then() block",
+      "D) Network errors are automatically thrown as ReferenceError"
+    ],
+    "correct_answer": "B",
+    "topic": "Fetch API",
+    "difficulty": "hard"
+  }
+]

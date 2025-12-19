@@ -70,5 +70,77 @@
     "correct_answer": "B",
     "topic": "Decorators",
     "difficulty": "medium"
+  },
+  {
+    "question": "What will be the output of the following Python code?\n```python\nmy_dict = {'a': 1, 'b': 2, 'c': 3}\nvalue = my_dict.pop('b', 0)\nprint(my_dict.get('b', value))\n```",
+    "options": [
+      "2",
+      "0",
+      "None",
+      "KeyError"
+    ],
+    "correct_answer": "2",
+    "topic": "Dictionaries",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What will be the output of the following Python code?\n```python\ndef combine_args(*args, **kwargs):\n    result = 0\n    for arg in args:\n        result += arg\n    for key, value in kwargs.items():\n        result += value\n    return result\n\nprint(combine_args(1, 2, x=3, y=4))\n```",
+    "options": [
+      "6",
+      "10",
+      "7",
+      "0"
+    ],
+    "correct_answer": "10",
+    "topic": "Functions",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What will be the output of the following Python code?\n```python\nclass Animal:\n    def sound(self):\n        return \"Generic Sound\"\n\nclass Dog(Animal):\n    def sound(self):\n        return \"Woof!\"\n\nclass Cat(Animal):\n    pass\n\nanimal1 = Dog()\nanimal2 = Cat()\nprint(animal1.sound() + \" \" + animal2.sound())\n```",
+    "options": [
+      "Woof! Generic Sound",
+      "Generic Sound Woof!",
+      "Woof! Woof!",
+      "Generic Sound Generic Sound"
+    ],
+    "correct_answer": "Woof! Generic Sound",
+    "topic": "OOP Concepts",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What will be printed by the following Python code?\n\n```python\ndata = {'apple': 3, 'banana': 1, 'cherry': 5}\ndata['banana'] = data['apple'] + data['cherry']\ndata['orange'] = 2\ndel data['apple']\nprint(len(data))\n```",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "correct_answer": "B",
+    "topic": "Dictionaries",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What will be the output of the following Python code?\n\n```python\ndef process_value(num):\n    if num % 2 == 0:\n        return num * 2\n    else:\n        return num + 1\n\ndef apply_and_print(func, values):\n    results = [func(v) for v in values]\n    print(results)\n\napply_and_print(process_value, [1, 2, 3])\n```",
+    "options": [
+      "[2, 4, 4]",
+      "[2, 4, 6]",
+      "[1, 4, 3]",
+      "[2, 2, 4]"
+    ],
+    "correct_answer": "A",
+    "topic": "Functions",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Consider the following Python classes:\n\n```python\nclass Vehicle:\n    def __init__(self, brand):\n        self.brand = brand\n    def get_info(self):\n        return f\"Brand: {self.brand}\"\n\nclass Car(Vehicle):\n    def __init__(self, brand, model):\n        super().__init__(brand)\n        self.model = model\n    def get_info(self):\n        return f\"{super().get_info()}, Model: {self.model}\"\n\nclass ElectricCar(Car):\n    def __init__(self, brand, model, battery_kwh):\n        super().__init__(brand, model)\n        self.battery_kwh = battery_kwh\n\nc = ElectricCar(\"Tesla\", \"Model 3\", 75)\nprint(c.get_info())\n```\n\nWhat will be the output?",
+    "options": [
+      "Brand: Tesla",
+      "Brand: Tesla, Model: Model 3",
+      "Brand: Tesla, Model: Model 3, Battery: 75kWh",
+      "Error"
+    ],
+    "correct_answer": "B",
+    "topic": "OOP Concepts",
+    "difficulty": "medium"
   }
 ]

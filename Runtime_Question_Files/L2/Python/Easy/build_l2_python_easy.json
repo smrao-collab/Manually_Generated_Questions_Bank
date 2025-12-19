@@ -178,5 +178,77 @@
     "correct_answer": "B",
     "topic": "Control Statements",
     "difficulty": "easy"
+  },
+  {
+    "question": "What will be the output of the following Python code?\n```python\nmy_list = [10, 20, 30, 40, 50]\nmy_list.insert(2, 25)\nprint(my_list[2])\n```",
+    "options": [
+      "30",
+      "25",
+      "20",
+      "Error"
+    ],
+    "correct_answer": "25",
+    "topic": "Lists",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What will be the output of the following Python code?\n```python\ntext = \"Hello, World!\"\nprint(text.upper().find('W'))\n```",
+    "options": [
+      "7",
+      "8",
+      "6",
+      "-1"
+    ],
+    "correct_answer": "7",
+    "topic": "Strings",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the output of the following Python code?\n```python\nx = 5\ny = 10\nif x > 10:\n    print(\"A\")\nelif y < 10:\n    print(\"B\")\nelse:\n    print(\"C\")\n```",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "Error"
+    ],
+    "correct_answer": "C",
+    "topic": "Control Statements",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What will be the output of the following Python code snippet?\n\n```python\ns = \"Python Programming\"\nprint(s[7:14])\n```",
+    "options": [
+      "Program",
+      "Programm",
+      "Programmi",
+      "grammin"
+    ],
+    "correct_answer": "B",
+    "topic": "Strings",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Consider the following Python code:\n\n```python\nmy_list = [10, 20]\nmy_list.append(30)\nmy_list.insert(0, 5)\nprint(len(my_list))\n```\n\nWhat will be the output?",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "Error"
+    ],
+    "correct_answer": "C",
+    "topic": "Lists",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the final value of `result` after executing the following Python code?\n\n```python\nx = 15\ny = 7\n\nif x % y == 0:\n    result = \"Divisible\"\nelif x > y * 2:\n    result = \"Greater\"\nelse:\n    result = \"Smaller\"\n\nprint(result)\n```",
+    "options": [
+      "Divisible",
+      "Greater",
+      "Smaller",
+      "Error"
+    ],
+    "correct_answer": "B",
+    "topic": "Control Statements",
+    "difficulty": "easy"
   }
 ]
