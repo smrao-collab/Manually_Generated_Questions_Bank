@@ -1,0 +1,38 @@
+[
+  {
+    "question": "What is logged to the console after approximately 100ms for each iteration?\n```javascript\nfor (var i = 0; i < 3; i++) {\n  setTimeout(function() {\n    console.log(i);\n  }, 100);\n}\n```",
+    "options": [
+      "A) 0, 1, 2",
+      "B) 3, 3, 3",
+      "C) 0, 0, 0",
+      "D) Error"
+    ],
+    "correct_answer": "B",
+    "topic": "Scope & Hoisting",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What will be the output of the following code?\n```javascript\nconst user = {\n  name: \"Alice\",\n  greet: function() {\n    return `Hello, my name is ${this.name}`;\n  }\n};\nconst sayHello = user.greet;\nconsole.log(user.greet());\nconsole.log(sayHello());\n```",
+    "options": [
+      "A) Hello, my name is Alice\nHello, my name is Alice",
+      "B) Hello, my name is Alice\nHello, my name is undefined",
+      "C) Hello, my name is undefined\nHello, my name is Alice",
+      "D) Error\nError"
+    ],
+    "correct_answer": "B",
+    "topic": "Objects",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the output of the following code?\n```javascript\nPromise.resolve(1)\n  .then(value => value + 1)\n  .then(value => console.log(value));\n```",
+    "options": [
+      "A) 1",
+      "B) 2",
+      "C) undefined",
+      "D) Error"
+    ],
+    "correct_answer": "B",
+    "topic": "Promises",
+    "difficulty": "medium"
+  }
+]
